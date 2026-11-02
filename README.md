@@ -1,16 +1,24 @@
 <div align="center">
 
-![Banner](https://capsule-render.vercel.app/api?type=waving&color=0:0e75b6,100:7F52FF&height=180&section=header&text=Fahim%20Foysal&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Senior%20Mobile%20Engineer%20%7C%20Android%2C%20Flutter%20%26%20KMP&descSize=18&descAlignY=58)
+<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:0e75b6,100:7F52FF&height=200&section=header&text=Fahim%20Foysal&fontSize=52&fontColor=ffffff&fontAlignY=42&desc=Senior%20Mobile%20Engineer&descSize=20&descAlignY=64" alt="Fahim Foysal banner" width="100%"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1200&color=0E75B6&center=true&vCenter=true&width=650&lines=Mobile-First+Software+Engineer;Android+%7C+Kotlin+%7C+Jetpack+Compose;Kotlin+Multiplatform+%26+Compose+Multiplatform;Flutter+%26+Dart+Developer;Building+AI-powered+mobile+apps)](https://git.io/typing-svg)
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1500&color=7F52FF&center=true&vCenter=true&width=620&height=40&lines=Android+and+Kotlin+Multiplatform;Jetpack+Compose+and+Flutter;Building+AI-powered+mobile+apps;5+years+of+mobile+engineering" alt="Typing animation"/></a>
 
-📍 Bangladesh &nbsp;•&nbsp; 🎓 BSc in CSE, Comilla University &nbsp;•&nbsp; 💼 5 years of experience
+<br>
 
-🟢 **Open to new opportunities**
+<img src="https://img.shields.io/badge/📍_Bangladesh-0d1117?style=for-the-badge&labelColor=0d1117&color=0e75b6"/>
+<img src="https://img.shields.io/badge/💼_5_Years_Experience-0d1117?style=for-the-badge&labelColor=0d1117&color=7F52FF"/>
+<img src="https://img.shields.io/badge/🟢_Open_to_Work-0d1117?style=for-the-badge&labelColor=0d1117&color=2ea043"/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mdfahimfoysal/)
-[![Gmail](https://img.shields.io/badge/Email-Contact-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:fahimfoysal97@gmail.com)
-![Profile Views](https://komarev.com/ghpvc/?username=FahimFoysal97&label=Profile%20Views&color=0e75b6&style=flat-square)
+<br><br>
+
+<a href="https://www.linkedin.com/in/mdfahimfoysal/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="mailto:fahimfoysal97@gmail.com"><img src="https://img.shields.io/badge/Email-Get_in_touch-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://github.com/FahimFoysal97/LipiRx"><img src="https://img.shields.io/badge/Latest_Project-LipiRx-7F52FF?style=for-the-badge&logo=github&logoColor=white"/></a>
+
+<br><br>
+
+<img src="https://komarev.com/ghpvc/?username=FahimFoysal97&label=Profile%20Views&color=0e75b6&style=flat-square"/>
 
 </div>
 
@@ -194,11 +202,13 @@ Company VR training program with small hands-on projects.
 
 <div align="center">
 
-**Looking for an Android / Flutter / KMP engineer or mobile team lead? Let's talk.**
+### Looking for an Android, Flutter or KMP engineer? Let's build something great.
 
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:fahimfoysal97@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mdfahimfoysal/)
+<a href="https://www.linkedin.com/in/mdfahimfoysal/"><img src="https://img.shields.io/badge/LinkedIn-Message_me-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="mailto:fahimfoysal97@gmail.com"><img src="https://img.shields.io/badge/Email-fahimfoysal97@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 
-![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:7F52FF,100:0e75b6&height=100&section=footer)
+<br><br>
+
+<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:7F52FF,100:0e75b6&height=90&section=footer" width="100%"/>
 
 </div>
