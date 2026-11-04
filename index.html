@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="theme-color" content="#06120f">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fahim Foysal – Senior Mobile Engineer</title>
-<meta name="description" content="Fahim Foysal is a senior mobile engineer building Android, Flutter and Kotlin Multiplatform apps.">
+<title>Fahim Foysal – Senior Android Engineer | Kotlin, Compose, KMP</title>
+<meta name="description" content="Fahim Foysal is a senior Android engineer specializing in Kotlin, Jetpack Compose and Kotlin Multiplatform.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>📱</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#080d1c;--surface:rgba(255,255,255,.045);--ink:#eef3ff;--muted:#9aa8c7;--line:rgba(255,255,255,.1);
-  --teal:#3fe0c5;--violet:#7c6cff;--pink:#ff6ac1;--code:#0a1022;
-  --grad:linear-gradient(120deg,#3fe0c5,#7c6cff 55%,#ff6ac1);
+  --bg:#06120f;--surface:rgba(255,255,255,.045);--ink:#eef3ff;--muted:#9aa8c7;--line:rgba(255,255,255,.1);
+  --teal:#2ee59d;--violet:#1fb978;--pink:#b8f26b;--code:#071510;
+  --grad:linear-gradient(120deg,#2ee59d,#1fb978 55%,#b8f26b);
   --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
   --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
   --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
@@ -34,8 +35,8 @@ section{padding:96px 0;position:relative}
 .glow{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
 .glow::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.35;mask-image:radial-gradient(ellipse at 50% 0,#000 10%,transparent 70%)}
 .glow i{position:absolute;border-radius:50%;filter:blur(110px);opacity:.38;animation:drift 16s ease-in-out infinite alternate}
-.glow i:nth-child(1){width:480px;height:480px;background:#1fb6a6;left:-140px;top:-120px}
-.glow i:nth-child(2){width:440px;height:440px;background:#6a5cff;right:-120px;top:100px;animation-delay:-7s}
+.glow i:nth-child(1){width:480px;height:480px;background:#0f9d6b;left:-140px;top:-120px}
+.glow i:nth-child(2){width:440px;height:440px;background:#22d68a;right:-120px;top:100px;animation-delay:-7s}
 @keyframes drift{to{transform:translate(70px,50px) scale(1.15)}}
 
 nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;position:sticky;top:0;z-index:10;backdrop-filter:blur(14px);background:linear-gradient(var(--bg),transparent)}
@@ -57,12 +58,12 @@ h1{font-size:clamp(46px,7.4vw,86px);font-weight:800;margin-bottom:16px;backgroun
 .hero p.sum{font-size:19px;color:var(--muted);max-width:38ch;margin-bottom:30px}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
 .btn{padding:13px 22px;border-radius:12px;font-weight:600;text-decoration:none;border:1px solid var(--line);background:var(--surface);backdrop-filter:blur(8px);transition:transform .2s,box-shadow .2s,border-color .2s}
-.btn.pri{background:var(--grad);border:0;color:#070b18;box-shadow:0 10px 30px -10px #7c6cff}
+.btn.pri{background:var(--grad);border:0;color:#070b18;box-shadow:0 10px 30px -10px #1fb978}
 .btn.res{border-color:var(--teal);color:var(--teal)}
 .btn:hover{transform:translateY(-3px);border-color:var(--violet)}
 
 /* phones */
-.phone{width:min(290px,100%);margin:0 auto;background:linear-gradient(160deg,#2a3358,#0d1226);border-radius:40px;padding:10px;box-shadow:0 0 0 1px rgba(255,255,255,.15),0 40px 80px -20px rgba(124,108,255,.55);position:relative;transform-style:preserve-3d;transition:transform .25s ease-out}
+.phone{width:min(290px,100%);margin:0 auto;background:linear-gradient(160deg,#21443a,#08150f);border-radius:40px;padding:10px;box-shadow:0 0 0 1px rgba(255,255,255,.15),0 40px 80px -20px rgba(46,229,157,.55);position:relative;transform-style:preserve-3d;transition:transform .25s ease-out}
 .phone::before{content:"";position:absolute;top:19px;left:50%;width:70px;height:18px;margin-left:-35px;background:#060a16;border-radius:99px;z-index:5}
 .hero .phone{animation:float 6s ease-in-out infinite}
 @keyframes float{50%{margin-top:-14px}}
@@ -85,7 +86,7 @@ h1{font-size:clamp(46px,7.4vw,86px);font-weight:800;margin-bottom:16px;backgroun
 
 /* glass cards with mouse spotlight */
 .stat,.skills>div,.list a,.codecard{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:18px;backdrop-filter:blur(10px)}
-.stat::before,.skills>div::before,.list a::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(260px circle at var(--x,50%) var(--y,50%),rgba(124,108,255,.25),transparent 70%)}
+.stat::before,.skills>div::before,.list a::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(260px circle at var(--x,50%) var(--y,50%),rgba(46,229,157,.25),transparent 70%)}
 .stat:hover::before,.skills>div:hover::before,.list a:hover::before{opacity:1}
 
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:64px}
@@ -114,7 +115,7 @@ h1{font-size:clamp(46px,7.4vw,86px);font-weight:800;margin-bottom:16px;backgroun
 .codecard header i+i{background:#ffbd2e}.codecard header i+i+i{background:#27c93f}
 .codecard header span{margin-left:10px}
 .codecard pre{padding:20px;font:14px/1.75 var(--mono);overflow-x:auto;color:#cfd9f5}
-.k{color:#c792ea}.t{color:#3fe0c5}.s{color:#c3e88d}.c{color:#6b789c}.f{color:#82aaff}
+.k{color:#c792ea}.t{color:#2ee59d}.s{color:#c3e88d}.c{color:#6b789c}.f{color:#82aaff}
 
 .job h3{font-size:24px}
 .job .when{color:var(--muted);margin-bottom:8px}
@@ -193,8 +194,8 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:28px 0 40px;b
     <div>
       <div class="status"><i></i>Open to new opportunities</div>
       <h1>Fahim Foysal</h1>
-      <div class="role" id="role" aria-label="Senior Mobile Engineer"></div>
-      <p class="sum">I build Android, Flutter and Kotlin Multiplatform apps, from first idea to the store. Based in Bangladesh.</p>
+      <div class="role" id="role" aria-label="Senior Android Engineer"></div>
+      <p class="sum">I build Android apps with Kotlin, Jetpack Compose and Kotlin Multiplatform, from analysis and design to testing and debugging. Based in Bangladesh.</p>
       <div class="btns">
         <!-- Resume button, enable later with your online CV link:
         <a class="btn res" href="YOUR_CV_LINK" target="_blank" rel="noopener">View CV</a> -->
@@ -219,13 +220,13 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:28px 0 40px;b
     <div class="stat"><b data-n="5" data-s="+">0</b><span>years in mobile</span></div>
     <div class="stat"><b data-n="9">0</b><span>projects at BJIT</span></div>
     <div class="stat"><b data-n="300" data-s="+">0</b><span>coding problems solved</span></div>
-    <div class="stat"><b data-n="3">0</b><span>mobile platforms: Android, Flutter, KMP</span></div>
+    <div class="stat"><b data-n="3">0</b><span>core stacks: Android, Compose, KMP</span></div>
   </div>
 </div>
 
 <div class="marq" aria-hidden="true"><div>
-  <span>Kotlin</span><span>Jetpack Compose</span><span>Flutter</span><span>Dart</span><span>Kotlin Multiplatform</span><span>Java</span><span>MVVM</span><span>BLoC</span><span>Riverpod</span><span>Hilt</span><span>Retrofit</span><span>Firebase</span><span>WebRTC</span><span>SQLite</span><span>Clean Architecture</span>
-  <span>Kotlin</span><span>Jetpack Compose</span><span>Flutter</span><span>Dart</span><span>Kotlin Multiplatform</span><span>Java</span><span>MVVM</span><span>BLoC</span><span>Riverpod</span><span>Hilt</span><span>Retrofit</span><span>Firebase</span><span>WebRTC</span><span>SQLite</span><span>Clean Architecture</span>
+  <span>Kotlin</span><span>Jetpack Compose</span><span>Kotlin Multiplatform</span><span>Compose Multiplatform</span><span>Android</span><span>Java</span><span>MVVM</span><span>Hilt</span><span>Retrofit</span><span>Clean Architecture</span><span>Firebase</span><span>WebRTC</span><span>SQLite</span><span>Flutter</span><span>Dart</span><span>BLoC</span><span>Riverpod</span>
+  <span>Kotlin</span><span>Jetpack Compose</span><span>Kotlin Multiplatform</span><span>Compose Multiplatform</span><span>Android</span><span>Java</span><span>MVVM</span><span>Hilt</span><span>Retrofit</span><span>Clean Architecture</span><span>Firebase</span><span>WebRTC</span><span>SQLite</span><span>Flutter</span><span>Dart</span><span>BLoC</span><span>Riverpod</span>
 </div></div>
 
 <section id="lipirx"><div class="wrap">
@@ -312,9 +313,9 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:28px 0 40px;b
 
 <section><div class="wrap rv">
   <h2>Skills</h2>
-  <p class="lead">Mobile is my core. The rest I picked up as projects required.</p>
+  <p class="lead">Android and Kotlin are my core. The rest I picked up as projects required.</p>
   <div class="skills">
-    <div><h3>Mobile</h3><p>Kotlin, Java, Dart, Android, Jetpack Compose, Flutter, Kotlin Multiplatform, Compose Multiplatform, basic iOS and Swift</p></div>
+    <div><h3>Android and KMP</h3><p>Kotlin, Jetpack Compose, Kotlin Multiplatform, Compose Multiplatform, Android, Java. Also Flutter, Dart and basic iOS with Swift.</p></div>
     <div><h3>Architecture and data</h3><p>MVVM, BLoC, Riverpod, Clean Architecture, Hilt, Retrofit, RoomDB, SQLite, MySQL, Firebase, WebRTC</p></div>
     <div><h3>Also worked with</h3><p>Python, TensorFlow, C#, C++, ReactJS, Mendix, Unity, Unreal Engine, Git, Jira, Redmine</p></div>
   </div>
@@ -334,7 +335,7 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:28px 0 40px;b
 
 <section class="contact" id="contact"><div class="wrap rv">
   <h2>Let’s build something together.</h2>
-  <p class="lead">I’m looking for Android, Flutter or Kotlin Multiplatform roles, including team lead positions.</p>
+  <p class="lead">I’m looking for Android, Kotlin and Kotlin Multiplatform roles, including team lead positions.</p>
   <div class="btns">
     <!-- Resume button, enable later with your online CV link:
         <a class="btn res" href="YOUR_CV_LINK" target="_blank" rel="noopener">View CV</a> -->
@@ -348,7 +349,7 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:28px 0 40px;b
 <script>
 // typing roles
 (function(){
-  var el=document.getElementById('role'),r=['Senior Mobile Engineer','Android and Jetpack Compose','Flutter and Dart','Kotlin Multiplatform'],i=0,j=0,del=false;
+  var el=document.getElementById('role'),r=['Senior Android Engineer','Kotlin and Jetpack Compose','Kotlin Multiplatform (KMP)','Compose Multiplatform'],i=0,j=0,del=false;
   if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=r[0];return}
   (function tick(){
     var w=r[i];el.textContent=w.slice(0,j);
