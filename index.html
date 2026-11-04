@@ -128,7 +128,6 @@ h1{font-size:clamp(46px,7.4vw,86px);font-weight:800;margin-bottom:16px;backgroun
 .contact-form .submit-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .hint{font-size:13px;color:var(--muted)}
 footer{text-align:center;color:var(--muted);font-size:14px;padding:28px 0 40px;border-top:1px solid var(--line);background:rgba(6,18,15,.7)}
-.edu{grid-template-columns:minmax(0,560px)!important}
 .rv{opacity:0;transform:perspective(900px) rotateX(9deg) translateY(32px);transform-origin:50% 100%;transition:opacity .8s,transform .8s}
 .rv.in{opacity:1;transform:none}
 .phone::before{content:"";position:absolute;top:19px;left:50%;width:70px;height:18px;margin-left:-35px;background:#060a16;border-radius:99px;z-index:5}
@@ -172,6 +171,10 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:28px 0 40px;b
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 .show .phone{width:290px;max-width:100%;justify-self:center}
 .app{min-height:200px}
+.skills ul{list-style:none;padding:0;display:grid;gap:10px}
+.skills li{color:var(--muted);font-size:16px;padding-left:18px;position:relative}
+.skills li::before{content:"";position:absolute;left:0;top:.75em;width:8px;height:3px;border-radius:2px;background:var(--teal)}
+.skills>div>p+p{margin-top:2px}
 </style>
 </head>
 <body>
@@ -240,8 +243,22 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:28px 0 40px;b
 </div></section>
 
 <section id="education"><div class="wrap rv">
-  <h2>Education</h2>
-  <div class="skills edu"><div><h3>BSc (Engg.) in Computer Science and Engineering</h3><p>Comilla University</p><p class="ctx">2015 to 2020</p></div></div>
+  <h2>Education and achievements</h2>
+  <p class="lead">Degree, competitions and the training I have completed.</p>
+  <div class="skills">
+    <div><h3>Education</h3><p>BSc (Engg.) in Computer Science and Engineering</p><p>Comilla University</p><p class="ctx">2015 to 2020</p></div>
+    <div><h3>Achievements</h3><ul>
+      <li>4th place, CoU CSE Fiesta 2015 Inter University Programming Contest</li>
+      <li>300+ programming problems solved on LeetCode, BeeCrowd and HackerRank</li>
+      <li>Gold badges in Java and Problem Solving on HackerRank</li>
+    </ul></div>
+    <div><h3>Training and courses</h3><ul>
+      <li>BJIT Academy: Android Development, Project Management, Japanese Business Culture, Business Finance and Communication, Workplace Etiquette</li>
+      <li>iOS development training</li>
+      <li>VR/AR with Unity and Unreal (basic)</li>
+      <li>Course: Master Machine Learning for Data Science &amp; AI, Beginner to Advanced</li>
+    </ul></div>
+  </div>
 </div></section>
 
 <section id="projects" class="panel"><div class="wrap rv">
