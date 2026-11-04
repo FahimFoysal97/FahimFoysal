@@ -146,7 +146,7 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:28px 0 40px;b
 .phone.real::before{display:none}
 .app{position:relative;aspect-ratio:390/844;border-radius:30px;overflow:hidden;background:#F4F7F6}
 .app iframe{position:absolute;top:0;left:0;width:390px;height:844px;border:0;transform-origin:0 0;pointer-events:none;background:#F4F7F6}
-.show{display:grid;grid-template-columns:1fr auto;gap:56px;align-items:center;margin-bottom:56px}
+.show{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:56px;align-items:center;margin-bottom:56px}
 .steps{display:grid;gap:12px}
 .step{text-align:left;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 20px;cursor:pointer;position:relative;overflow:hidden;transition:border-color .25s,background .25s}
 .step:hover{border-color:var(--teal)}
@@ -170,6 +170,8 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:28px 0 40px;b
 }
 @media(max-width:620px){.contact-form .row{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+.show .phone{width:290px;max-width:100%;justify-self:center}
+.app{min-height:200px}
 </style>
 </head>
 <body>
@@ -359,6 +361,7 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){
 document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
 function fitApps(){document.querySelectorAll('.app').forEach(function(a){a.querySelectorAll('iframe').forEach(function(f){f.style.transform='scale('+(a.clientWidth/390)+')'})})}
 fitApps();addEventListener('resize',fitApps);addEventListener('load',fitApps);
+if(window.ResizeObserver){var roApp=new ResizeObserver(fitApps);document.querySelectorAll('.app').forEach(function(a){roApp.observe(a)})}
 // LipiRx walkthrough
 (function(){
   var box=document.querySelector('.show');if(!box)return;
