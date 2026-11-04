@@ -339,6 +339,39 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:28px 0 40px;b
   </div>
 </div></section>
 
+<section id="explore" class="panel">
+  <div class="wrap">
+    <p class="eyebrow">Engineering, made tangible</p>
+    <h2>Explore how I build</h2>
+    <p class="lead">A closer look at the layers, decisions, and product thinking behind my mobile work.</p>
+    <div class="explore-grid">
+      <div class="arch-card">
+        <div class="arch-head"><span class="mini-label">ARCHITECTURE EXPLORER</span><span class="arch-note">Illustrative LipiRx architecture</span></div>
+        <div class="arch-map" role="group" aria-label="Select an architecture layer">
+          <button class="arch-node active" data-layer="presentation"><span>01</span><b>Presentation</b><small>Compose UI · screens · state</small></button>
+          <div class="arch-link" aria-hidden="true"></div>
+          <button class="arch-node" data-layer="domain"><span>02</span><b>Domain</b><small>Use cases · models · rules</small></button>
+          <div class="arch-link" aria-hidden="true"></div>
+          <button class="arch-node" data-layer="data"><span>03</span><b>Data</b><small>Repositories · sources</small></button>
+          <div class="arch-link" aria-hidden="true"></div>
+          <button class="arch-node" data-layer="platform"><span>04</span><b>Platform & AI</b><small>KMP · OCR/vision providers</small></button>
+        </div>
+        <div class="arch-detail" aria-live="polite"><span class="detail-index">LAYER PRESENTATION</span><h3>Presentation</h3><p>Compose screens present the prescription workflow, collect user input, and reflect loading, results, and review states.</p><div class="detail-tags"><span>Compose</span><span>UI state</span><span>ViewModel</span></div></div>
+      </div>
+      <div class="journey-card">
+        <div class="arch-head"><span class="mini-label">CAREER JOURNEY</span><span class="arch-note">Scroll or select a milestone</span></div>
+        <div class="journey-list">
+          <button class="journey-item active" data-journey="0"><span class="journey-dot"></span><span><b>Software foundations</b><small>Computer Science · problem solving</small></span><span class="journey-arrow">↗</span></button>
+          <button class="journey-item" data-journey="1"><span class="journey-dot"></span><span><b>Android engineering</b><small>Kotlin · architecture · production apps</small></span><span class="journey-arrow">↗</span></button>
+          <button class="journey-item" data-journey="2"><span class="journey-dot"></span><span><b>Technical leadership</b><small>Team lead · delivery · technical decisions</small></span><span class="journey-arrow">↗</span></button>
+          <button class="journey-item" data-journey="3"><span class="journey-dot"></span><span><b>Cross-platform exploration</b><small>KMP · Compose · AI-enabled experiences</small></span><span class="journey-arrow">↗</span></button>
+        </div>
+        <div class="journey-caption" aria-live="polite">Building a strong foundation in software engineering and problem solving.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="contact" id="contact"><div class="wrap rv">
   <h2>Let’s build something together.</h2>
   <p class="lead">I’m looking for Android, Kotlin and Kotlin Multiplatform roles, including team lead positions.</p>
@@ -484,5 +517,71 @@ size();addEventListener('resize',size);
 if(rm)addEventListener('scroll',function(){frame(performance.now())},{passive:true});else requestAnimationFrame(frame);
 })();
 </script>
+
+
+<style>
+/* This section is appended after the original reveal observer initializes. Keep it visible. */
+#explore, #explore .wrap{opacity:1!important;transform:none!important;visibility:visible!important}
+#explore .explore-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;margin-top:30px}
+#explore .arch-card,#explore .journey-card{border:1px solid var(--line);background:var(--surface);border-radius:22px;padding:clamp(18px,3vw,28px);min-width:0}
+#explore .arch-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+#explore .mini-label{font:700 10px/1.4 'JetBrains Mono',monospace;letter-spacing:.13em;color:var(--teal)}
+#explore .arch-note{font-size:11px;color:var(--muted)}
+#explore .arch-map{display:flex;flex-direction:column;align-items:stretch}
+#explore .arch-node{display:grid;grid-template-columns:32px 1fr;gap:2px 10px;text-align:left;padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:transparent;color:var(--ink);cursor:pointer;transition:border-color .2s,background .2s,transform .2s}
+#explore .arch-node>span{grid-row:span 2;color:var(--teal);font:11px 'JetBrains Mono',monospace;padding-top:2px}
+#explore .arch-node b{font-size:13px}#explore .arch-node small{font-size:11px;color:var(--muted);margin-top:3px}
+#explore .arch-node:hover{transform:translateX(3px);border-color:var(--teal)}
+#explore .arch-node.active{background:rgba(46,229,157,.10);border-color:var(--teal)}
+#explore .arch-link{height:13px;width:1px;background:var(--teal);opacity:.45;margin-left:31px}
+#explore .arch-detail{margin-top:18px;padding:18px;border-radius:14px;background:rgba(0,0,0,.13);border:1px solid var(--line)}
+#explore .detail-index{font:10px 'JetBrains Mono',monospace;color:var(--teal);letter-spacing:.1em}
+#explore .arch-detail h3{font-size:18px;margin:7px 0}
+#explore .arch-detail p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+#explore .detail-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}
+#explore .detail-tags span{font:10px 'JetBrains Mono',monospace;border:1px solid var(--line);border-radius:99px;padding:5px 8px;color:var(--muted)}
+#explore .journey-list{position:relative;display:flex;flex-direction:column;gap:8px}
+#explore .journey-list:before{content:"";position:absolute;left:15px;top:15px;bottom:15px;width:1px;background:linear-gradient(var(--teal),var(--line));}
+#explore .journey-item{position:relative;display:grid;grid-template-columns:22px 1fr 18px;align-items:center;gap:10px;text-align:left;padding:13px 10px;border:1px solid transparent;border-radius:12px;background:transparent;color:var(--ink);cursor:pointer}
+#explore .journey-dot{width:9px;height:9px;border-radius:50%;background:var(--muted);border:2px solid var(--bg);box-shadow:0 0 0 1px var(--line);z-index:1}
+#explore .journey-item b{display:block;font-size:13px}
+#explore .journey-item small{display:block;color:var(--muted);font-size:11px;margin-top:4px;line-height:1.5}
+#explore .journey-arrow{color:var(--muted);opacity:0;transition:opacity .2s}
+#explore .journey-item:hover,#explore .journey-item.active{background:rgba(46,229,157,.08);border-color:var(--line)}
+#explore .journey-item.active .journey-dot{background:var(--teal);box-shadow:0 0 0 3px rgba(46,229,157,.20)}
+#explore .journey-item.active .journey-arrow{opacity:1;color:var(--teal)}
+#explore .journey-caption{font-size:12px;line-height:1.7;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:15px}
+@media(max-width:760px){#explore .explore-grid{grid-template-columns:1fr}#explore .arch-note{width:100%}}
+@media(prefers-reduced-motion:reduce){#explore *{transition:none!important;scroll-behavior:auto!important}}
+</style>
+<script>
+(()=>{
+const root=document.querySelector('#explore');if(!root)return;
+const layers={
+presentation:{name:'Presentation',text:'Compose screens present the prescription workflow, collect user input, and reflect loading, results, and review states.',tags:['Compose','UI state','ViewModel']},
+domain:{name:'Domain',text:'Use cases and domain models express the core workflow independently from UI details and external AI providers.',tags:['Use cases','Domain models','Validation']},
+data:{name:'Data',text:'Repository boundaries coordinate data access and keep the workflow insulated from individual provider implementations.',tags:['Repositories','Data sources','Mapping']},
+platform:{name:'Platform & AI',text:'Kotlin Multiplatform supports shared logic, while configurable vision/AI providers support handwriting interpretation. Results remain subject to pharmacist review.',tags:['KMP','Vision AI','Provider integration']}
+};
+const detail=root.querySelector('.arch-detail');
+root.querySelectorAll('.arch-node').forEach(btn=>btn.addEventListener('click',()=>{
+root.querySelectorAll('.arch-node').forEach(b=>b.classList.toggle('active',b===btn));
+const d=layers[btn.dataset.layer];detail.querySelector('.detail-index').textContent='LAYER '+btn.dataset.layer.toUpperCase();
+detail.querySelector('h3').textContent=d.name;detail.querySelector('p').textContent=d.text;
+const tags=detail.querySelector('.detail-tags');tags.replaceChildren(...d.tags.map(t=>{const e=document.createElement('span');e.textContent=t;return e;}));
+}));
+const captions=[
+'Building a strong foundation in software engineering and problem solving.',
+'Growing into Android development with Kotlin, maintainable architecture, and production-focused implementation.',
+'Taking ownership of technical decisions, collaboration, and delivery as a team lead.',
+'Exploring shared mobile code with Kotlin Multiplatform and AI-enabled product experiences.'
+];
+root.querySelectorAll('.journey-item').forEach(btn=>btn.addEventListener('click',()=>{
+root.querySelectorAll('.journey-item').forEach(b=>b.classList.toggle('active',b===btn));
+root.querySelector('.journey-caption').textContent=captions[Number(btn.dataset.journey)];
+}));
+})();
+</script>
+
 </body>
 </html>
