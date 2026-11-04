@@ -151,8 +151,6 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:28px 0 40px;b
 .step:hover{border-color:var(--teal)}
 .step b{display:block;font:700 18px var(--display);margin-bottom:2px}
 .step span{color:var(--muted);font-size:15px}
-.step em{font:600 11px var(--mono);font-style:normal;border-radius:99px;padding:1px 9px;margin-left:10px;vertical-align:2px;border:1px solid var(--teal);color:var(--teal)}
-.step em.mock{border-color:var(--line);color:var(--muted)}
 .step.on{border-color:var(--teal);background:rgba(46,229,157,.08)}
 .step.on::after{content:"";position:absolute;left:0;bottom:0;height:3px;background:var(--grad);animation:fill 3.8s linear forwards}
 .steps.manual .step.on::after{animation:none;width:100%}
@@ -300,7 +298,7 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:28px 0 40px;b
   </div>
 
   <div class="show rv">
-    <div class="steps" role="tablist" aria-label="LipiRx walkthrough"><button class="step on" data-i="0"><b>Snap or upload<em class="mock">Design mockup</em></b><span>Take a photo or pick one from the gallery.</span></button><button class="step" data-i="1"><b>Preview<em class="mock">Design mockup</em></b><span>Check the photo is sharp and choose the AI model.</span></button><button class="step" data-i="2"><b>Analyze<em class="mock">Design mockup</em></b><span>The handwriting is read and brands are matched.</span></button><button class="step" data-i="3"><b>Review<em class="real">Real app screen</em></b><span>Brand, generic, schedule, quantity, similar brands and review flags.</span></button></div>
+    <div class="steps" role="tablist" aria-label="LipiRx walkthrough"><button class="step on" data-i="0"><b>Snap or upload</b><span>Take a photo or pick one from the gallery.</span></button><button class="step" data-i="1"><b>Preview</b><span>Check the photo is sharp and choose the AI model.</span></button><button class="step" data-i="2"><b>Analyze</b><span>The handwriting is read and brands are matched.</span></button><button class="step" data-i="3"><b>Review</b><span>Brand, generic, schedule, quantity, similar brands and review flags.</span></button></div>
     <div class="phone real"><div class="app stack"><iframe class="on" srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;LipiRx - Home&lt;/title&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;&lt;style&gt;*{box-sizing:border-box}body{margin:0;font-family:&quot;Plus Jakarta Sans&quot;,sans-serif}button{cursor:pointer}@keyframes spin{to{transform:rotate(360deg)}}@keyframes scan{0%{top:6%}100%{top:90%}}body{background:#dfe7e5;display:flex;justify-content:center;min-height:100vh}&lt;/style&gt;&lt;/head&gt;
 &lt;body&gt;
