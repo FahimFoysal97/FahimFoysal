@@ -366,10 +366,10 @@
     <a class="btn" href="https://www.linkedin.com/in/mdfahimfoysal/">Message on LinkedIn</a>
   </div>
   <div class="contact-form-wrap" id="contact-form">
-    <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/fahimfoysal97@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New message from portfolio site">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
+    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="67f1ed93-2a59-4b8c-9e5b-bdcf1577cb4e">
+      <input type="hidden" name="subject" value="New message from portfolio site">
+      <input type="hidden" name="from_name" value="Portfolio website">
       <div class="row">
         <label>
           Name
@@ -388,7 +388,7 @@
         <span class="hint">Replies usually within 1–2 business days.</span>
         <button class="btn pri" type="submit">Send message</button>
       </div>
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
       <p class="hint" id="formStatus" role="status" aria-live="polite"></p>
     </form>
   </div>
@@ -487,6 +487,7 @@
     f.addEventListener('submit',function(e){
       e.preventDefault();
       var b=f.querySelector('button[type=submit]');
+      if(f.elements.access_key.value.indexOf('PASTE_')===0){st.style.color='#ff8a8a';st.textContent='Contact form key is not set yet.';return}
       b.disabled=true;b.textContent='Sending...';st.textContent='';
       fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
         .then(function(r){
