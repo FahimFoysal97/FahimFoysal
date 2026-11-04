@@ -388,6 +388,8 @@
         <span class="hint">Replies usually within 1–2 business days.</span>
         <button class="btn pri" type="submit">Send message</button>
       </div>
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <p class="hint" id="formStatus" role="status" aria-live="polite"></p>
     </form>
   </div>
 </div></section>
@@ -477,6 +479,25 @@
       }
     });
     if(location.hash==='#contact-form')showForm();
+  })();
+  // contact form submit (FormSubmit AJAX)
+  (function(){
+    var f=document.getElementById('contactForm'),st=document.getElementById('formStatus');
+    if(!f||!st)return;
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var b=f.querySelector('button[type=submit]');
+      b.disabled=true;b.textContent='Sending...';st.textContent='';
+      fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+        .then(function(r){
+          return r.json().catch(function(){return {}}).then(function(d){
+            if(!r.ok||d.success===false||d.success==='false')throw new Error(d.message||'failed');
+          });
+        })
+        .then(function(){f.reset();st.style.color='var(--teal)';st.textContent='Thanks, your message was sent.'})
+        .catch(function(){st.style.color='#ff8a8a';st.textContent='Could not send. Please email fahimfoysal97@gmail.com directly.'})
+        .then(function(){b.disabled=false;b.textContent='Send message'});
+    });
   })();
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
