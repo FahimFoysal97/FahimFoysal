@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fahim Foysal – Senior Mobile Engineer</title>
+<meta name="description" content="Fahim Foysal is a senior mobile engineer building Android, Flutter and Kotlin Multiplatform apps.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>📱</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080d1c;--surface:rgba(255,255,255,.045);--ink:#eef3ff;--muted:#9aa8c7;--line:rgba(255,255,255,.1);
+  --teal:#3fe0c5;--violet:#7c6cff;--pink:#ff6ac1;--code:#0a1022;
+  --grad:linear-gradient(120deg,#3fe0c5,#7c6cff 55%,#ff6ac1);
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.025em}
+h2{font-size:clamp(30px,4.4vw,46px);margin-bottom:14px}
+section{padding:96px 0;position:relative}
+.lead{color:var(--muted);max-width:60ch;margin-bottom:34px}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:30}
+
+/* aurora + grid */
+.glow{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.glow::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.35;mask-image:radial-gradient(ellipse at 50% 0,#000 10%,transparent 70%)}
+.glow i{position:absolute;border-radius:50%;filter:blur(110px);opacity:.38;animation:drift 16s ease-in-out infinite alternate}
+.glow i:nth-child(1){width:480px;height:480px;background:#1fb6a6;left:-140px;top:-120px}
+.glow i:nth-child(2){width:440px;height:440px;background:#6a5cff;right:-120px;top:100px;animation-delay:-7s}
+@keyframes drift{to{transform:translate(70px,50px) scale(1.15)}}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;position:sticky;top:0;z-index:10;backdrop-filter:blur(14px);background:linear-gradient(var(--bg),transparent)}
+nav b{font:800 20px var(--display)}
+nav div{display:flex;gap:6px;font-size:15px}
+nav a{text-decoration:none;color:var(--muted);padding:6px 14px;border-radius:99px;transition:.2s}
+nav a:hover{color:var(--ink);background:var(--surface)}
+
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:56px 0 96px}
+.status{display:inline-flex;gap:9px;align-items:center;border:1px solid var(--line);background:var(--surface);color:var(--teal);padding:7px 15px;border-radius:99px;font-size:14px;font-weight:600;margin-bottom:24px;backdrop-filter:blur(8px)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--teal)}70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
+h1{font-size:clamp(46px,7.4vw,86px);font-weight:800;margin-bottom:16px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:sheen 8s linear infinite alternate}
+@keyframes sheen{to{background-position:100% 0}}
+.role{font:500 19px var(--mono);color:var(--teal);min-height:1.6em;margin-bottom:16px}
+.role::before{content:"> ";color:var(--muted)}
+.role::after{content:"";display:inline-block;width:9px;height:1.05em;background:var(--teal);margin-left:4px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.sum{font-size:19px;color:var(--muted);max-width:38ch;margin-bottom:30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{padding:13px 22px;border-radius:12px;font-weight:600;text-decoration:none;border:1px solid var(--line);background:var(--surface);backdrop-filter:blur(8px);transition:transform .2s,box-shadow .2s,border-color .2s}
+.btn.pri{background:var(--grad);border:0;color:#070b18;box-shadow:0 10px 30px -10px #7c6cff}
+.btn.res{border-color:var(--teal);color:var(--teal)}
+.btn:hover{transform:translateY(-3px);border-color:var(--violet)}
+
+/* phones */
+.phone{width:min(290px,100%);margin:0 auto;background:linear-gradient(160deg,#2a3358,#0d1226);border-radius:40px;padding:10px;box-shadow:0 0 0 1px rgba(255,255,255,.15),0 40px 80px -20px rgba(124,108,255,.55);position:relative;transform-style:preserve-3d;transition:transform .25s ease-out}
+.phone::before{content:"";position:absolute;top:19px;left:50%;width:70px;height:18px;margin-left:-35px;background:#060a16;border-radius:99px;z-index:5}
+.hero .phone{animation:float 6s ease-in-out infinite}
+@keyframes float{50%{margin-top:-14px}}
+.screen{--ink:#12232b;--muted:#5b707a;--line:#dbe5e8;--teal:#0b7a75;background:#f6fafb;color:var(--ink);border-radius:31px;padding:40px 16px 18px;min-height:450px;position:relative;overflow:hidden}
+.screen>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:3}
+.screen small{color:var(--muted);font-size:12px;display:block;font-weight:600}
+.rx-paper{background:#fffdf6;border-radius:10px;padding:12px 14px;margin:8px 0 14px;color:#2b2f55;font:italic 600 16px/1.5 "Segoe Script","Bradley Hand","Comic Sans MS",cursive;position:relative;overflow:hidden;border:1px solid #e8dfc4}
+.rx-paper b{color:#c93c3c;font-size:21px}
+.scan{position:absolute;left:0;right:0;height:3px;background:var(--teal);box-shadow:0 0 16px var(--teal);animation:scan 3s ease-in-out infinite alternate}
+@keyframes scan{from{top:0}to{top:calc(100% - 3px)}}
+.med{background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 12px;margin-bottom:8px;font-size:14px;line-height:1.4}
+.med strong{display:block;font-size:15px}
+.med span{color:var(--muted)}
+.med em{font-style:normal;color:var(--teal);font-weight:600}
+.pv{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin-bottom:8px;font-size:15px}
+.pv u{width:34px;height:20px;border-radius:99px;background:#cdd9dd;position:relative;text-decoration:none}
+.pv u::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff}
+.pv.on u{background:var(--teal)}.pv.on u::after{left:16px}
+.keybox{font:13px var(--mono);color:var(--muted);border:1px dashed #b9c8cd;border-radius:8px;padding:8px 10px;margin-top:10px;word-break:break-all}
+
+/* glass cards with mouse spotlight */
+.stat,.skills>div,.list a,.codecard{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:18px;backdrop-filter:blur(10px)}
+.stat::before,.skills>div::before,.list a::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(260px circle at var(--x,50%) var(--y,50%),rgba(124,108,255,.25),transparent 70%)}
+.stat:hover::before,.skills>div:hover::before,.list a:hover::before{opacity:1}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:64px}
+.stat{padding:22px}
+.stat b{display:block;font:800 44px var(--display);letter-spacing:-.03em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--muted);font-size:15px}
+
+.marq{overflow:hidden;border-block:1px solid var(--line);padding:18px 0;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marq div{display:flex;gap:14px;width:max-content;animation:slide 34s linear infinite}
+.marq span{font:500 15px var(--mono);color:var(--ink);border:1px solid var(--line);background:var(--surface);padding:6px 16px;border-radius:99px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-bottom:56px}
+.feature ul{list-style:none;padding:0;display:grid;gap:14px}
+.feature li{padding-left:26px;position:relative;color:var(--muted)}
+.feature li b{color:var(--ink)}
+.feature li::before{content:"";position:absolute;left:0;top:.62em;width:12px;height:12px;border-radius:4px;background:var(--grad)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 26px}
+.chips span{border:1px solid var(--line);background:var(--surface);padding:5px 14px;border-radius:99px;font-size:14px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:44px}
+.gallery figure .phone{width:100%;max-width:260px}
+.gallery figcaption{text-align:center;color:var(--muted);font-size:15px;margin-top:18px}
+.codecard{overflow:hidden;background:var(--code)}
+.codecard header{display:flex;gap:7px;padding:13px 16px;background:rgba(255,255,255,.04);align-items:center;font:12px var(--mono);color:#7f8db0}
+.codecard header i{width:11px;height:11px;border-radius:50%;background:#ff5f56}
+.codecard header i+i{background:#ffbd2e}.codecard header i+i+i{background:#27c93f}
+.codecard header span{margin-left:10px}
+.codecard pre{padding:20px;font:14px/1.75 var(--mono);overflow-x:auto;color:#cfd9f5}
+.k{color:#c792ea}.t{color:#3fe0c5}.s{color:#c3e88d}.c{color:#6b789c}.f{color:#82aaff}
+
+.job h3{font-size:24px}
+.job .when{color:var(--muted);margin-bottom:8px}
+.proj{display:grid;grid-template-columns:140px 1fr;gap:8px 28px;padding:20px 0 20px 28px;border-left:2px solid var(--line);position:relative}
+.proj::before{content:"";position:absolute;left:-7px;top:28px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--teal);box-shadow:0 0 12px var(--teal)}
+.proj time{color:var(--muted);font:14px var(--mono);padding-top:2px}
+.proj h4{font:700 20px var(--display);margin-bottom:2px}
+.proj p{color:var(--muted);font-size:16px}
+.tech{font:13px var(--mono);color:var(--teal);margin-top:6px}
+.sub{font:700 15px var(--display);color:var(--violet);margin:38px 0 4px}
+
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skills>div{padding:26px}
+.skills h3{font-size:20px;margin-bottom:10px}
+.skills p{color:var(--muted);font-size:16px}
+
+.list{display:grid;gap:12px}
+.list a{display:grid;grid-template-columns:240px 1fr auto;gap:20px;padding:22px 24px;text-decoration:none;align-items:baseline;transition:transform .25s,border-color .25s}
+.list a:hover{transform:translateX(8px);border-color:var(--violet)}
+.list h3{font-size:20px}
+.list p,.list span{color:var(--muted);font-size:15.5px}
+.list span{font-family:var(--mono);font-size:13px;color:var(--teal)}
+
+.contact{text-align:center;overflow:hidden}
+.contact h2{font-size:clamp(34px,5.4vw,60px)}
+.contact .lead{margin:0 auto 30px}
+.contact .btns{justify-content:center}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:28px 0 40px;border-top:1px solid var(--line)}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .hero,.feature{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .gallery,.skills{grid-template-columns:1fr}
+  .gallery figure{display:flex;flex-direction:column;align-items:center}
+  .proj{grid-template-columns:1fr}
+  .list a{grid-template-columns:1fr;gap:4px}
+  nav div{gap:0}nav a{padding:6px 9px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}.scan{top:40%}html{scroll-behavior:auto}
+}
+.proj{grid-template-columns:190px 1fr}
+.tag{font:600 11px var(--mono);padding:2px 9px;border-radius:99px;border:1px solid var(--teal);color:var(--teal);vertical-align:3px;margin-left:6px}
+.tag.asg{border-color:var(--violet);color:var(--violet)}
+.legend{color:var(--muted);font-size:14px;margin:0 0 20px}.legend .tag{margin:0 4px 0 0}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.flow div{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.flow b{display:block;font:700 20px var(--display);margin-bottom:6px}
+.flow span{color:var(--muted);font-size:16px}
+@media(max-width:860px){.flow{grid-template-columns:1fr}.proj{grid-template-columns:1fr}}
+.phone.real::before{display:none}
+.app{position:relative;aspect-ratio:390/844;border-radius:30px;overflow:hidden;background:#F4F7F6}
+.app iframe{position:absolute;top:0;left:0;width:390px;height:844px;border:0;transform-origin:0 0;pointer-events:none;background:#F4F7F6}
+.gallery{grid-template-columns:repeat(4,1fr)!important;gap:22px}
+.gallery figure .phone{max-width:250px;margin:0 auto}
+.gallery figure:hover .phone{z-index:2}
+@media(max-width:980px){.gallery{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:520px){.gallery{grid-template-columns:1fr!important}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div class="glow" aria-hidden="true"><i></i><i></i></div>
+
+<div class="wrap">
+  <nav>
+    <b>Fahim Foysal</b>
+    <div><a href="#lipirx">LipiRx</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="status"><i></i>Open to new opportunities</div>
+      <h1>Fahim Foysal</h1>
+      <div class="role" id="role" aria-label="Senior Mobile Engineer"></div>
+      <p class="sum">I build Android, Flutter and Kotlin Multiplatform apps, from first idea to the store. Based in Bangladesh.</p>
+      <div class="btns">
+        <!-- Resume button, enable later with your online CV link:
+        <a class="btn res" href="YOUR_CV_LINK" target="_blank" rel="noopener">View CV</a> -->
+        <a class="btn pri" href="#lipirx">See LipiRx</a>
+        <a class="btn" href="https://github.com/FahimFoysal97">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/mdfahimfoysal/">LinkedIn</a>
+      </div>
+    </div>
+    <div class="phone real" aria-label="LipiRx app preview"><div class="app"><iframe srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;LipiRx - Results&lt;/title&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;&lt;style&gt;*{box-sizing:border-box}body{margin:0;font-family:&quot;Plus Jakarta Sans&quot;,sans-serif}button{cursor:pointer}@keyframes spin{to{transform:rotate(360deg)}}@keyframes scan{0%{top:6%}100%{top:90%}}body{background:#dfe7e5;display:flex;justify-content:center;min-height:100vh}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;div style=&quot;width:390px;height:844px;box-sizing:border-box;background:#F4F7F6;color:#10242B;position:relative;overflow:hidden;display:flex;flex-direction:column;font-family:&#x27;Plus Jakarta Sans&#x27;,sans-serif&quot;&gt;&lt;div style=&quot;display:flex;align-items:center;gap:10px;padding:28px 24px 12px&quot;&gt;&lt;div style=&quot;width:38px;height:38px;border-radius:12px;background:#0B7A6E;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center&quot;&gt;Rx&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;LipiRx&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;padding:4px 24px 0;display:flex;flex-direction:column;gap:14px&quot;&gt;&lt;div style=&quot;display:flex;gap:8px&quot;&gt;&lt;span style=&quot;background:#E3F3F0;color:#0B7A6E;border-radius:99px;padding:7px 12px;font-size:12px;font-weight:700&quot;&gt;5 medicines&lt;/span&gt;&lt;span style=&quot;background:#FBE9E7;color:#8C1D18;border-radius:99px;padding:7px 12px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:5px&quot;&gt;&lt;svg width=&quot;13&quot; height=&quot;13&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M12 3l10 18H2z&quot;/&gt;&lt;path d=&quot;M12 10v5M12 18h.01&quot;/&gt;&lt;/svg&gt; 2 need review&lt;/span&gt;&lt;/div&gt;
+&lt;div style=&quot;background:#fff;border:1px solid #E1E9E7;border-radius:18px;padding:10px;display:flex;align-items:center;gap:12px&quot;&gt;&lt;div style=&quot;width:40px;height:50px;border-radius:8px;background:#FFFEFA;padding:6px;box-sizing:border-box;border:1px solid #E1E9E7&quot;&gt;&lt;div style=&quot;font-weight:800;color:#0B7A6E;font-size:10px&quot;&gt;Rx&lt;/div&gt;&lt;div style=&quot;height:5px;width:80%;background:#9FB0C8;border-radius:3px;margin-top:6px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:5px;width:60%;background:#9FB0C8;border-radius:3px;margin-top:6px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:5px;width:70%;background:#9FB0C8;border-radius:3px;margin-top:6px&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;font-size:14px;font-weight:700&quot;&gt;Prescription scanned&lt;/div&gt;&lt;div style=&quot;font-size:12px;color:#52666C;display:flex;align-items:center;gap:5px;margin-top:2px&quot;&gt;&lt;svg width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;circle cx=&quot;11&quot; cy=&quot;11&quot; r=&quot;6&quot;/&gt;&lt;path d=&quot;M20 20l-4-4&quot;/&gt;&lt;/svg&gt; Tap to zoom&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;background:#fff;border:1px solid #E1E9E7;border-radius:22px;overflow:hidden;display:flex&quot;&gt;&lt;div style=&quot;display:contents&quot;&gt;&lt;/div&gt;&lt;div style=&quot;flex:1;padding:16px;display:flex;flex-direction:column;gap:12px&quot;&gt;&lt;div style=&quot;display:flex;gap:12px;align-items:flex-start&quot;&gt;&lt;div style=&quot;width:30px;height:30px;border-radius:99px;background:#0B7A6E;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;flex:none&quot;&gt;1&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;Candinil 200 mg&lt;/div&gt;&lt;div style=&quot;font-size:12px;color:#52666C&quot;&gt;Incepta Pharmaceuticals Ltd.&lt;/div&gt;&lt;div style=&quot;font-size:13px;color:#52666C&quot;&gt;Generic: Itraconazole&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;gap:8px&quot;&gt;&lt;div style=&quot;flex:1;border-radius:12px;padding:8px 0;text-align:center;background:#0B7A6E;color:#fff&quot;&gt;&lt;div style=&quot;font-size:10px;font-weight:600;opacity:.9&quot;&gt;Morning&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;flex:1;border-radius:12px;padding:8px 0;text-align:center;background:#EEF2F1;color:#8A9A9F&quot;&gt;&lt;div style=&quot;font-size:10px;font-weight:600;opacity:.9&quot;&gt;Noon&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;0&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;flex:1;border-radius:12px;padding:8px 0;text-align:center;background:#0B7A6E;color:#fff&quot;&gt;&lt;div style=&quot;font-size:10px;font-weight:600;opacity:.9&quot;&gt;Night&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;1&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;gap:8px;flex-wrap:wrap&quot;&gt;&lt;span style=&quot;background:#E3F3F0;color:#075E54;border-radius:10px;padding:6px 10px;font-size:12px;font-weight:700&quot;&gt;Qty: 1 capsule&lt;/span&gt;&lt;span style=&quot;background:#FFF1DC;color:#8A4B00;border-radius:10px;padding:6px 10px;font-size:12px;font-weight:700&quot;&gt;After meal&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;align-items:center;gap:6px;background:#F4F7F6;border-radius:14px;padding:12px;font-size:13px;font-weight:700;color:#52666C&quot;&gt;&lt;span style=&quot;display:flex&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 11a8 8 0 00-14-4M4 4v4h4M4 13a8 8 0 0014 4M20 20v-4h-4&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span style=&quot;flex:1&quot;&gt;4 similar brands&lt;/span&gt;&lt;span style=&quot;display:flex&quot;&gt;&lt;svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M6 9l6 6 6-6&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;background:#fff;border:1px solid #E1E9E7;border-radius:22px;overflow:hidden;display:flex&quot;&gt;&lt;div style=&quot;display:contents&quot;&gt;&lt;div style=&quot;width:4px;background:#B3261E&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;flex:1;padding:16px;display:flex;flex-direction:column;gap:12px&quot;&gt;&lt;div style=&quot;display:flex;gap:12px;align-items:flex-start&quot;&gt;&lt;div style=&quot;width:30px;height:30px;border-radius:99px;background:#0B7A6E;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;flex:none&quot;&gt;3&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;Lulizol&lt;/div&gt;&lt;div style=&quot;font-size:12px;color:#52666C&quot;&gt;Incepta Pharmaceuticals Ltd.&lt;/div&gt;&lt;div style=&quot;font-size:13px;color:#52666C&quot;&gt;Generic: Luliconazole&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;align-items:center;gap:8px;background:#FBE9E7;color:#8C1D18;border-radius:12px;padding:10px 12px;font-size:12.5px;font-weight:700&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M12 3l10 18H2z&quot;/&gt;&lt;path d=&quot;M12 10v5M12 18h.01&quot;/&gt;&lt;/svg&gt;&lt;span&gt;Needs review: strength assumed 1%, confirm before dispensing&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;gap:8px&quot;&gt;&lt;div style=&quot;flex:1;border-radius:12px;padding:8px 0;text-align:center;background:#0B7A6E;color:#fff&quot;&gt;&lt;div style=&quot;font-size:10px;font-weight:600;opacity:.9&quot;&gt;Morning&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;flex:1;border-radius:12px;padding:8px 0;text-align:center;background:#EEF2F1;color:#8A9A9F&quot;&gt;&lt;div style=&quot;font-size:10px;font-weight:600;opacity:.9&quot;&gt;Noon&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;0&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;flex:1;border-radius:12px;padding:8px 0;text-align:center;background:#0B7A6E;color:#fff&quot;&gt;&lt;div style=&quot;font-size:10px;font-weight:600;opacity:.9&quot;&gt;Night&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;1&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;gap:8px;flex-wrap:wrap&quot;&gt;&lt;span style=&quot;background:#E3F3F0;color:#075E54;border-radius:10px;padding:6px 10px;font-size:12px;font-weight:700&quot;&gt;Qty: 1 tube&lt;/span&gt;&lt;span style=&quot;background:#FFF1DC;color:#8A4B00;border-radius:10px;padding:6px 10px;font-size:12px;font-weight:700&quot;&gt;After meal&lt;/span&gt;&lt;span style=&quot;background:#F1F4F3;color:#10242B;border-radius:10px;padding:6px 10px;font-size:12px;font-weight:700&quot;&gt;Form: cream&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;align-items:center;gap:6px;background:#F4F7F6;border-radius:14px;padding:12px;font-size:13px;font-weight:700;color:#52666C&quot;&gt;&lt;span style=&quot;display:flex&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 11a8 8 0 00-14-4M4 4v4h4M4 13a8 8 0 0014 4M20 20v-4h-4&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span style=&quot;flex:1&quot;&gt;4 similar brands&lt;/span&gt;&lt;span style=&quot;display:flex&quot;&gt;&lt;svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M6 9l6 6 6-6&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;position:absolute;left:0;right:0;bottom:0;background:#fff;box-shadow:0 -8px 28px rgba(16,36,43,.1);border-radius:24px 24px 0 0;padding:14px 20px 28px;display:flex;gap:10px&quot;&gt;&lt;button style=&quot;display:flex;align-items:center;justify-content:center;gap:8px;height:52px;flex:1;border-radius:16px;background:#fff;color:#10242B;border:1px solid #D5E0DE;font:600 14px &#x27;Plus Jakarta Sans&#x27;,sans-serif&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;rect x=&quot;9&quot; y=&quot;9&quot; width=&quot;11&quot; height=&quot;11&quot; rx=&quot;2&quot;/&gt;&lt;path d=&quot;M5 15V6a2 2 0 012-2h9&quot;/&gt;&lt;/svg&gt; Copy Summary&lt;/button&gt;&lt;button style=&quot;display:flex;align-items:center;justify-content:center;gap:8px;height:52px;flex:1;border-radius:16px;background:#fff;color:#10242B;border:1px solid #D5E0DE;font:600 14px &#x27;Plus Jakarta Sans&#x27;,sans-serif&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 11a8 8 0 00-14-4M4 4v4h4M4 13a8 8 0 0014 4M20 20v-4h-4&quot;/&gt;&lt;/svg&gt; Rescan&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;" title="LipiRx results screen" loading="lazy" tabindex="-1" scrolling="no"></iframe></div></div>
+  </header>
+
+  <div class="stats rv">
+    <div class="stat"><b data-n="5" data-s="+">0</b><span>years in mobile</span></div>
+    <div class="stat"><b data-n="9">0</b><span>projects at BJIT</span></div>
+    <div class="stat"><b data-n="300" data-s="+">0</b><span>coding problems solved</span></div>
+    <div class="stat"><b data-n="3">0</b><span>mobile platforms: Android, Flutter, KMP</span></div>
+  </div>
+</div>
+
+<div class="marq" aria-hidden="true"><div>
+  <span>Kotlin</span><span>Jetpack Compose</span><span>Flutter</span><span>Dart</span><span>Kotlin Multiplatform</span><span>Java</span><span>MVVM</span><span>BLoC</span><span>Riverpod</span><span>Hilt</span><span>Retrofit</span><span>Firebase</span><span>WebRTC</span><span>SQLite</span><span>Clean Architecture</span>
+  <span>Kotlin</span><span>Jetpack Compose</span><span>Flutter</span><span>Dart</span><span>Kotlin Multiplatform</span><span>Java</span><span>MVVM</span><span>BLoC</span><span>Riverpod</span><span>Hilt</span><span>Retrofit</span><span>Firebase</span><span>WebRTC</span><span>SQLite</span><span>Clean Architecture</span>
+</div></div>
+
+<section id="lipirx"><div class="wrap">
+  <div class="feature rv">
+    <div>
+      <h2>LipiRx reads handwritten prescriptions for pharmacies.</h2>
+      <p class="lead">A Kotlin Multiplatform app for retail pharmacies in Bangladesh. Point the camera at a doctor’s prescription and it fills in the details for you.</p>
+      <div class="chips"><span>Kotlin Multiplatform</span><span>Compose Multiplatform</span><span>Vision AI</span><span>Gemini</span><span>Groq</span><span>OpenAI</span><span>Ollama</span></div>
+      <a class="btn pri" href="https://github.com/FahimFoysal97/LipiRx">View on GitHub</a>
+    </div>
+    <ul>
+      <li><b>Brand names.</b> Finds each medicine written on the prescription.</li>
+      <li><b>Generic compositions.</b> Matches each brand to its active ingredient.</li>
+      <li><b>Local dosage schedules.</b> Understands the dosing notation used locally.</li>
+      <li><b>Tablet quantities.</b> Calculates how many tablets to hand over.</li>
+      <li><b>Similar brands.</b> Suggests alternative brands for each medicine.</li>
+      <li><b>Needs review flags.</b> Marks unclear items so the pharmacist confirms before dispensing.</li>
+      <li><b>Zoom and pan.</b> Inspect the original photo next to the result.</li>
+      <li><b>Your choice of AI provider.</b> Gemini, Groq, OpenAI, or any OpenAI-compatible endpoint, including a local Ollama server or a private proxy.</li>
+    </ul>
+  </div>
+
+  <div class="gallery rv">
+    <figure><div class="phone real"><div class="app"><iframe srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;LipiRx - Home&lt;/title&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;&lt;style&gt;*{box-sizing:border-box}body{margin:0;font-family:&quot;Plus Jakarta Sans&quot;,sans-serif}button{cursor:pointer}@keyframes spin{to{transform:rotate(360deg)}}@keyframes scan{0%{top:6%}100%{top:90%}}body{background:#dfe7e5;display:flex;justify-content:center;min-height:100vh}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;div style=&quot;width:390px;height:844px;box-sizing:border-box;background:#F4F7F6;color:#10242B;position:relative;overflow:hidden;display:flex;flex-direction:column;font-family:&#x27;Plus Jakarta Sans&#x27;,sans-serif&quot;&gt;&lt;div style=&quot;display:flex;align-items:center;justify-content:space-between;padding:28px 24px 0&quot;&gt;&lt;div style=&quot;display:flex;align-items:center;gap:10px&quot;&gt;&lt;div style=&quot;width:38px;height:38px;border-radius:12px;background:#0B7A6E;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center&quot;&gt;Rx&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;LipiRx&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;align-items:center;gap:6px;background:#fff;border:1px solid #D5E0DE;border-radius:99px;padding:7px 12px;font-size:12px;font-weight:600&quot;&gt;&lt;span style=&quot;width:7px;height:7px;border-radius:99px;background:#1DB36B&quot;&gt;&lt;/span&gt;Google Gemini&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;margin:28px 24px 0;height:320px;border-radius:30px;background:#E3F3F0;position:relative;display:flex;align-items:center;justify-content:center&quot;&gt;&lt;div style=&quot;position:absolute;width:34px;height:34px;border:3px solid #0B7A6E;left:22px;top:22px;border-right:0;border-bottom:0;border-radius:12px 0 0 0&quot;&gt;&lt;/div&gt;&lt;div style=&quot;position:absolute;width:34px;height:34px;border:3px solid #0B7A6E;right:22px;top:22px;border-left:0;border-bottom:0;border-radius:0 12px 0 0&quot;&gt;&lt;/div&gt;&lt;div style=&quot;position:absolute;width:34px;height:34px;border:3px solid #0B7A6E;left:22px;bottom:22px;border-right:0;border-top:0;border-radius:0 0 0 12px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;position:absolute;width:34px;height:34px;border:3px solid #0B7A6E;right:22px;bottom:22px;border-left:0;border-top:0;border-radius:0 0 12px 0&quot;&gt;&lt;/div&gt;&lt;div style=&quot;width:186px;height:240px;background:#FFFEFA;border-radius:10px;box-shadow:0 18px 40px rgba(16,36,43,.2);padding:20px;box-sizing:border-box;transform:rotate(-4deg)&quot;&gt;&lt;div style=&quot;font-weight:800;color:#0B7A6E;font-size:22px&quot;&gt;Rx&lt;/div&gt;&lt;div style=&quot;height:6px;width:82%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:64%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:74%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:50%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:78%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:58%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;padding:28px 24px 0&quot;&gt;&lt;h1 style=&quot;margin:0;font-size:30px;line-height:1.15;font-weight:800;letter-spacing:-.5px&quot;&gt;Read any prescription, instantly.&lt;/h1&gt;&lt;p style=&quot;margin:10px 0 0;font-size:15px;line-height:1.5;color:#52666C&quot;&gt;Snap or upload a handwritten prescription. Get every medicine, schedule and alternative brand in seconds.&lt;/p&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-top:auto;padding:0 24px 32px;display:flex;flex-direction:column;gap:12px&quot;&gt;&lt;button style=&quot;display:flex;align-items:center;justify-content:center;gap:10px;height:56px;border-radius:18px;background:#0B7A6E;color:#fff;font:700 16px &#x27;Plus Jakarta Sans&#x27;,sans-serif;border:0;box-shadow:0 10px 24px rgba(11,122,110,.3)&quot;&gt;&lt;svg width=&quot;22&quot; height=&quot;22&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M4 8h3l2-3h6l2 3h3v11H4z&quot;/&gt;&lt;circle cx=&quot;12&quot; cy=&quot;13&quot; r=&quot;3.5&quot;/&gt;&lt;/svg&gt; Take Prescription Photo&lt;/button&gt;&lt;button style=&quot;display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:16px;background:#fff;color:#10242B;border:1px solid #D5E0DE;font:600 14px &#x27;Plus Jakarta Sans&#x27;,sans-serif;height:56px;font-size:16px&quot;&gt;&lt;svg width=&quot;22&quot; height=&quot;22&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;rect x=&quot;3&quot; y=&quot;4&quot; width=&quot;18&quot; height=&quot;16&quot; rx=&quot;2&quot;/&gt;&lt;circle cx=&quot;9&quot; cy=&quot;10&quot; r=&quot;2&quot;/&gt;&lt;path d=&quot;M21 16l-5-5-9 9&quot;/&gt;&lt;/svg&gt; Choose from Gallery&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;" title="LipiRx home screen" loading="lazy" tabindex="-1" scrolling="no"></iframe></div></div><figcaption>Snap or upload a prescription</figcaption></figure>
+    <figure><div class="phone real"><div class="app"><iframe srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;LipiRx - Preview&lt;/title&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;&lt;style&gt;*{box-sizing:border-box}body{margin:0;font-family:&quot;Plus Jakarta Sans&quot;,sans-serif}button{cursor:pointer}@keyframes spin{to{transform:rotate(360deg)}}@keyframes scan{0%{top:6%}100%{top:90%}}body{background:#dfe7e5;display:flex;justify-content:center;min-height:100vh}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;div style=&quot;width:390px;height:844px;box-sizing:border-box;background:#F4F7F6;color:#10242B;position:relative;overflow:hidden;display:flex;flex-direction:column;font-family:&#x27;Plus Jakarta Sans&#x27;,sans-serif&quot;&gt;&lt;div style=&quot;display:flex;align-items:center;justify-content:space-between;padding:28px 24px 0&quot;&gt;&lt;div style=&quot;display:flex;align-items:center;gap:10px&quot;&gt;&lt;div style=&quot;width:38px;height:38px;border-radius:12px;background:#0B7A6E;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center&quot;&gt;Rx&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;LipiRx&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size:12px;font-weight:700;color:#0B7A6E;background:#E3F3F0;border-radius:99px;padding:7px 12px&quot;&gt;842 KB&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;padding:22px 24px 0&quot;&gt;&lt;div style=&quot;font-size:22px;font-weight:800&quot;&gt;Prescription ready&lt;/div&gt;&lt;div style=&quot;font-size:14px;color:#52666C;margin-top:4px&quot;&gt;Check the photo is sharp, then analyze.&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;margin:18px 24px 0;height:330px;border-radius:26px;background:#E9EFEE;position:relative;display:flex;align-items:center;justify-content:center&quot;&gt;&lt;div style=&quot;width:240px;height:320px;background:#FFFEFA;border-radius:10px;box-shadow:0 18px 40px rgba(16,36,43,.2);padding:20px;box-sizing:border-box;transform:rotate(0deg)&quot;&gt;&lt;div style=&quot;font-weight:800;color:#0B7A6E;font-size:22px&quot;&gt;Rx&lt;/div&gt;&lt;div style=&quot;height:6px;width:82%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:64%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:74%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:50%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:78%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:58%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:7px;background:rgba(16,36,43,.88);color:#fff;border-radius:99px;padding:9px 14px;font-size:12px;font-weight:600;white-space:nowrap&quot;&gt;&lt;svg width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;circle cx=&quot;11&quot; cy=&quot;11&quot; r=&quot;6&quot;/&gt;&lt;path d=&quot;M20 20l-4-4&quot;/&gt;&lt;/svg&gt; Tap photo to zoom &amp;amp; pan&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-top:auto;padding:0 24px 32px;display:flex;flex-direction:column;gap:12px&quot;&gt;&lt;button style=&quot;display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #D5E0DE;border-radius:16px;padding:10px 14px;font-family:inherit;text-align:left;color:#10242B&quot;&gt;&lt;span style=&quot;width:36px;height:36px;border-radius:10px;background:#E3F3F0;color:#0B7A6E;display:flex;align-items:center;justify-content:center&quot;&gt;&lt;svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span style=&quot;flex:1&quot;&gt;&lt;span style=&quot;display:block;font-size:11px;font-weight:600;color:#52666C&quot;&gt;AI model&lt;/span&gt;&lt;span style=&quot;display:block;font-size:14px;font-weight:700&quot;&gt;Google Gemini&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;display:flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:#0B7A6E&quot;&gt;Change &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M6 9l6 6 6-6&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;&lt;button style=&quot;display:flex;align-items:center;justify-content:center;gap:10px;height:56px;border-radius:18px;background:#0B7A6E;color:#fff;font:700 16px &#x27;Plus Jakarta Sans&#x27;,sans-serif;border:0;box-shadow:0 10px 24px rgba(11,122,110,.3)&quot;&gt;&lt;svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M13 2L4 14h7l-1 8 9-12h-7z&quot;/&gt;&lt;/svg&gt; Analyze Prescription&lt;/button&gt;&lt;div style=&quot;display:flex;gap:10px&quot;&gt;&lt;button style=&quot;display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:16px;background:#fff;color:#10242B;border:1px solid #D5E0DE;font:600 14px &#x27;Plus Jakarta Sans&#x27;,sans-serif;flex:1&quot;&gt;&lt;svg width=&quot;22&quot; height=&quot;22&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M4 8h3l2-3h6l2 3h3v11H4z&quot;/&gt;&lt;circle cx=&quot;12&quot; cy=&quot;13&quot; r=&quot;3.5&quot;/&gt;&lt;/svg&gt; Retake&lt;/button&gt;&lt;button style=&quot;display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:16px;background:#fff;color:#10242B;border:1px solid #D5E0DE;font:600 14px &#x27;Plus Jakarta Sans&#x27;,sans-serif;flex:1&quot;&gt;&lt;svg width=&quot;22&quot; height=&quot;22&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;rect x=&quot;3&quot; y=&quot;4&quot; width=&quot;18&quot; height=&quot;16&quot; rx=&quot;2&quot;/&gt;&lt;circle cx=&quot;9&quot; cy=&quot;10&quot; r=&quot;2&quot;/&gt;&lt;path d=&quot;M21 16l-5-5-9 9&quot;/&gt;&lt;/svg&gt; Change&lt;/button&gt;&lt;button style=&quot;display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:16px;background:#fff;color:#10242B;border:1px solid #D5E0DE;font:600 14px &#x27;Plus Jakarta Sans&#x27;,sans-serif;flex:1;color:#B3261E&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M6 6l12 12M18 6L6 18&quot;/&gt;&lt;/svg&gt; Clear&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;" title="LipiRx preview screen" loading="lazy" tabindex="-1" scrolling="no"></iframe></div></div><figcaption>Check the photo and pick the AI model</figcaption></figure>
+    <figure><div class="phone real"><div class="app"><iframe srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;LipiRx - Loading&lt;/title&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;&lt;style&gt;*{box-sizing:border-box}body{margin:0;font-family:&quot;Plus Jakarta Sans&quot;,sans-serif}button{cursor:pointer}@keyframes spin{to{transform:rotate(360deg)}}@keyframes scan{0%{top:6%}100%{top:90%}}body{background:#dfe7e5;display:flex;justify-content:center;min-height:100vh}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;div style=&quot;width:390px;height:844px;box-sizing:border-box;background:#F4F7F6;color:#10242B;position:relative;overflow:hidden;display:flex;flex-direction:column;font-family:&#x27;Plus Jakarta Sans&#x27;,sans-serif;align-items:center;justify-content:center;gap:34px&quot;&gt;&lt;div style=&quot;width:150px;height:190px;border-radius:16px;background:#fff;box-shadow:0 18px 40px rgba(16,36,43,.14);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center&quot;&gt;&lt;div style=&quot;width:120px;height:160px;background:#FFFEFA;border-radius:10px;box-shadow:0 18px 40px rgba(16,36,43,.2);padding:20px;box-sizing:border-box;transform:rotate(0deg)&quot;&gt;&lt;div style=&quot;font-weight:800;color:#0B7A6E;font-size:22px&quot;&gt;Rx&lt;/div&gt;&lt;div style=&quot;height:6px;width:82%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:64%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:74%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:50%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:78%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:6px;width:58%;background:#9FB0C8;border-radius:3px;margin-top:14px&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;position:absolute;left:0;right:0;height:3px;background:#0B7A6E;box-shadow:0 0 18px 6px rgba(11,122,110,.45);animation:scan 1.8s ease-in-out infinite alternate&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;position:relative;width:84px;height:84px&quot;&gt;&lt;svg width=&quot;84&quot; height=&quot;84&quot; viewBox=&quot;0 0 84 84&quot; aria-hidden=&quot;true&quot;&gt;&lt;circle cx=&quot;42&quot; cy=&quot;42&quot; r=&quot;36&quot; fill=&quot;none&quot; stroke=&quot;#D5E0DE&quot; stroke-width=&quot;7&quot;/&gt;&lt;circle cx=&quot;42&quot; cy=&quot;42&quot; r=&quot;36&quot; fill=&quot;none&quot; stroke=&quot;#0B7A6E&quot; stroke-width=&quot;7&quot; stroke-linecap=&quot;round&quot; stroke-dasharray=&quot;70 160&quot; style=&quot;transform-origin:42px 42px;animation:spin 1.1s linear infinite&quot;/&gt;&lt;/svg&gt;&lt;/div&gt;
+&lt;div style=&quot;text-align:center;padding:0 40px&quot;&gt;&lt;div style=&quot;font-size:20px;font-weight:800&quot;&gt;Analyzing Prescription&lt;/div&gt;&lt;div style=&quot;font-size:14px;color:#52666C;margin-top:6px&quot;&gt;using Google Gemini...&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;display:flex;flex-direction:column;gap:10px;font-size:13px;font-weight:600&quot;&gt;&lt;div style=&quot;color:#0B7A6E&quot;&gt;&amp;#10003; Reading handwriting&lt;/div&gt;&lt;div style=&quot;color:#10242B&quot;&gt;&amp;#9679; Matching brand names&lt;/div&gt;&lt;div style=&quot;color:#7C8F94&quot;&gt;&amp;#9675; Finding similar brands&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;" title="LipiRx analyzing screen" loading="lazy" tabindex="-1" scrolling="no"></iframe></div></div><figcaption>Reads the handwriting and matches brands</figcaption></figure>
+    <figure><div class="phone real"><div class="app"><iframe srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;LipiRx - Results&lt;/title&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;&lt;style&gt;*{box-sizing:border-box}body{margin:0;font-family:&quot;Plus Jakarta Sans&quot;,sans-serif}button{cursor:pointer}@keyframes spin{to{transform:rotate(360deg)}}@keyframes scan{0%{top:6%}100%{top:90%}}body{background:#dfe7e5;display:flex;justify-content:center;min-height:100vh}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;div style=&quot;width:390px;height:844px;box-sizing:border-box;background:#F4F7F6;color:#10242B;position:relative;overflow:hidden;display:flex;flex-direction:column;font-family:&#x27;Plus Jakarta Sans&#x27;,sans-serif&quot;&gt;&lt;div style=&quot;display:flex;align-items:center;gap:10px;padding:28px 24px 12px&quot;&gt;&lt;div style=&quot;width:38px;height:38px;border-radius:12px;background:#0B7A6E;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center&quot;&gt;Rx&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;LipiRx&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;padding:4px 24px 0;display:flex;flex-direction:column;gap:14px&quot;&gt;&lt;div style=&quot;display:flex;gap:8px&quot;&gt;&lt;span style=&quot;background:#E3F3F0;color:#0B7A6E;border-radius:99px;padding:7px 12px;font-size:12px;font-weight:700&quot;&gt;5 medicines&lt;/span&gt;&lt;span style=&quot;background:#FBE9E7;color:#8C1D18;border-radius:99px;padding:7px 12px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:5px&quot;&gt;&lt;svg width=&quot;13&quot; height=&quot;13&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M12 3l10 18H2z&quot;/&gt;&lt;path d=&quot;M12 10v5M12 18h.01&quot;/&gt;&lt;/svg&gt; 2 need review&lt;/span&gt;&lt;/div&gt;
+&lt;div style=&quot;background:#fff;border:1px solid #E1E9E7;border-radius:18px;padding:10px;display:flex;align-items:center;gap:12px&quot;&gt;&lt;div style=&quot;width:40px;height:50px;border-radius:8px;background:#FFFEFA;padding:6px;box-sizing:border-box;border:1px solid #E1E9E7&quot;&gt;&lt;div style=&quot;font-weight:800;color:#0B7A6E;font-size:10px&quot;&gt;Rx&lt;/div&gt;&lt;div style=&quot;height:5px;width:80%;background:#9FB0C8;border-radius:3px;margin-top:6px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:5px;width:60%;background:#9FB0C8;border-radius:3px;margin-top:6px&quot;&gt;&lt;/div&gt;&lt;div style=&quot;height:5px;width:70%;background:#9FB0C8;border-radius:3px;margin-top:6px&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;font-size:14px;font-weight:700&quot;&gt;Prescription scanned&lt;/div&gt;&lt;div style=&quot;font-size:12px;color:#52666C;display:flex;align-items:center;gap:5px;margin-top:2px&quot;&gt;&lt;svg width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;circle cx=&quot;11&quot; cy=&quot;11&quot; r=&quot;6&quot;/&gt;&lt;path d=&quot;M20 20l-4-4&quot;/&gt;&lt;/svg&gt; Tap to zoom&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;background:#fff;border:1px solid #E1E9E7;border-radius:22px;overflow:hidden;display:flex&quot;&gt;&lt;div style=&quot;display:contents&quot;&gt;&lt;/div&gt;&lt;div style=&quot;flex:1;padding:16px;display:flex;flex-direction:column;gap:12px&quot;&gt;&lt;div style=&quot;display:flex;gap:12px;align-items:flex-start&quot;&gt;&lt;div style=&quot;width:30px;height:30px;border-radius:99px;background:#0B7A6E;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;flex:none&quot;&gt;1&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;Candinil 200 mg&lt;/div&gt;&lt;div style=&quot;font-size:12px;color:#52666C&quot;&gt;Incepta Pharmaceuticals Ltd.&lt;/div&gt;&lt;div style=&quot;font-size:13px;color:#52666C&quot;&gt;Generic: Itraconazole&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;gap:8px&quot;&gt;&lt;div style=&quot;flex:1;border-radius:12px;padding:8px 0;text-align:center;background:#0B7A6E;color:#fff&quot;&gt;&lt;div style=&quot;font-size:10px;font-weight:600;opacity:.9&quot;&gt;Morning&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;flex:1;border-radius:12px;padding:8px 0;text-align:center;background:#EEF2F1;color:#8A9A9F&quot;&gt;&lt;div style=&quot;font-size:10px;font-weight:600;opacity:.9&quot;&gt;Noon&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;0&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;flex:1;border-radius:12px;padding:8px 0;text-align:center;background:#0B7A6E;color:#fff&quot;&gt;&lt;div style=&quot;font-size:10px;font-weight:600;opacity:.9&quot;&gt;Night&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;1&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;gap:8px;flex-wrap:wrap&quot;&gt;&lt;span style=&quot;background:#E3F3F0;color:#075E54;border-radius:10px;padding:6px 10px;font-size:12px;font-weight:700&quot;&gt;Qty: 1 capsule&lt;/span&gt;&lt;span style=&quot;background:#FFF1DC;color:#8A4B00;border-radius:10px;padding:6px 10px;font-size:12px;font-weight:700&quot;&gt;After meal&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;align-items:center;gap:6px;background:#F4F7F6;border-radius:14px;padding:12px;font-size:13px;font-weight:700;color:#52666C&quot;&gt;&lt;span style=&quot;display:flex&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 11a8 8 0 00-14-4M4 4v4h4M4 13a8 8 0 0014 4M20 20v-4h-4&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span style=&quot;flex:1&quot;&gt;4 similar brands&lt;/span&gt;&lt;span style=&quot;display:flex&quot;&gt;&lt;svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M6 9l6 6 6-6&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;background:#fff;border:1px solid #E1E9E7;border-radius:22px;overflow:hidden;display:flex&quot;&gt;&lt;div style=&quot;display:contents&quot;&gt;&lt;div style=&quot;width:4px;background:#B3261E&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;flex:1;padding:16px;display:flex;flex-direction:column;gap:12px&quot;&gt;&lt;div style=&quot;display:flex;gap:12px;align-items:flex-start&quot;&gt;&lt;div style=&quot;width:30px;height:30px;border-radius:99px;background:#0B7A6E;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;flex:none&quot;&gt;3&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;Lulizol&lt;/div&gt;&lt;div style=&quot;font-size:12px;color:#52666C&quot;&gt;Incepta Pharmaceuticals Ltd.&lt;/div&gt;&lt;div style=&quot;font-size:13px;color:#52666C&quot;&gt;Generic: Luliconazole&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;align-items:center;gap:8px;background:#FBE9E7;color:#8C1D18;border-radius:12px;padding:10px 12px;font-size:12.5px;font-weight:700&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M12 3l10 18H2z&quot;/&gt;&lt;path d=&quot;M12 10v5M12 18h.01&quot;/&gt;&lt;/svg&gt;&lt;span&gt;Needs review: strength assumed 1%, confirm before dispensing&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;gap:8px&quot;&gt;&lt;div style=&quot;flex:1;border-radius:12px;padding:8px 0;text-align:center;background:#0B7A6E;color:#fff&quot;&gt;&lt;div style=&quot;font-size:10px;font-weight:600;opacity:.9&quot;&gt;Morning&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;flex:1;border-radius:12px;padding:8px 0;text-align:center;background:#EEF2F1;color:#8A9A9F&quot;&gt;&lt;div style=&quot;font-size:10px;font-weight:600;opacity:.9&quot;&gt;Noon&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;0&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;flex:1;border-radius:12px;padding:8px 0;text-align:center;background:#0B7A6E;color:#fff&quot;&gt;&lt;div style=&quot;font-size:10px;font-weight:600;opacity:.9&quot;&gt;Night&lt;/div&gt;&lt;div style=&quot;font-size:18px;font-weight:800&quot;&gt;1&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;gap:8px;flex-wrap:wrap&quot;&gt;&lt;span style=&quot;background:#E3F3F0;color:#075E54;border-radius:10px;padding:6px 10px;font-size:12px;font-weight:700&quot;&gt;Qty: 1 tube&lt;/span&gt;&lt;span style=&quot;background:#FFF1DC;color:#8A4B00;border-radius:10px;padding:6px 10px;font-size:12px;font-weight:700&quot;&gt;After meal&lt;/span&gt;&lt;span style=&quot;background:#F1F4F3;color:#10242B;border-radius:10px;padding:6px 10px;font-size:12px;font-weight:700&quot;&gt;Form: cream&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;display:flex;align-items:center;gap:6px;background:#F4F7F6;border-radius:14px;padding:12px;font-size:13px;font-weight:700;color:#52666C&quot;&gt;&lt;span style=&quot;display:flex&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 11a8 8 0 00-14-4M4 4v4h4M4 13a8 8 0 0014 4M20 20v-4h-4&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span style=&quot;flex:1&quot;&gt;4 similar brands&lt;/span&gt;&lt;span style=&quot;display:flex&quot;&gt;&lt;svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M6 9l6 6 6-6&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;position:absolute;left:0;right:0;bottom:0;background:#fff;box-shadow:0 -8px 28px rgba(16,36,43,.1);border-radius:24px 24px 0 0;padding:14px 20px 28px;display:flex;gap:10px&quot;&gt;&lt;button style=&quot;display:flex;align-items:center;justify-content:center;gap:8px;height:52px;flex:1;border-radius:16px;background:#fff;color:#10242B;border:1px solid #D5E0DE;font:600 14px &#x27;Plus Jakarta Sans&#x27;,sans-serif&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;rect x=&quot;9&quot; y=&quot;9&quot; width=&quot;11&quot; height=&quot;11&quot; rx=&quot;2&quot;/&gt;&lt;path d=&quot;M5 15V6a2 2 0 012-2h9&quot;/&gt;&lt;/svg&gt; Copy Summary&lt;/button&gt;&lt;button style=&quot;display:flex;align-items:center;justify-content:center;gap:8px;height:52px;flex:1;border-radius:16px;background:#fff;color:#10242B;border:1px solid #D5E0DE;font:600 14px &#x27;Plus Jakarta Sans&#x27;,sans-serif&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 11a8 8 0 00-14-4M4 4v4h4M4 13a8 8 0 0014 4M20 20v-4h-4&quot;/&gt;&lt;/svg&gt; Rescan&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;" title="LipiRx results screen" loading="lazy" tabindex="-1" scrolling="no"></iframe></div></div><figcaption>Medicines, generics, schedules and similar brands</figcaption></figure>
+  </div>
+
+  <div class="flow rv">
+    <div><b>1. Scan</b><span>Take a photo of the handwritten prescription.</span></div>
+    <div><b>2. Read</b><span>Vision AI reads it with the provider you chose.</span></div>
+    <div><b>3. Review</b><span>Check brands, generics, dosage schedules and tablet counts.</span></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap rv">
+  <h2>Experience</h2>
+  <div class="job">
+    <h3>Senior Software Engineer, BJIT Limited</h3>
+    <p class="when">Dhaka, November 2021 to October 2026</p>
+    <p class="legend"><span class="tag">Mobile</span> my core work &nbsp; <span class="tag asg">Assignment</span> given by the company outside mobile</p>
+    <div class="proj"><time>Jul – Oct 2026</time><div><h4>Mendix proof of concept <span class="tag asg">Assignment</span></h4><p>Learned Mendix and developed a confidential project for the client.</p><div class="tech">Mendix low-code</div></div></div>
+    <div class="proj"><time>Mar – Jun 2026</time><div><h4>Fully autonomous app development platform <span class="tag asg">Assignment</span></h4><p>Learned ReactJS and built a code generation platform, one part of a fully autonomous app development platform. Picked up AI basics along the way.</p><div class="tech">ReactJS</div></div></div>
+    <div class="proj"><time>Mar 2025 – Feb 2026</time><div><h4>AI Traveler Diary (Jasmy Labo) <span class="tag">Mobile</span></h4><p>Tracks locations during a trip and collects photos to create a travel diary, written with the help of AI. Covered analysis, design, development, testing and debugging.</p><div class="tech">Flutter, Dart, Java, XML, Swift</div></div></div>
+    <div class="proj"><time>Jun 2024 – Feb 2025</time><div><h4>MR-APP for CWASA <span class="tag">Mobile</span></h4><p>Led the team on an app for water meter inspectors to post readings, print bills and report meter problems.</p><div class="tech">Kotlin, MVVM, Retrofit, Hilt-Dagger, Jetpack Compose, Firebase Messaging, POS thermal print</div></div></div>
+    <div class="proj"><time>May 2024</time><div><h4>Desa_VR <span class="tag asg">Assignment</span></h4><p>Led the team building a menu for a virtual museum. A one month project.</p><div class="tech">Unreal Engine</div></div></div>
+    <div class="proj"><time>Sep 2023 – Apr 2024</time><div><h4>Training_4IR <span class="tag asg">Assignment</span></h4><p>Learned VR development through small projects, and led the team.</p><div class="tech">Unity, C#, Unreal Engine</div></div></div>
+    <div class="proj"><time>Jul – Sep 2022 and May – Aug 2023</time><div><h4>Sharjah University Type 2 Diabetes PoC <span class="tag">Mobile</span></h4><p>Led the team on a health and fitness app for research on the daily activity of children who may get type 2 diabetes.</p><div class="tech">Kotlin, MVVM, Retrofit, Hilt-Dagger, Jetpack Compose, Firebase Messaging</div></div></div>
+    <div class="proj"><time>Oct 2022 – Apr 2023</time><div><h4>JSDE Wallet and Door Lock (Jasmy Labo) <span class="tag">Mobile</span></h4><p>Secure data exchange over WebRTC, plus a remote door lock and unlock system.</p><div class="tech">Java, Kotlin, XML, Retrofit, WebRTC, SQLite</div></div></div>
+    <div class="proj"><time>Nov 2021 – Jun 2022</time><div><h4>Pocketalk device <span class="tag">Mobile</span></h4><p>Software for a voice translation device: the user speaks in one language and the device translates it into their preferred one.</p><div class="tech">Java, Kotlin, XML, Retrofit, SQLite, translate engines</div></div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap rv">
+  <h2>Skills</h2>
+  <p class="lead">Mobile is my core. The rest I picked up as projects required.</p>
+  <div class="skills">
+    <div><h3>Mobile</h3><p>Kotlin, Java, Dart, Android, Jetpack Compose, Flutter, Kotlin Multiplatform, Compose Multiplatform, basic iOS and Swift</p></div>
+    <div><h3>Architecture and data</h3><p>MVVM, BLoC, Riverpod, Clean Architecture, Hilt, Retrofit, RoomDB, SQLite, MySQL, Firebase, WebRTC</p></div>
+    <div><h3>Also worked with</h3><p>Python, TensorFlow, C#, C++, ReactJS, Mendix, Unity, Unreal Engine, Git, Jira, Redmine</p></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap rv">
+  <h2>Personal projects</h2>
+  <p class="lead">Code is public on GitHub.</p>
+  <div class="list">
+    <a href="https://github.com/FahimFoysal97/LipiRx"><h3>LipiRx</h3><p>Scans handwritten prescriptions with Vision AI for pharmacies.</p><span>KMP, Compose</span></a>
+    <a href="https://github.com/FahimFoysal97/MovieApp"><h3>Movie App</h3><p>Nov 2021. Android sample app using modern best practices and a free movie API.</p><span>Kotlin, Hilt</span></a>
+    <a href="https://github.com/FahimFoysal97/ManipulatedImageDetector"><h3>Manipulated Image Detector</h3><p>2019 to 2020. Android app that checks whether an image was manipulated, using a neural network.</p><span>Java, Python</span></a>
+    <a href="https://github.com/FahimFoysal97/AutomaticAttendance"><h3>Automatic Attendance</h3><p>2019. Takes student attendance automatically over WiFi Direct.</p><span>Java, WiFi Direct</span></a>
+    <a href="https://github.com/FahimFoysal97/WeatherApp"><h3>Weather App</h3><p>2018. Current weather and the next 7 days.</p><span>Java, REST API</span></a>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap rv">
+  <h2>Let’s build something together.</h2>
+  <p class="lead">I’m looking for Android, Flutter or Kotlin Multiplatform roles, including team lead positions.</p>
+  <div class="btns">
+    <!-- Resume button, enable later with your online CV link:
+        <a class="btn res" href="YOUR_CV_LINK" target="_blank" rel="noopener">View CV</a> -->
+    <a class="btn pri" href="mailto:fahimfoysal97@gmail.com">Email me</a>
+    <a class="btn" href="https://www.linkedin.com/in/mdfahimfoysal/">Message on LinkedIn</a>
+  </div>
+</div></section>
+
+<footer>© 2026 Fahim Foysal</footer>
+
+<script>
+// typing roles
+(function(){
+  var el=document.getElementById('role'),r=['Senior Mobile Engineer','Android and Jetpack Compose','Flutter and Dart','Kotlin Multiplatform'],i=0,j=0,del=false;
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=r[0];return}
+  (function tick(){
+    var w=r[i];el.textContent=w.slice(0,j);
+    if(!del&&j===w.length){del=true;return setTimeout(tick,1600)}
+    if(del&&j===0){del=false;i=(i+1)%r.length}
+    j+=del?-1:1;setTimeout(tick,del?35:70);
+  })();
+})();
+// scroll progress
+addEventListener('scroll',function(){
+  var h=document.documentElement;
+  document.getElementById('bar').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+},{passive:true});
+// reveal and count up
+var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
+  e.target.querySelectorAll('[data-n]').forEach(function(b){
+    var n=+b.dataset.n,s=b.dataset.s||'',t=0;
+    var id=setInterval(function(){t+=Math.max(1,Math.ceil(n/40));if(t>=n){t=n;clearInterval(id)}b.textContent=t+s},30);
+  });
+})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+function fitApps(){document.querySelectorAll('.app').forEach(function(a){a.firstElementChild.style.transform='scale('+(a.clientWidth/390)+')'})}
+fitApps();addEventListener('resize',fitApps);addEventListener('load',fitApps);
+// spotlight on cards
+document.querySelectorAll('.stat,.skills>div,.list a').forEach(function(c){
+  c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--x',(e.clientX-r.left)+'px');c.style.setProperty('--y',(e.clientY-r.top)+'px')});
+});
+// 3D tilt on gallery phones
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches&&matchMedia('(hover:hover)').matches){
+  document.querySelectorAll('.gallery .phone').forEach(function(p){
+    p.addEventListener('pointermove',function(e){var r=p.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;p.style.transform='perspective(800px) rotateY('+(x*16)+'deg) rotateX('+(-y*16)+'deg) translateY(-6px)'});
+    p.addEventListener('pointerleave',function(){p.style.transform=''});
+  });
+}
+</script>
+</body>
+</html>
