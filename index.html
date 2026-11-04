@@ -491,11 +491,11 @@
       fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
         .then(function(r){
           return r.json().catch(function(){return {}}).then(function(d){
-            if(!r.ok||d.success===false||d.success==='false')throw new Error(d.message||'failed');
+            if(!r.ok||d.success===false||d.success==='false')throw new Error(d.message||('HTTP '+r.status));
           });
         })
         .then(function(){f.reset();st.style.color='var(--teal)';st.textContent='Thanks, your message was sent.'})
-        .catch(function(){st.style.color='#ff8a8a';st.textContent='Could not send. Please email fahimfoysal97@gmail.com directly.'})
+        .catch(function(err){console.error('Contact form error:',err);st.style.color='#ff8a8a';st.textContent='Could not send: '+(err&&err.message?err.message:'network error')+'. You can email fahimfoysal97@gmail.com directly.'})
         .then(function(){b.disabled=false;b.textContent='Send message'});
     });
   })();
