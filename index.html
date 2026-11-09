@@ -971,6 +971,25 @@ var hpn=G(-3.0,DT,-3.3,3.05);cy(hpn,.22,.25,.05,0x1b1f1e,0,.025,0);cy(hpn,.035,.
 var hb2=new T.Mesh(new T.TorusGeometry(.36,.055,10,32,Math.PI),M(0xe9eeeb,{roughness:.4}));hb2.position.y=.47;hb2.castShadow=true;hpn.add(hb2);
 [-1,1].forEach(function(sd){cy(hpn,.16,.16,.13,0x64dd9f,sd*.36,.47,0,{emissive:0x2ee59d,emissiveIntensity:.25}).rotation.z=Math.PI/2;cy(hpn,.14,.14,.05,0x1b1f1e,sd*.285,.47,0).rotation.z=Math.PI/2});
 
+/* ARC REACTOR (Iron Man): copper coil ring, chrome rims, glowing core on a tilted stand; its light pulses and spills onto the desk */
+function paintArc(spin){return function(x,w,h){var c=w/2,j,a;x.clearRect(0,0,w,h);x.shadowColor='#8ef0ff';x.shadowBlur=22;x.strokeStyle='#eaffff';
+ if(!spin){var g=x.createRadialGradient(c,c,0,c,c,c);g.addColorStop(0,'#d8fbff');g.addColorStop(.3,'#7fe3ff');g.addColorStop(.72,'#0b5d78');g.addColorStop(1,'#06303f');x.fillStyle=g;x.beginPath();x.arc(c,c,c-1,0,6.283);x.fill();
+  x.lineWidth=10;x.beginPath();x.arc(c,c,c*.86,0,6.283);x.stroke();x.fillStyle='#ffffff';x.beginPath();x.arc(c,c,c*.18,0,6.283);x.fill()}
+ else{x.lineWidth=9;x.beginPath();for(j=0;j<3;j++){a=-Math.PI/2+j*2.0944;x[j?'lineTo':'moveTo'](c+Math.cos(a)*c*.56,c+Math.sin(a)*c*.56)}x.closePath();x.stroke();
+  x.lineWidth=7;for(j=0;j<24;j++){x.beginPath();x.arc(c,c,c*.7,j*.2618,j*.2618+.13);x.stroke()}}}}
+var arc=G(0,DT,-2.92,3.3),arcS=new T.Group(),rcg=new T.Group(),arcSpin=new T.Group();arcS.scale.setScalar(.42);arc.add(arcS);
+cy(arcS,.5,.56,.05,0x141b19,0,.025,0,{metalness:.7,roughness:.4});cy(arcS,.045,.045,.22,0x2b3733,0,.15,.16,{metalness:.6,roughness:.4});
+rcg.position.set(0,.66,0);rcg.rotation.x=-.5;arcS.add(rcg);
+cy(rcg,.48,.48,.1,0x111816,0,0,0,{metalness:.8,roughness:.35}).rotation.x=Math.PI/2;
+var rim=new T.Mesh(new T.TorusGeometry(.44,.035,12,56),M(0xdfe7e3,{metalness:.9,roughness:.2}));rim.position.z=.045;rim.castShadow=true;rcg.add(rim);
+var rim2=new T.Mesh(new T.TorusGeometry(.238,.016,10,48),M(0xdfe7e3,{metalness:.9,roughness:.2}));rim2.position.z=.07;rcg.add(rim2);
+for(k=0;k<12;k++){var sg=new T.Group();sg.rotation.z=k*Math.PI/6;rcg.add(sg);bx(sg,.14,.112,.07,0xb87333,.31,0,.04,{metalness:.85,roughness:.32})}
+scr2(rcg,.47,.47,tex(512,512,paintArc(false)),0,0,.066);
+arcSpin.position.z=.072;rcg.add(arcSpin);scr2(arcSpin,.47,.47,tex(512,512,paintArc(true)),0,0,0);
+var arcHalo=new T.Sprite(new T.SpriteMaterial({map:tex(128,128,function(x,w,h){var g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,'rgba(150,240,255,.9)');g.addColorStop(.35,'rgba(70,200,255,.35)');g.addColorStop(1,'rgba(0,150,255,0)');x.fillStyle=g;x.fillRect(0,0,w,h)}),transparent:true,depthWrite:false,blending:T.AdditiveBlending,opacity:.7}));
+arcHalo.scale.set(1.4,1.4,1);arcHalo.position.z=.12;rcg.add(arcHalo);
+var arcL=new T.PointLight(0x7fe9ff,1.6,2.8);arcL.position.set(0,0,.35);rcg.add(arcL);
+
 var hr=new Date().getHours();if(hr>=19||hr<6){hemi.intensity=.4;sun.intensity=.3;sun.color.set(0x9ab4ff);fill.intensity=1.4}
 var stage=document.getElementById('desk'),hs=[].slice.call(stage.querySelectorAll('.hs')),AN={exp:[2.6,3.05,-3.0],build:[0,3.75,-3.4],lipi:[-1.6,3.2,-2.55],skills:[3.1,5.3,-4.0],edu:[-3.1,5.3,-4.0],proj:[2.15,2.75,-2.0],contact:[2.15,2.75,-2.0]};
 hs.forEach(function(h){h._v=new T.Vector3().fromArray(AN[h.dataset.k])});
@@ -987,6 +1006,7 @@ function frame(now){
  items.forEach(function(it){var p=Math.min(1,Math.max(0,(tb-it.d)/.8));if(p<=0){it.g.visible=false;return}it.g.visible=true;var e=Math.max(.001,eb(p));if(it.ys)it.g.scale.set(1,e,1);else{it.g.scale.setScalar(e);it.g.position.y=it.y+(1-p)*(1-p)*4}});
  var kk=Math.floor(Math.max(0,tb-2)*45),ns=rm?FL:Math.min(FL,kk%(FL+110));if(ns!==shown){shown=ns;paintIDE(t1.userData.x,1152,384);t1.needsUpdate=true}
   ping.scale.setScalar(1+Math.sin(tb*3)*.2);
+ var ap=.5+.5*Math.sin(tb*2.2);arcL.intensity=1.2+ap*.7;arcHalo.material.opacity=.6+ap*.3;arcSpin.rotation.z=-tb*.5;
  var ah=rm?0:Math.floor(tb/1.8)%4;if(ah!==archHi){archHi=ah;paintArch(archT.userData.x,480,300);archT.needsUpdate=true}
   ch.rotation.y=Math.sin(tb*.5)*.25;bt.rotation.z=Math.sin(tb*2)*.06;lv.forEach(function(l,j){l.rotation.z=Math.cos(j)*.5+Math.sin(tb*1.2+j)*.05});
  var hh=(tb*.1)%1;rgbM.forEach(function(m,j){m.color.setHSL((hh+j*.015)%1,.85,.55)});rgbL.color.setHSL(hh,.85,.5);rgbFans.forEach(function(f){f.rotation.x=tb*5});
