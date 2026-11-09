@@ -1,134 +1,75 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:053d2e,100:0f9d6b&height=200&section=header&text=Fahim%20Foysal&fontSize=52&fontColor=ffffff&fontAlignY=42&desc=Senior%20Software%20Engineer&descSize=20&descAlignY=64" alt="Fahim Foysal banner" width="100%"/>
+<img src="assets/header.svg" alt="Fahim Foysal, Senior Software Engineer" width="100%"/>
 
-<a href="https://git.io/typing-svg"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1500&color=2EE59D&center=true&vCenter=true&width=620&height=40&lines=Mobile+apps+for+Android+and+iOS;Flutter+and+Dart;Kotlin+Multiplatform;Kotlin+and+Jetpack+Compose;5+years+at+BJIT">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1500&color=0B6E4F&center=true&vCenter=true&width=620&height=40&lines=Mobile+apps+for+Android+and+iOS;Flutter+and+Dart;Kotlin+Multiplatform;Kotlin+and+Jetpack+Compose;5+years+at+BJIT" alt="Typing animation"/>
-</picture></a>
+<img src="assets/status.svg" alt="Bangladesh · 5 years at BJIT · Open to work · Android + iOS" width="100%"/>
 
-<br>
-
-<img src="https://img.shields.io/badge/📍_Bangladesh-0d1117?style=for-the-badge&labelColor=0d1117&color=0b6e4f"/>
-<img src="https://img.shields.io/badge/💼_5_Years_at_BJIT-0d1117?style=for-the-badge&labelColor=0d1117&color=087f5b"/>
-<img src="https://img.shields.io/badge/🟢_Open_to_Work-0d1117?style=for-the-badge&labelColor=0d1117&color=1a7f37"/>
+<a href="https://fahimfoysalportfolio.vercel.app/"><img src="assets/btn-portfolio.svg" alt="Portfolio" height="56"/></a>&nbsp;
+<a href="https://www.linkedin.com/in/mdfahimfoysal/"><img src="assets/btn-linkedin.svg" alt="LinkedIn" height="56"/></a>&nbsp;
+<a href="mailto:fahimfoysal97@gmail.com"><img src="assets/btn-email.svg" alt="Email" height="56"/></a>
 
 <br><br>
 
-<a href="https://fahimfoysalportfolio.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-Visit_my_site-0b6e4f?style=for-the-badge&logo=vercel&logoColor=white&labelColor=064e3b"/></a>
-<a href="https://www.linkedin.com/in/mdfahimfoysal/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="mailto:fahimfoysal97@gmail.com"><img src="https://img.shields.io/badge/Email-Get_in_touch-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-
-<br><br>
-
-<img src="https://komarev.com/ghpvc/?username=FahimFoysal97&label=Profile%20Views&color=0b6e4f&style=flat-square"/>
+<img src="https://komarev.com/ghpvc/?username=FahimFoysal97&label=Profile%20Views&color=0f9d6b&style=flat-square&labelColor=053d2e"/>
 
 </div>
 
----
+<br>
 
-## 👨‍💻 About Me
+<img src="assets/h-about.svg" alt="01 About Me" width="100%"/>
 
 I'm a **Senior Software Engineer** with **5 years at BJIT**, mainly building **mobile apps for Android and iOS with Flutter and Kotlin Multiplatform**, plus native Android with **Kotlin and Jetpack Compose**. My work covers real-time communication, hardware and device integration, push messaging, health tech, utility apps and AI-assisted features. I lead teams from analysis and design through testing and debugging.
 
 Most of my career has been in mobile. When my company needed it, I also took on assignments in low-code (Mendix), web (ReactJS) and VR (Unity and Unreal), which broadened my range as an engineer.
 
-### ⚡ Quick Snapshot
+<img src="assets/metrics.svg" alt="5+ years, 9 projects, 4 teams led, 2 platforms" width="100%"/>
+
+<br>
 
 | | |
 |---|---|
 | 🔎 **Status** | Open to mobile roles across Android and iOS: Flutter, KMP, Kotlin, and team-lead positions |
 | 📱 **Core focus** | Flutter and Dart, Kotlin Multiplatform, native Android (Kotlin, Jetpack Compose) |
-| 👥 **Leadership** | Led the team on 4 of 9 projects at BJIT, from analysis to delivery |
 | 🏗 **I care about** | Clean Architecture, MVVM, BLoC, Riverpod |
 | 🌐 **Portfolio** | [fahimfoysalportfolio.vercel.app](https://fahimfoysalportfolio.vercel.app/) |
 | 📫 **Reach me** | fahimfoysal97@gmail.com · [LinkedIn](https://www.linkedin.com/in/mdfahimfoysal/) |
 
----
+<br>
 
-## 🛠 Tech Stack
-
-### 📱 Core (Mobile)
+<img src="assets/h-stack.svg" alt="02 Tech Stack" width="100%"/>
 
 <div align="center">
 
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![Kotlin Multiplatform](https://img.shields.io/badge/Kotlin%20Multiplatform-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
-![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
-![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white)
-![Compose Multiplatform](https://img.shields.io/badge/Compose%20Multiplatform-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white)
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+<img src="assets/stack-orbit.svg" alt="Core mobile stack: Flutter, Dart, Kotlin Multiplatform, Kotlin, Jetpack Compose, Android, iOS, Java, Swift, Firebase, SQLite, MySQL" width="100%"/>
+
+<img src="assets/stack-marquee.svg" alt="Architecture and libraries: Clean Architecture, MVVM, BLoC, Riverpod, Hilt/Dagger, Retrofit, Room, Firebase Messaging, WebRTC. Also: Python, C#, C++, TensorFlow, ReactJS, Mendix, Unity, Unreal Engine, Git, GitHub, Jira" width="100%"/>
 
 </div>
 
-**Architecture & libraries:** MVVM · BLoC · Riverpod · Clean Architecture · Hilt/Dagger · Retrofit · RoomDB · Firebase Messaging · WebRTC
+<br>
 
-### 🧰 Also worked with
-
-<div align="center">
-
-![Swift](https://img.shields.io/badge/Swift%20(basic)-F05138?style=for-the-badge&logo=swift&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![React](https://img.shields.io/badge/React%20(project)-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Mendix](https://img.shields.io/badge/Mendix%20(project)-0CABF9?style=for-the-badge&logoColor=white)
-![Unity](https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white)
-![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-0E1128?style=for-the-badge&logo=unrealengine&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![Jira](https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white)
-
-</div>
-
----
-
-## 💼 Experience
+<img src="assets/h-exp.svg" alt="03 Experience" width="100%"/>
 
 ### Senior Software Engineer · BJIT Limited, Dhaka
 *Nov 2021 – Oct 2026*
 
-📱 = mobile project (my core work) &nbsp;·&nbsp; 🔄 = assignment given by the company outside mobile
+`📱 mobile project (my core work)` &nbsp; `🔄 assignment given by the company outside mobile` &nbsp; `👑 I led the team`
 
-**🔄 Mendix proof of concept** *(Jul – Oct 2026)* · `Mendix`
-Learned Mendix and developed a confidential project for the client.
+| | Period | Project | What I did | Stack |
+|:-:|---|---|---|---|
+| 🔄 | Jul – Oct 2026 | **Mendix proof of concept** | Learned Mendix and developed a confidential project for the client. | `Mendix` |
+| 🔄 | Mar – Jun 2026 | **Fully autonomous app development platform** | Learned ReactJS and built a code generation platform, one part of a fully autonomous app development platform. Picked up AI basics along the way. | `ReactJS` |
+| 📱 | Mar 2025 – Feb 2026 | **AI Traveler Diary** (Jasmy Labo) | Tracks locations during a trip and collects photos to create a travel diary, written with the help of AI. Covered analysis, design, development, testing and debugging. | `Flutter` `Dart` `Java` `XML` `Swift` |
+| 📱👑 | Jun 2024 – Feb 2025 | **MR-APP for CWASA** | Led the team on an app for water meter inspectors to post readings, print bills and report meter problems. | `Kotlin` `MVVM` `Retrofit` `Hilt-Dagger` `Jetpack Compose` `Firebase Messaging` `POS thermal print` |
+| 🔄👑 | May 2024 | **Desa_VR** | Led the team building a menu for a virtual museum. A one month project. | `Unreal Engine` |
+| 🔄👑 | Sep 2023 – Apr 2024 | **Training_4IR** | Learned VR development through small projects, and led the team. | `Unity` `C#` `Unreal Engine` |
+| 📱👑 | Jul – Sep 2022 and May – Aug 2023 | **Sharjah University Type 2 Diabetes PoC** | Led the team on a health and fitness app for research on the daily activity of children who may get type 2 diabetes. | `Kotlin` `MVVM` `Retrofit` `Hilt-Dagger` `Jetpack Compose` `Firebase Messaging` |
+| 📱 | Oct 2022 – Apr 2023 | **JSDE Wallet and Door Lock** (Jasmy Labo) | Secure data exchange over WebRTC, plus a remote door lock and unlock system. | `Java` `Kotlin` `XML` `Retrofit` `WebRTC` `SQLite` |
+| 📱 | Nov 2021 – Jun 2022 | **Pocketalk device** | Software for a voice translation device: the user speaks in one language and the device translates it into their preferred one. | `Java` `Kotlin` `XML` `Retrofit` `SQLite` `translate engines` |
 
-**🔄 Fully autonomous app development platform** *(Mar – Jun 2026)* · `ReactJS`
-Learned ReactJS and built a code generation platform, one part of a fully autonomous app development platform. Picked up AI basics along the way.
+<br>
 
-**📱 AI Traveler Diary (Jasmy Labo)** *(Mar 2025 – Feb 2026)* · `Flutter` `Dart` `Java` `XML` `Swift`
-Tracks locations during a trip and collects photos to create a travel diary, written with the help of AI. Covered analysis, design, development, testing and debugging.
-
-**📱 MR-APP for CWASA** *(Jun 2024 – Feb 2025)* · `Kotlin` `MVVM` `Retrofit` `Hilt-Dagger` `Jetpack Compose` `Firebase Messaging` `POS thermal print`
-**Led the team** on an app for water meter inspectors to post readings, print bills and report meter problems.
-
-**🔄 Desa_VR** *(May 2024)* · `Unreal Engine`
-**Led the team** building a menu for a virtual museum. A one month project.
-
-**🔄 Training_4IR** *(Sep 2023 – Apr 2024)* · `Unity` `C#` `Unreal Engine`
-Learned VR development through small projects, and **led the team**.
-
-**📱 Sharjah University Type 2 Diabetes PoC** *(Jul – Sep 2022 and May – Aug 2023)* · `Kotlin` `MVVM` `Retrofit` `Hilt-Dagger` `Jetpack Compose` `Firebase Messaging`
-**Led the team** on a health and fitness app for research on the daily activity of children who may get type 2 diabetes.
-
-**📱 JSDE Wallet and Door Lock (Jasmy Labo)** *(Oct 2022 – Apr 2023)* · `Java` `Kotlin` `XML` `Retrofit` `WebRTC` `SQLite`
-Secure data exchange over WebRTC, plus a remote door lock and unlock system.
-
-**📱 Pocketalk device** *(Nov 2021 – Jun 2022)* · `Java` `Kotlin` `XML` `Retrofit` `SQLite` `translate engines`
-Software for a voice translation device: the user speaks in one language and the device translates it into their preferred one.
-
----
-
-## 🚀 Personal Projects
-
-Side projects I built to learn and experiment.
+<img src="assets/h-projects.svg" alt="04 Personal Projects" width="100%"/>
 
 | Project | What it does | Tech | Link |
 |---|---|---|---|
@@ -138,49 +79,51 @@ Side projects I built to learn and experiment.
 | 📋 **Automatic Attendance** | 2019. Takes student attendance automatically over WiFi Direct | Java, XML, WiFi Direct | [View repo](https://github.com/FahimFoysal97/AutomaticAttendance) |
 | ⛅ **Weather App** | 2018. Current weather and the next 7 days | Java, XML, Weather API | [View repo](https://github.com/FahimFoysal97/WeatherApp) |
 
----
+<br>
 
-## 📊 GitHub Stats
+<img src="assets/h-stats.svg" alt="05 GitHub Stats" width="100%"/>
 
 <div align="center">
 
-![Stats](https://github-readme-stats.vercel.app/api?username=FahimFoysal97&show_icons=true&hide_border=true&bg_color=0d1117&title_color=2EE59D&icon_color=2EE59D&text_color=D6E6DD)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=FahimFoysal97&layout=compact&hide_border=true&bg_color=0d1117&title_color=2EE59D&text_color=D6E6DD)
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=FahimFoysal97&show_icons=true&hide_border=true&bg_color=0d1117&title_color=2EE59D&icon_color=2EE59D&text_color=D6E6DD&border_radius=16"/>
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=FahimFoysal97&layout=compact&hide_border=true&bg_color=0d1117&title_color=2EE59D&text_color=D6E6DD&border_radius=16"/>
 
-![Streak](https://streak-stats.demolab.com?user=FahimFoysal97&hide_border=true&background=0d1117&ring=2EE59D&fire=2EE59D&currStreakLabel=2EE59D&currStreakNum=D6E6DD&sideNums=D6E6DD&sideLabels=9AA8C7&dates=9AA8C7)
+<img src="https://streak-stats.demolab.com?user=FahimFoysal97&hide_border=true&background=0d1117&ring=2EE59D&fire=2EE59D&currStreakLabel=2EE59D&currStreakNum=D6E6DD&sideNums=D6E6DD&sideLabels=9AA8C7&dates=9AA8C7&border_radius=16"/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=FahimFoysal97&bg_color=0d1117&color=2EE59D&line=0f9d6b&point=ffffff&area=true&hide_border=true&radius=16" width="100%"/>
 
 </div>
 
----
+<br>
 
-## 🏆 Achievements
+<img src="assets/h-awards.svg" alt="06 Achievements" width="100%"/>
+
+<img src="assets/achievements.svg" alt="4th place CoU CSE Fiesta 2015, 300+ problems solved, gold badges on HackerRank" width="100%"/>
 
 - 🥇 **4th place**: CoU CSE Fiesta 2015, Inter University Programming Contest
 - 💻 **300+ problems solved** on [LeetCode](https://leetcode.com/fahimfoysal97/), [BeeCrowd](https://www.beecrowd.com.br/judge/en/profile/59519) and [HackerRank](https://www.hackerrank.com/profile/Fahim_Foysal)
 - ⭐ **Gold badges** in Java and Problem Solving on HackerRank
 
----
+<br>
 
-## 🎓 Education & Training
+<img src="assets/h-edu.svg" alt="07 Education and Training" width="100%"/>
 
 - **BSc (Engg.) in Computer Science & Engineering**: Comilla University, 2015–2020
 - **BJIT Academy:** Android Development, Project Management, Japanese Business Culture, Business Finance & Communication, Workplace Etiquette
 - **Also:** iOS development training · VR/AR with Unity and Unreal (basic, [Unity Learn profile](https://learn.unity.com/u/64fef836edbc2a0407e3f640)) · Course: Master Machine Learning for Data Science & AI, Beginner to Advanced
 
----
+<br>
 
-## 🤝 Let's Connect
+<img src="assets/h-connect.svg" alt="08 Let's Connect" width="100%"/>
 
 <div align="center">
 
-### Looking for a mobile engineer for Android and iOS? Let's build something great.
-
-<a href="https://fahimfoysalportfolio.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-Visit_my_site-0b6e4f?style=for-the-badge&logo=vercel&logoColor=white&labelColor=064e3b"/></a>
-<a href="https://www.linkedin.com/in/mdfahimfoysal/"><img src="https://img.shields.io/badge/LinkedIn-Message_me-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="mailto:fahimfoysal97@gmail.com"><img src="https://img.shields.io/badge/Email-fahimfoysal97@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://fahimfoysalportfolio.vercel.app/"><img src="assets/btn-portfolio.svg" alt="Portfolio" height="56"/></a>&nbsp;
+<a href="https://www.linkedin.com/in/mdfahimfoysal/"><img src="assets/btn-linkedin.svg" alt="LinkedIn" height="56"/></a>&nbsp;
+<a href="mailto:fahimfoysal97@gmail.com"><img src="assets/btn-email.svg" alt="Email" height="56"/></a>
 
 <br><br>
 
-<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:0f9d6b,100:053d2e&height=90&section=footer" width="100%"/>
+<img src="assets/footer.svg" alt="Let's build something great" width="100%"/>
 
 </div>
