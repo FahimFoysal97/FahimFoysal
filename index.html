@@ -85,8 +85,8 @@ nav a.on{color:var(--md-primary)}
 nav a.on::after{content:"";position:absolute;left:12px;right:12px;bottom:0;height:3px;border-radius:3px 3px 0 0;background:var(--md-primary)}
 
 /* Hero */
-.hero{min-height:calc(100vh - 64px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:32px;align-items:center;padding:40px 0 80px}
-.hero>div{max-width:640px;background:var(--md-surface-container);border-radius:var(--shape-xl);padding:clamp(24px,4vw,40px);box-shadow:var(--elev-2)}
+.hero{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:start;padding:40px 0 56px}
+.hero>div{max-width:none;background:var(--md-surface-container);border-radius:var(--shape-xl);padding:clamp(24px,4vw,40px);box-shadow:var(--elev-2)}
 .who{display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap}
 .avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 4px var(--md-primary-container)}
 .status{display:inline-flex;gap:8px;align-items:center;height:32px;padding:0 12px;border-radius:var(--shape-sm);background:var(--md-secondary-container);color:var(--md-on-secondary-container);font:500 14px/20px var(--font-body);letter-spacing:.1px}
@@ -249,9 +249,10 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
 #explore .journey-caption{font:400 14px/20px var(--font-body);letter-spacing:.25px;color:var(--md-on-surface-variant);border-top:1px solid var(--md-outline-variant);padding-top:16px;margin-top:16px}
 
 /* Hero desk: contained 3D scene (SVG fallback) with tappable hotspots */
-.desk{position:relative;width:100%;aspect-ratio:5/4;border-radius:var(--shape-xl);overflow:hidden;background:radial-gradient(120% 90% at 60% 15%,#17382d 0%,var(--md-surface-container) 72%);box-shadow:var(--elev-2);touch-action:pan-y;isolation:isolate}
+.desk{position:relative;width:100%;aspect-ratio:16/9;border-radius:var(--shape-xl);overflow:hidden;background:radial-gradient(120% 90% at 60% 15%,#17382d 0%,var(--md-surface-container) 72%);box-shadow:var(--elev-2);touch-action:pan-y;isolation:isolate}
 .desk canvas,.desk .desk-svg{position:absolute;inset:0;width:100%;height:100%;display:block}
 .desk canvas{opacity:0;transition:opacity .6s var(--ease-std)}
+.desk:not(.gl){aspect-ratio:5/4;max-width:640px;margin:0 auto}
 .desk.gl canvas{opacity:1}
 .desk.gl .desk-svg{display:none}
 .hs{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);width:44px;height:44px;display:grid;place-items:center;border-radius:50%;text-decoration:none;color:var(--md-on-surface);z-index:2;transition:opacity .4s var(--ease-std)}
