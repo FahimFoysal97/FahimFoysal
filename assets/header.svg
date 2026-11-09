@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-label="Fahim Foysal, Senior Software Engineer"><title>Fahim Foysal, Senior Software Engineer</title><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#04100b"/><stop offset="1" stop-color="#0b2a1f"/></linearGradient>
+<linearGradient id="acc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2EE59D"/><stop offset="1" stop-color="#5eead4"/></linearGradient>
+<linearGradient id="accv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2EE59D"/><stop offset="1" stop-color="#0f9d6b"/></linearGradient>
+<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#2EE59D" fill-opacity=".16"/></pattern>
+</defs>
+<clipPath id="hc"><rect width="1200" height="340" rx="26"/></clipPath>
+<radialGradient id="glow1"><stop offset="0" stop-color="#2EE59D" stop-opacity=".35"/><stop offset="1" stop-color="#2EE59D" stop-opacity="0"/></radialGradient>
+<radialGradient id="glow2"><stop offset="0" stop-color="#5eead4" stop-opacity=".22"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+<linearGradient id="nameg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#2EE59D"/><stop offset="1" stop-color="#5eead4"/></linearGradient>
+<linearGradient id="waveg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2EE59D" stop-opacity=".35"/><stop offset="1" stop-color="#2EE59D" stop-opacity="0"/></linearGradient>
+<g clip-path="url(#hc)">
+ <rect width="1200" height="340" fill="url(#bg)"/>
+ <rect width="1200" height="340" fill="url(#dots)"/>
+ <circle r="260" cx="220" cy="120" fill="url(#glow1)"><animate attributeName="cx" values="220;420;220" dur="14s" repeatCount="indefinite"/></circle>
+ <circle r="300" cx="1000" cy="260" fill="url(#glow2)"><animate attributeName="cx" values="1000;820;1000" dur="16s" repeatCount="indefinite"/></circle>
+ <g transform="translate(0,288)"><g><animateTransform attributeName="transform" type="translate" from="0 0" to="300 0" dur="9s" repeatCount="indefinite"/><path d="M -300 0 q 75.0 -16 150.0 0 t 150.0 0 q 75.0 -16 150.0 0 t 150.0 0 q 75.0 -16 150.0 0 t 150.0 0 q 75.0 -16 150.0 0 t 150.0 0 q 75.0 -16 150.0 0 t 150.0 0 q 75.0 -16 150.0 0 t 150.0 0 L 1500 140 L -300 140 Z" fill="url(#waveg)"/></g></g>
+ <g transform="translate(0,282)"><g><animateTransform attributeName="transform" type="translate" from="300 0" to="0 0" dur="14s" repeatCount="indefinite"/><path d="M -300 0 q 75.0 -16 150.0 0 t 150.0 0 q 75.0 -16 150.0 0 t 150.0 0 q 75.0 -16 150.0 0 t 150.0 0 q 75.0 -16 150.0 0 t 150.0 0 q 75.0 -16 150.0 0 t 150.0 0 q 75.0 -16 150.0 0 t 150.0 0 L 1500 140 L -300 140 Z" fill="url(#waveg)" fill-opacity=".7"/></g></g>
+ 
+<g transform="translate(1090,62) rotate(-9) scale(0.86)" opacity="0.55">
+ <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -12;0 0" dur="6s" begin="0.8s" repeatCount="indefinite"/>
+  <rect x="-72" y="0" width="144" height="260" rx="28" fill="#06130e" stroke="#2EE59D" stroke-opacity=".65" stroke-width="2"/>
+  <rect x="-22" y="10" width="44" height="8" rx="4" fill="#12382a"/>
+  <rect x="-56" y="36" width="112" height="64" rx="14" fill="url(#acc)" fill-opacity=".9"/>
+  <circle cx="-34" cy="60" r="10" fill="#04100b" fill-opacity=".55"/>
+  <rect x="-18" y="52" width="60" height="7" rx="3.5" fill="#04100b" fill-opacity=".55"/>
+  <rect x="-18" y="66" width="40" height="7" rx="3.5" fill="#04100b" fill-opacity=".35"/>
+  <rect x="-56" y="112" width="52" height="52" rx="12" fill="#0e2a20" stroke="#2EE59D" stroke-opacity=".25"/>
+  <rect x="4" y="112" width="52" height="52" rx="12" fill="#0e2a20" stroke="#2EE59D" stroke-opacity=".25"/>
+  <rect x="-56" y="176" width="112" height="14" rx="7" fill="#0e2a20"/>
+  <rect x="-56" y="176" width="70" height="14" rx="7" fill="#2EE59D" fill-opacity=".7"/>
+  <rect x="-56" y="200" width="112" height="14" rx="7" fill="#0e2a20"/>
+  <rect x="-56" y="200" width="44" height="14" rx="7" fill="#5eead4" fill-opacity=".55"/>
+  <rect x="-20" y="244" width="40" height="5" rx="2.5" fill="#12382a"/>
+ </g>
+</g>
+ 
+<g transform="translate(965,40) rotate(7) scale(1)" opacity="1">
+ <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -12;0 0" dur="5s" begin="0s" repeatCount="indefinite"/>
+  <rect x="-72" y="0" width="144" height="260" rx="28" fill="#06130e" stroke="#2EE59D" stroke-opacity=".65" stroke-width="2"/>
+  <rect x="-22" y="10" width="44" height="8" rx="4" fill="#12382a"/>
+  <rect x="-56" y="36" width="112" height="64" rx="14" fill="url(#acc)" fill-opacity=".9"/>
+  <circle cx="-34" cy="60" r="10" fill="#04100b" fill-opacity=".55"/>
+  <rect x="-18" y="52" width="60" height="7" rx="3.5" fill="#04100b" fill-opacity=".55"/>
+  <rect x="-18" y="66" width="40" height="7" rx="3.5" fill="#04100b" fill-opacity=".35"/>
+  <rect x="-56" y="112" width="52" height="52" rx="12" fill="#0e2a20" stroke="#2EE59D" stroke-opacity=".25"/>
+  <rect x="4" y="112" width="52" height="52" rx="12" fill="#0e2a20" stroke="#2EE59D" stroke-opacity=".25"/>
+  <rect x="-56" y="176" width="112" height="14" rx="7" fill="#0e2a20"/>
+  <rect x="-56" y="176" width="70" height="14" rx="7" fill="#2EE59D" fill-opacity=".7"/>
+  <rect x="-56" y="200" width="112" height="14" rx="7" fill="#0e2a20"/>
+  <rect x="-56" y="200" width="44" height="14" rx="7" fill="#5eead4" fill-opacity=".55"/>
+  <rect x="-20" y="244" width="40" height="5" rx="2.5" fill="#12382a"/>
+ </g>
+</g>
+ <g transform="translate(790,96)"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 8;0 0" dur="4.5s" begin="0s" repeatCount="indefinite"/><g><rect x="-47.8" y="-16.0" width="95.5" height="32" rx="16.0" fill="#071a13" stroke="#54C5F8" stroke-opacity=".8"/><circle cx="-31.8" cy="0" r="4.5" fill="#54C5F8"/><text x="-19.8" y="4.7" font-family="'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" fill="#D6E6DD">Flutter</text></g></g></g>
+ <g transform="translate(806,232)"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 8;0 0" dur="5.5s" begin="1s" repeatCount="indefinite"/><g><rect x="-43.8" y="-16.0" width="87.6" height="32" rx="16.0" fill="#071a13" stroke="#9B7BFF" stroke-opacity=".8"/><circle cx="-27.8" cy="0" r="4.5" fill="#9B7BFF"/><text x="-15.8" y="4.7" font-family="'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" fill="#D6E6DD">Kotlin</text></g></g></g>
+ <text x="72" y="84" font-family="'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" fill="#7fa396">~/fahim $ <tspan fill="#D6E6DD">whoami</tspan></text>
+ <rect x="188" y="69" width="10" height="19" fill="#2EE59D"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.5;.5;1" dur="1s" repeatCount="indefinite"/></rect>
+ <text x="68" y="172" font-family="'Inter','Segoe UI',system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,sans-serif" font-size="76" font-weight="800" fill="url(#nameg)" letter-spacing="-1.5">Fahim Foysal</text>
+ <text x="72" y="232" font-family="'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="24" fill="#2EE59D" opacity="1">Senior Software Engineer<animate attributeName="opacity" values="1;1;0;0" keyTimes="0.000;0.303;0.333;1.000" dur="12s" repeatCount="indefinite"/></text><text x="72" y="232" font-family="'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="24" fill="#2EE59D" opacity="0">Mobile apps for Android + iOS<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0.000;0.333;0.363;0.637;0.667;1.000" dur="12s" repeatCount="indefinite"/></text><text x="72" y="232" font-family="'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="24" fill="#2EE59D" opacity="0">Flutter · KMP · Kotlin + Compose<animate attributeName="opacity" values="0;0;1;1" keyTimes="0.000;0.667;0.697;1.000" dur="12s" repeatCount="indefinite"/></text>
+ <g transform="translate(45.6,0)"><rect x="26.4" y="271.0" width="91.2" height="28" rx="14.0" fill="#0e2a20" stroke="#54C5F8" stroke-opacity=".45"/><circle cx="42.4" cy="285" r="4.5" fill="#54C5F8"/><text x="54.4" y="289.3" font-family="'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#D6E6DD">Flutter</text></g><g transform="translate(93.2,0)"><rect x="82.0" y="271.0" width="186.4" height="28" rx="14.0" fill="#0e2a20" stroke="#9B7BFF" stroke-opacity=".45"/><circle cx="98.0" cy="285" r="4.5" fill="#9B7BFF"/><text x="110.0" y="289.3" font-family="'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#D6E6DD">Kotlin Multiplatform</text></g><g transform="translate(74.9,0)"><rect x="298.7" y="271.0" width="149.8" height="28" rx="14.0" fill="#0e2a20" stroke="#4285F4" stroke-opacity=".45"/><circle cx="314.7" cy="285" r="4.5" fill="#4285F4"/><text x="326.7" y="289.3" font-family="'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#D6E6DD">Jetpack Compose</text></g><g transform="translate(85.9,0)"><rect x="449.6" y="271.0" width="171.8" height="28" rx="14.0" fill="#0e2a20" stroke="#2EE59D" stroke-opacity=".45"/><circle cx="465.6" cy="285" r="4.5" fill="#2EE59D"/><text x="477.6" y="289.3" font-family="'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#D6E6DD">Clean Architecture</text></g>
+ <rect x="1" y="1" width="1198" height="338" rx="25" fill="none" stroke="#2EE59D" stroke-opacity=".35"/>
+</g></svg>

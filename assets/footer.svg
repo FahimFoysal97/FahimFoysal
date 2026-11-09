@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img" aria-label="Let&#x27;s build something great"><title>Let&#x27;s build something great</title><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#04100b"/><stop offset="1" stop-color="#0b2a1f"/></linearGradient>
+<linearGradient id="acc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2EE59D"/><stop offset="1" stop-color="#5eead4"/></linearGradient>
+<linearGradient id="accv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2EE59D"/><stop offset="1" stop-color="#0f9d6b"/></linearGradient>
+<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#2EE59D" fill-opacity=".16"/></pattern>
+</defs>
+<clipPath id="fc"><rect width="1200" height="240" rx="26"/></clipPath>
+<linearGradient id="fw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2EE59D" stop-opacity=".5"/><stop offset="1" stop-color="#0f9d6b" stop-opacity=".05"/></linearGradient>
+<linearGradient id="ft" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#2EE59D"/><stop offset="1" stop-color="#5eead4"/></linearGradient>
+<g clip-path="url(#fc)">
+<rect width="1200" height="240" fill="url(#bg)"/><rect width="1200" height="240" fill="url(#dots)"/>
+<g transform="translate(0,170)"><g><animateTransform attributeName="transform" type="translate" from="0 0" to="300 0" dur="10s" repeatCount="indefinite"/><path d="M -300 0 q 75.0 -18 150.0 0 t 150.0 0 q 75.0 -18 150.0 0 t 150.0 0 q 75.0 -18 150.0 0 t 150.0 0 q 75.0 -18 150.0 0 t 150.0 0 q 75.0 -18 150.0 0 t 150.0 0 q 75.0 -18 150.0 0 t 150.0 0 L 1500 200 L -300 200 Z" fill="url(#fw)"/></g></g>
+<g transform="translate(0,188)"><g><animateTransform attributeName="transform" type="translate" from="300 0" to="0 0" dur="15s" repeatCount="indefinite"/><path d="M -300 0 q 75.0 -18 150.0 0 t 150.0 0 q 75.0 -18 150.0 0 t 150.0 0 q 75.0 -18 150.0 0 t 150.0 0 q 75.0 -18 150.0 0 t 150.0 0 q 75.0 -18 150.0 0 t 150.0 0 q 75.0 -18 150.0 0 t 150.0 0 L 1500 200 L -300 200 Z" fill="url(#fw)" fill-opacity=".7"/></g></g>
+<text x="600.0" y="84" text-anchor="middle" font-family="'Inter','Segoe UI',system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,sans-serif" font-size="44" font-weight="800" fill="url(#ft)">Let's build something great.</text>
+<text x="600.0" y="120" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" fill="#D6E6DD">open to mobile roles · Android · iOS · Flutter · KMP · team lead</text>
+<circle cx="410.0" cy="152" r="5" fill="#2EE59D"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
+<text x="424.0" y="157" font-family="'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="#2EE59D">available now · fahimfoysal97@gmail.com</text>
+<rect x="1" y="1" width="1198" height="238" rx="25" fill="none" stroke="#2EE59D" stroke-opacity=".35"/>
+</g></svg>
