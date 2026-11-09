@@ -847,7 +847,7 @@ bx(kb,.6,.035,.092,0xcfd9d3,0,.07,.22);
 var mo=G(1.15,DT,-2.4,2.1);mo.rotation.y=-.15;sp(mo,.17,0xdfe7e2,0,.06,0,1,.5,1.5);bx(mo,.012,.006,.16,0x9aa8a2,0,.118,-.09);cy(mo,.022,.022,.05,0x2c3d37,0,.115,-.11);
 
 /* MUG */
-var mg=G(-2.55,DT,-2.55,2.7),steam=[];cy(mg,.28,.28,.02,0x1b2823,0,.01,0);cy(mg,.17,.15,.3,0xf4f7f6,0,.17,0);var hd=new T.Mesh(new T.TorusGeometry(.09,.025,8,14),M(0xf4f7f6));hd.position.set(.2,.17,0);mg.add(hd);cy(mg,.14,.14,.02,0x3b1f0e,0,.31,0);bx(mg,.16,.06,.005,0x2ee59d,0,.2,.165);
+var mg=G(-2.55,DT,-2.55,2.7),steam=[];cy(mg,.28,.28,.02,0x1b2823,0,.01,0);cy(mg,.17,.15,.3,0xf4f7f6,0,.17,0);var hd=new T.Mesh(new T.TorusGeometry(.09,.025,8,14),M(0xf4f7f6));hd.position.set(-.2,.17,0);mg.add(hd);cy(mg,.14,.14,.012,0x3b1f0e,0,.326,0);bx(mg,.16,.06,.005,0x2ee59d,0,.2,.165);
 /* soft wispy smoke: billboarded puffs with a cloudy texture, rising, swaying, growing and fading */
 var smokeTex=[0,1,2].map(function(v){return tex(128,128,function(x,w,h){var sd=v*7+3;function rnd(){sd=(sd*9301+49297)%233280;return sd/233280}
  for(var b=0;b<9;b++){var cx=w/2+(rnd()-.5)*46,cy2=h/2+(rnd()-.5)*46,r=18+rnd()*26,g=x.createRadialGradient(cx,cy2,0,cx,cy2,r);g.addColorStop(0,'rgba(255,255,255,.55)');g.addColorStop(.6,'rgba(235,245,240,.18)');g.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=g;x.fillRect(0,0,w,h)}})});
