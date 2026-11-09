@@ -908,13 +908,50 @@ var lkp=new T.Mesh(new T.PlaneGeometry(1.1,.5),new T.MeshBasicMaterial({map:tex(
 rbh(lap,.44,.24,.004,.03,0x98a49f,0,.038,.32,al);
 var lh=new T.Group();lh.position.set(0,.04,-.43);lh.rotation.x=-.3;lap.add(lh);rbx(lh,1.3,.86,.016,.04,0xaeb9b4,0,.44,0,al);scr(lh,1.2,.74,archT,0,.44,.03);
 
-/* PC tower under the desk */
-var twr=G(-2.3,0,-3.2,2.0);bx(twr,.75,1.7,1.3,0x151d1a,0,.88,0);bx(twr,.73,1.68,.03,0x1d2a25,0,.88,.66);
-for(k=0;k<9;k++)bx(twr,.45,.025,.02,0x0a100d,0,.4+k*.09,.68);
-cy(twr,.07,.07,.02,0x2c3d37,0,1.5,.68).rotation.x=Math.PI/2;
-var twg=new T.Mesh(new T.PlaneGeometry(1.15,1.5),new T.MeshStandardMaterial({color:0x0a1813,roughness:.3,metalness:.2}));twg.rotation.y=Math.PI/2;twg.position.set(.378,.88,0);twr.add(twg);
-[.55,1.25].forEach(function(fy){var f0=new T.Mesh(new T.TorusGeometry(.22,.025,8,28),M(0x3a5249));f0.rotation.y=Math.PI/2;f0.position.set(.39,fy,.25);twr.add(f0);cy(twr,.05,.05,.03,0x3a5249,.39,fy,.25).rotation.z=Math.PI/2});
-bx(twr,.04,.2,.9,0x2c3d37,.39,.85,-.2);bx(twr,.1,.04,.14,0x111111,-.25,.02,.5);bx(twr,.1,.04,.14,0x111111,.25,.02,.5);bx(twr,.1,.04,.14,0x111111,-.25,.02,-.5);bx(twr,.1,.04,.14,0x111111,.25,.02,-.5);
+/* GAMING PC tower under the desk: RGB fans, tempered glass side, GPU, RAM, AIO pump, RGB strips and a colour-cycling glow */
+var rgbM=[],rgbFans=[],rgbL;
+function rgbMat(){var m=new T.MeshBasicMaterial({color:0x2ee59d,toneMapped:false});rgbM.push(m);return m}
+function rgbBox(p,w,h,d,x,y,z){var m=new T.Mesh(new T.BoxGeometry(w,h,d),rgbMat());m.position.set(x,y,z);p.add(m);return m}
+var twr=G(-2.55,0,-3.2,2.0);twr.rotation.y=-.5;
+bx(twr,.03,1.7,1.3,0x0d1311,-.36,.88,0);bx(twr,.75,1.7,.03,0x0d1311,0,.88,-.635);
+bx(twr,.75,.03,1.3,0x0d1311,0,1.725,0).castShadow=false;bx(twr,.75,.03,1.3,0x0d1311,0,.05,0);
+bx(twr,.68,.22,1.2,0x080c0b,0,.17,0);
+/* front: mesh panel, dark slats and a glowing RGB edge on both sides */
+bx(twr,.73,1.68,.03,0x131b18,0,.88,.66).castShadow=false;
+for(k=0;k<14;k++)bx(twr,.5,.02,.02,0x050807,0,.18+k*.11,.68);
+rgbBox(twr,.025,1.55,.02,-.33,.88,.685);rgbBox(twr,.025,1.55,.02,.33,.88,.685);
+/* power button with RGB ring */
+var pbr=new T.Mesh(new T.TorusGeometry(.06,.014,8,24),rgbMat());pbr.position.set(0,1.58,.685);twr.add(pbr);
+cy(twr,.035,.035,.02,0x050807,0,1.58,.68).rotation.x=Math.PI/2;
+/* inside: motherboard on the far wall, visible through the glass */
+bx(twr,.03,1.5,1.15,0x0a110e,-.3,.88,0);
+bx(twr,.01,1.46,1.1,0x12201a,-.28,.88,0);
+/* AIO pump head with RGB ring and tubes to a top radiator */
+cy(twr,.13,.13,.07,0x1a2420,-.22,1.3,-.3).rotation.z=Math.PI/2;
+var pr=new T.Mesh(new T.TorusGeometry(.1,.012,8,24),rgbMat());pr.rotation.y=Math.PI/2;pr.position.set(-.185,1.3,-.3);twr.add(pr);
+tubeAt(twr,[[-.2,1.4,-.3],[-.1,1.55,-.2],[0,1.62,0],[0,1.65,.2]],.025,0x0a0f0d);
+tubeAt(twr,[[-.2,1.22,-.35],[-.05,1.45,-.4],[.1,1.6,-.25],[.1,1.65,.1]],.025,0x0a0f0d);
+/* RAM sticks with RGB tops */
+[-.5,-.4,-.3].forEach(function(rz){bx(twr,.1,.4,.025,0x1a2420,-.2,1.12,rz-.12);rgbBox(twr,.1,.025,.03,-.2,1.33,rz-.12)});
+/* graphics card: big slab with RGB strip, backplate and a power cable */
+bx(twr,.3,.16,.8,0x2a3a34,-.12,.72,-.15);bx(twr,.3,.02,.8,0x4a665c,-.12,.8,-.15);
+rgbBox(twr,.014,.04,.74,.04,.72,-.15);
+[-.35,-.1,.15].forEach(function(gz){cy(twr,.09,.09,.02,0x050807,-.12,.64,gz-.05)});
+bx(twr,.02,.1,.1,0x2b2f2e,.0,.9,.34);
+/* three RGB case fans on the front edge, seen through the glass; blades spin */
+[.52,.92,1.32].forEach(function(fy){
+ var ring=new T.Mesh(new T.TorusGeometry(.21,.022,8,28),rgbMat());ring.rotation.y=Math.PI/2;ring.position.set(.3,fy,.4);twr.add(ring);
+ var fan=new T.Group();fan.position.set(.3,fy,.4);twr.add(fan);
+ for(var b=0;b<3;b++){var bl=bx(fan,.012,.38,.07,0x1a2420,0,0,0);bl.rotation.x=b*Math.PI/3}
+ cy(fan,.06,.06,.03,0x050807,0,0,0).rotation.z=Math.PI/2;
+ var hub=new T.Mesh(new T.TorusGeometry(.04,.01,6,16),rgbMat());hub.rotation.y=Math.PI/2;hub.position.set(.016,0,0);fan.add(hub);
+ rgbFans.push(fan)});
+/* tempered glass side panel with a thin RGB frame */
+var twg=new T.Mesh(new T.PlaneGeometry(1.2,1.6),new T.MeshStandardMaterial({color:0x0a1813,roughness:.12,metalness:.4,transparent:true,opacity:.1,depthWrite:false}));twg.rotation.y=Math.PI/2;twg.position.set(.385,.88,0);twr.add(twg);
+rgbBox(twr,.014,.02,1.22,.39,1.69,0);rgbBox(twr,.014,.02,1.22,.39,.07,0);
+/* RGB underglow and a light that cycles colour with the fans */
+rgbL=new T.PointLight(0x2ee59d,.9,3.4);rgbL.position.set(.1,.9,.3);twr.add(rgbL);
+bx(twr,.1,.04,.14,0x111111,-.25,.02,.5);bx(twr,.1,.04,.14,0x111111,.25,.02,.5);bx(twr,.1,.04,.14,0x111111,-.25,.02,-.5);bx(twr,.1,.04,.14,0x111111,.25,.02,-.5);
 
 /* multiplug and wall socket */
 var mp=G(-1.0,.06,-3.9,2.0);rbh(mp,1.1,.28,.1,.04,0xe9eeeb,0,.05,0);for(k=0;k<5;k++)bx(mp,.14,.012,.1,0x2b2f2e,-.4+k*.2,.108,0);bx(mp,.07,.02,.06,0xe44857,.5,.12,.0);
@@ -952,6 +989,7 @@ function frame(now){
   ping.scale.setScalar(1+Math.sin(tb*3)*.2);
  var ah=rm?0:Math.floor(tb/1.8)%4;if(ah!==archHi){archHi=ah;paintArch(archT.userData.x,480,300);archT.needsUpdate=true}
   ch.rotation.y=Math.sin(tb*.5)*.25;bt.rotation.z=Math.sin(tb*2)*.06;lv.forEach(function(l,j){l.rotation.z=Math.cos(j)*.5+Math.sin(tb*1.2+j)*.05});
+ var hh=(tb*.1)%1;rgbM.forEach(function(m,j){m.color.setHSL((hh+j*.015)%1,.85,.55)});rgbL.color.setHSL(hh,.85,.5);rgbFans.forEach(function(f){f.rotation.x=tb*5});
  steam.forEach(function(s,j){var q=(tb*.22+j/steam.length)%1,sw=q*(.1+.05*Math.sin(j*2.3));
  s.position.set(Math.sin(tb*1.1+j*1.9+q*5)*sw+q*.05,.34+q*1.25,Math.cos(tb*.9+j*1.3+q*4)*sw);
  s.material.opacity=.42*Math.min(q*7,1)*Math.pow(1-q,1.4);s.material.rotation=j*1.3+q*.9;var sc=.14+q*.62;s.scale.set(sc,sc,1)});
