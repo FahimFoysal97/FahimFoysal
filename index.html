@@ -848,7 +848,11 @@ var mo=G(1.15,DT,-2.4,2.1);mo.rotation.y=-.15;sp(mo,.17,0xdfe7e2,0,.06,0,1,.5,1.
 
 /* MUG */
 var mg=G(-2.55,DT,-2.55,2.7),steam=[];cy(mg,.28,.28,.02,0x1b2823,0,.01,0);cy(mg,.17,.15,.3,0xf4f7f6,0,.17,0);var hd=new T.Mesh(new T.TorusGeometry(.09,.025,8,14),M(0xf4f7f6));hd.position.set(.2,.17,0);mg.add(hd);cy(mg,.14,.14,.02,0x3b1f0e,0,.31,0);bx(mg,.16,.06,.005,0x2ee59d,0,.2,.165);
-for(k=0;k<3;k++){var s=sp(mg,.05,0xffffff,0,.42,0);s.material.transparent=true;steam.push(s)}
+/* soft wispy smoke: billboarded puffs with a cloudy texture, rising, swaying, growing and fading */
+var smokeTex=[0,1,2].map(function(v){return tex(128,128,function(x,w,h){var sd=v*7+3;function rnd(){sd=(sd*9301+49297)%233280;return sd/233280}
+ for(var b=0;b<9;b++){var cx=w/2+(rnd()-.5)*46,cy2=h/2+(rnd()-.5)*46,r=18+rnd()*26,g=x.createRadialGradient(cx,cy2,0,cx,cy2,r);g.addColorStop(0,'rgba(255,255,255,.55)');g.addColorStop(.6,'rgba(235,245,240,.18)');g.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=g;x.fillRect(0,0,w,h)}})});
+var SN=18;
+for(k=0;k<SN;k++){var smk=new T.Sprite(new T.SpriteMaterial({map:smokeTex[k%3],transparent:true,depthWrite:false,opacity:0,color:0xf2fbf6}));smk.position.set(0,.34,0);mg.add(smk);steam.push(smk)}
 
 /* PHONE ON STAND (projects) */
 var ph=G(-1.6,DT,-2.55,2.8);ph.rotation.y=.5;rbh(ph,.85,.55,.05,.06,0x24342e,0,.025,0);bx(ph,.1,.45,.04,0x24342e,0,.28,-.2).rotation.x=-.25;
@@ -948,7 +952,9 @@ function frame(now){
   ping.scale.setScalar(1+Math.sin(tb*3)*.2);
  var ah=rm?0:Math.floor(tb/1.8)%4;if(ah!==archHi){archHi=ah;paintArch(archT.userData.x,480,300);archT.needsUpdate=true}
   ch.rotation.y=Math.sin(tb*.5)*.25;bt.rotation.z=Math.sin(tb*2)*.06;lv.forEach(function(l,j){l.rotation.z=Math.cos(j)*.5+Math.sin(tb*1.2+j)*.05});
- steam.forEach(function(s,j){var q=(tb*.4+j/3)%1;s.position.y=.4+q*.6;s.material.opacity=.5*(1-q);s.scale.setScalar(.6+q)});
+ steam.forEach(function(s,j){var q=(tb*.22+j/steam.length)%1,sw=q*(.1+.05*Math.sin(j*2.3));
+ s.position.set(Math.sin(tb*1.1+j*1.9+q*5)*sw+q*.05,.34+q*1.25,Math.cos(tb*.9+j*1.3+q*4)*sw);
+ s.material.opacity=.42*Math.min(q*7,1)*Math.pow(1-q,1.4);s.material.rotation=j*1.3+q*.9;var sc=.14+q*.62;s.scale.set(sc,sc,1)});
  var nr=C.aspect<1.15,a=.55+sx*.45+(rm?0:Math.sin(tb*.25)*.08),rad=nr?8.8:9;
  TG.set(nr?.5:.4,nr?3.1:3,-2.8);C.position.set(Math.sin(a)*rad,6.2+sy*.9,Math.cos(a)*rad);C.lookAt(TG);C.updateMatrixWorld(true);
  if(!ready&&tb>1.9){ready=true;stage.classList.add('ready')}
