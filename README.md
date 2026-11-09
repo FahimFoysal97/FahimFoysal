@@ -1,24 +1,27 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:0f9d6b,100:2ee59d&height=200&section=header&text=Fahim%20Foysal&fontSize=52&fontColor=ffffff&fontAlignY=42&desc=Senior%20Software%20Engineer&descSize=20&descAlignY=64" alt="Fahim Foysal banner" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:053d2e,100:0f9d6b&height=200&section=header&text=Fahim%20Foysal&fontSize=52&fontColor=ffffff&fontAlignY=42&desc=Senior%20Software%20Engineer&descSize=20&descAlignY=64" alt="Fahim Foysal banner" width="100%"/>
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1500&color=2EE59D&center=true&vCenter=true&width=620&height=40&lines=Mobile+apps+for+Android+and+iOS;Flutter+and+Dart;Kotlin+Multiplatform;Kotlin+and+Jetpack+Compose;5+years+at+BJIT" alt="Typing animation"/></a>
+<a href="https://git.io/typing-svg"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1500&color=2EE59D&center=true&vCenter=true&width=620&height=40&lines=Mobile+apps+for+Android+and+iOS;Flutter+and+Dart;Kotlin+Multiplatform;Kotlin+and+Jetpack+Compose;5+years+at+BJIT">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1500&color=0B6E4F&center=true&vCenter=true&width=620&height=40&lines=Mobile+apps+for+Android+and+iOS;Flutter+and+Dart;Kotlin+Multiplatform;Kotlin+and+Jetpack+Compose;5+years+at+BJIT" alt="Typing animation"/>
+</picture></a>
 
 <br>
 
-<img src="https://img.shields.io/badge/📍_Bangladesh-0d1117?style=for-the-badge&labelColor=0d1117&color=0f9d6b"/>
-<img src="https://img.shields.io/badge/💼_5_Years_at_BJIT-0d1117?style=for-the-badge&labelColor=0d1117&color=1fb978"/>
-<img src="https://img.shields.io/badge/🟢_Open_to_Work-0d1117?style=for-the-badge&labelColor=0d1117&color=2ea043"/>
+<img src="https://img.shields.io/badge/📍_Bangladesh-0d1117?style=for-the-badge&labelColor=0d1117&color=0b6e4f"/>
+<img src="https://img.shields.io/badge/💼_5_Years_at_BJIT-0d1117?style=for-the-badge&labelColor=0d1117&color=087f5b"/>
+<img src="https://img.shields.io/badge/🟢_Open_to_Work-0d1117?style=for-the-badge&labelColor=0d1117&color=1a7f37"/>
 
 <br><br>
 
-<a href="https://fahimfoysalportfolio.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-Visit_my_site-2EE59D?style=for-the-badge&logo=vercel&logoColor=070b18&labelColor=2EE59D"/></a>
+<a href="https://fahimfoysalportfolio.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-Visit_my_site-0b6e4f?style=for-the-badge&logo=vercel&logoColor=white&labelColor=064e3b"/></a>
 <a href="https://www.linkedin.com/in/mdfahimfoysal/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
 <a href="mailto:fahimfoysal97@gmail.com"><img src="https://img.shields.io/badge/Email-Get_in_touch-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 
 <br><br>
 
-<img src="https://komarev.com/ghpvc/?username=FahimFoysal97&label=Profile%20Views&color=0f9d6b&style=flat-square"/>
+<img src="https://komarev.com/ghpvc/?username=FahimFoysal97&label=Profile%20Views&color=0b6e4f&style=flat-square"/>
 
 </div>
 
@@ -38,7 +41,7 @@ Most of my career has been in mobile. When my company needed it, I also took on 
 | 📱 **Core focus** | Flutter and Dart, Kotlin Multiplatform, native Android (Kotlin, Jetpack Compose) |
 | 👥 **Leadership** | Led the team on 4 of 9 projects at BJIT, from analysis to delivery |
 | 🏗 **I care about** | Clean Architecture, MVVM, BLoC, Riverpod |
-| 🌐 **Portfolio** | [https://fahimfoysalportfolio.vercel.app/](https://fahimfoysalportfolio.vercel.app/) |
+| 🌐 **Portfolio** | [fahimfoysalportfolio.vercel.app](https://fahimfoysalportfolio.vercel.app/) |
 | 📫 **Reach me** | fahimfoysal97@gmail.com · [LinkedIn](https://www.linkedin.com/in/mdfahimfoysal/) |
 
 ---
@@ -172,12 +175,12 @@ Side projects I built to learn and experiment.
 
 ### Looking for a mobile engineer for Android and iOS? Let's build something great.
 
-<a href="https://fahimfoysalportfolio.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-Visit_my_site-2EE59D?style=for-the-badge&logo=vercel&logoColor=070b18&labelColor=2EE59D"/></a>
+<a href="https://fahimfoysalportfolio.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-Visit_my_site-0b6e4f?style=for-the-badge&logo=vercel&logoColor=white&labelColor=064e3b"/></a>
 <a href="https://www.linkedin.com/in/mdfahimfoysal/"><img src="https://img.shields.io/badge/LinkedIn-Message_me-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
 <a href="mailto:fahimfoysal97@gmail.com"><img src="https://img.shields.io/badge/Email-fahimfoysal97@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 
 <br><br>
 
-<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:2ee59d,100:0f9d6b&height=90&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:0f9d6b,100:053d2e&height=90&section=footer" width="100%"/>
 
 </div>
