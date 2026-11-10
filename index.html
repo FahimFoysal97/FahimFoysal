@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Fahim Foysal – Senior Software Engineer">
-<meta property="og:description" content="Mobile apps for Android and iOS with Flutter, Kotlin Multiplatform and Kotlin. 5 years at BJIT, team lead on 4 projects.">
+<meta property="og:description" content="Mobile apps for Android and iOS with Flutter, Kotlin Multiplatform and Kotlin, plus agentic AI automation. 5 years at BJIT, team lead on 4 projects.">
 <meta property="og:url" content="https://fahimfoysalportfolio.vercel.app/">
 <meta property="og:image" content="https://fahimfoysalportfolio.vercel.app/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -19,8 +19,8 @@
 <meta name="theme-color" content="#0c1510">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fahim Foysal – Senior Software Engineer | Mobile: Flutter, KMP, Android, iOS</title>
-<meta name="description" content="Fahim Foysal is a senior software engineer building mobile apps for Android and iOS with Flutter, Kotlin Multiplatform and Kotlin. Portfolio of professional and personal projects.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Fahim Foysal", "jobTitle": "Senior Software Engineer", "url": "https://fahimfoysalportfolio.vercel.app/", "image": "https://fahimfoysalportfolio.vercel.app/og-image.png", "alumniOf": {"@type": "CollegeOrUniversity", "name": "Comilla University"}, "knowsAbout": ["Mobile app development", "Flutter", "Dart", "Kotlin Multiplatform", "Kotlin", "Jetpack Compose", "Android", "iOS"], "sameAs": ["https://github.com/FahimFoysal97", "https://www.linkedin.com/in/mdfahimfoysal/"]}</script>
+<meta name="description" content="Fahim Foysal is a senior software engineer building mobile apps for Android and iOS with Flutter, Kotlin Multiplatform and Kotlin. Also builds agentic AI automation with n8n, Gemini and Ollama. Portfolio of professional and personal projects.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Fahim Foysal", "jobTitle": "Senior Software Engineer", "url": "https://fahimfoysalportfolio.vercel.app/", "image": "https://fahimfoysalportfolio.vercel.app/og-image.png", "alumniOf": {"@type": "CollegeOrUniversity", "name": "Comilla University"}, "knowsAbout": ["Mobile app development", "Flutter", "Dart", "Kotlin Multiplatform", "Kotlin", "Jetpack Compose", "Android", "iOS", "Agentic AI", "LLM tool calling", "n8n workflow automation"], "sameAs": ["https://github.com/FahimFoysal97", "https://www.linkedin.com/in/mdfahimfoysal/"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -143,6 +143,7 @@ nav a.on::after{content:"";position:absolute;left:12px;right:12px;bottom:0;heigh
 .skills>div{background:var(--card);border-radius:var(--shape-lg);padding:24px}
 .skills h3{margin-bottom:12px}
 .skills p{color:var(--md-on-surface-variant)}
+.skills.s4{grid-template-columns:repeat(2,1fr)}
 .skills p.ctx{margin-top:12px;font:500 12px/16px var(--font-body);letter-spacing:.5px;color:var(--md-primary)}
 .skills ul{list-style:none;padding:0;display:grid;gap:12px}
 .skills li{color:var(--md-on-surface-variant);padding-left:20px;position:relative}
@@ -332,10 +333,28 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
 .snap-now em{display:block;font:400 12px/16px var(--font-body);font-style:normal;letter-spacing:.4px;color:var(--md-on-surface-variant)}
 .snap-now .go{color:var(--md-on-surface-variant)}
 
+
+.ai-feat{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:40px}
+.ai-card{background:var(--card);border-radius:var(--shape-lg);padding:28px;display:flex;flex-direction:column;gap:14px}
+.ai-card .eyebrow{font:500 12px/16px var(--font-body);letter-spacing:.8px;color:var(--md-primary);text-transform:uppercase}
+.ai-card h3{font-size:24px;line-height:30px;margin:0}
+.ai-card>p{color:var(--md-on-surface-variant)}
+.ai-card ul{list-style:none;padding:0;display:grid;gap:10px}
+.ai-card li{color:var(--md-on-surface-variant);padding-left:20px;position:relative;font:400 14px/21px var(--font-body);letter-spacing:.25px}
+.ai-card li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--md-primary)}
+.ai-card li b{color:var(--md-on-surface);font-weight:500}
+.ai-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font:500 12px/16px ui-monospace,Menlo,Consolas,monospace;color:var(--md-on-surface-variant)}
+.ai-flow span{padding:5px 9px;border-radius:var(--shape-sm);background:var(--md-surface-container-highest)}
+.ai-flow i{font-style:normal;color:var(--md-primary)}
+.ai-card .tech{margin-top:0}
+.ai-card .btns{margin-top:auto;padding-top:6px}
+.ai-card .btn{height:36px;padding:0 18px}
+.sub-h{font-size:20px;line-height:28px;margin:0 0 12px}
+@media(max-width:840px){.ai-feat{grid-template-columns:1fr}}
 /* Window size classes: medium below 840px, compact below 600px */
 @media(max-width:840px){
   .hero>div{grid-template-columns:minmax(0,1fr);align-items:start}
-  .stats,.skills,.flow{grid-template-columns:1fr}
+  .stats,.skills,.skills.s4,.flow{grid-template-columns:1fr}
   .proj{grid-template-columns:1fr}
   .list a{grid-template-columns:1fr;gap:8px}
   .list span{justify-self:start}
@@ -374,7 +393,7 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
       <h1>Fahim Foysal</h1>
       <h2 class="desig">Senior Software Engineer</h2>
       <div class="role" id="role" aria-hidden="true"></div>
-      <p class="sum">Senior software engineer with 5 years at BJIT, mainly building mobile apps for Android and iOS with Flutter and Kotlin Multiplatform, plus native Android with Kotlin and Jetpack Compose. I lead teams from analysis and design through testing and debugging.</p>
+      <p class="sum">Senior software engineer with 5 years at BJIT, mainly building mobile apps for Android and iOS with Flutter and Kotlin Multiplatform, plus native Android with Kotlin and Jetpack Compose. I also build agentic AI automation: LLM assistants that call real APIs and local actions, with allowlists and human approval built in. I lead teams from analysis and design through testing and debugging.</p>
       <div class="btns">
         <a class="btn pri" href="#work">View experience</a>
         <a class="btn tonal" href="https://drive.google.com/uc?export=download&id=1gZ82qlGWgeMNDJI4i9LzTDmxXkTxiAOC">Download resume</a>
@@ -456,8 +475,8 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
 </div>
 
 <div class="marq" aria-hidden="true"><div>
-  <span>Flutter</span><span>Dart</span><span>Kotlin Multiplatform</span><span>Kotlin</span><span>Jetpack Compose</span><span>Android</span><span>iOS</span><span>Compose Multiplatform</span><span>Java</span><span>MVVM</span><span>Hilt</span><span>Retrofit</span><span>Clean Architecture</span><span>BLoC</span><span>Riverpod</span><span>Firebase</span><span>WebRTC</span><span>SQLite</span>
-  <span>Flutter</span><span>Dart</span><span>Kotlin Multiplatform</span><span>Kotlin</span><span>Jetpack Compose</span><span>Android</span><span>iOS</span><span>Compose Multiplatform</span><span>Java</span><span>MVVM</span><span>Hilt</span><span>Retrofit</span><span>Clean Architecture</span><span>BLoC</span><span>Riverpod</span><span>Firebase</span><span>WebRTC</span><span>SQLite</span>
+  <span>Flutter</span><span>Dart</span><span>Kotlin Multiplatform</span><span>Kotlin</span><span>Jetpack Compose</span><span>Android</span><span>iOS</span><span>Compose Multiplatform</span><span>Java</span><span>MVVM</span><span>Hilt</span><span>Retrofit</span><span>Clean Architecture</span><span>BLoC</span><span>Riverpod</span><span>Firebase</span><span>WebRTC</span><span>SQLite</span><span>n8n</span><span>Gemini</span><span>Ollama</span><span>Python</span>
+  <span>Flutter</span><span>Dart</span><span>Kotlin Multiplatform</span><span>Kotlin</span><span>Jetpack Compose</span><span>Android</span><span>iOS</span><span>Compose Multiplatform</span><span>Java</span><span>MVVM</span><span>Hilt</span><span>Retrofit</span><span>Clean Architecture</span><span>BLoC</span><span>Riverpod</span><span>Firebase</span><span>WebRTC</span><span>SQLite</span><span>n8n</span><span>Gemini</span><span>Ollama</span><span>Python</span>
 </div></div>
 
 <section id="work" class="panel"><div class="wrap rv">
@@ -468,7 +487,7 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
     <div class="filter" role="group" aria-label="Filter experience"><button class="on" data-f="all">All</button><button data-f="m">Mobile</button><button data-f="a">Assignments</button></div>
     <p class="legend"><span class="tag">Mobile</span> my core work &nbsp; <span class="tag asg">Assignment</span> given by the company outside mobile &nbsp; <span class="tag lead">Lead</span> projects I led</p>
     <div class="proj" data-t="a"><time>Jul – Oct 2026</time><div><h4>Mendix proof of concept <span class="tag asg">Assignment</span></h4><p>Learned Mendix and developed a confidential project for the client.</p><div class="tech">Mendix low-code</div></div></div>
-    <div class="proj" data-t="a"><time>Mar – Jun 2026</time><div><h4>Fully autonomous app development platform <span class="tag asg">Assignment</span></h4><p>Learned ReactJS and built a code generation platform, one part of a fully autonomous app development platform. Picked up AI basics along the way.</p><div class="tech">ReactJS</div></div></div>
+    <div class="proj" data-t="a"><time>Mar – Jun 2026</time><div><h4>Fully autonomous app development platform <span class="tag asg">Assignment</span></h4><p>Learned ReactJS and built a code generation module, one part of a fully autonomous app development platform, applying LLM-based generation.</p><div class="tech">ReactJS</div></div></div>
     <div class="proj" data-t="m"><time>Mar 2025 – Feb 2026</time><div><h4>AI Traveler Diary (Jasmy Labo) <span class="tag">Mobile</span></h4><p>Tracks locations during a trip and collects photos to create a travel diary, written with the help of AI. Covered analysis, design, development, testing and debugging.</p><div class="tech">Flutter, Dart, Java, XML, Swift</div></div></div>
     <div class="proj" data-t="m"><time>Jun 2024 – Feb 2025</time><div><h4>MR-APP for CWASA <span class="tag">Mobile</span> <span class="tag lead">Lead</span></h4><p>Led the team on an app for water meter inspectors to post readings, print bills and report meter problems.</p><div class="tech">Kotlin, MVVM, Retrofit, Hilt-Dagger, Jetpack Compose, Firebase Messaging, POS thermal print</div></div></div>
     <div class="proj" data-t="a"><time>May 2024</time><div><h4>Desa_VR <span class="tag asg">Assignment</span> <span class="tag lead">Lead</span></h4><p>Led the team building a menu for a virtual museum. A one month project.</p><div class="tech">Unreal Engine</div></div></div>
@@ -481,11 +500,12 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
 
 <section id="skills"><div class="wrap rv">
   <h2>Skills</h2>
-  <p class="lead">Mobile development is my core: Android and iOS with Flutter and Kotlin Multiplatform, plus native Android with Kotlin. The rest I picked up as projects required.</p>
-  <div class="skills">
+  <p class="lead">Mobile development is my core: Android and iOS with Flutter and Kotlin Multiplatform, plus native Android with Kotlin. Agentic AI automation is the newest addition. The rest I picked up as projects required.</p>
+  <div class="skills s4">
     <div><h3>Mobile: Android and iOS</h3><p>Flutter, Dart, Kotlin Multiplatform, Kotlin, Jetpack Compose, Compose Multiplatform, Android, iOS, Java</p><p class="ctx">Used in AI Traveler Diary (Flutter), CWASA, Sharjah University PoC, JSDE Wallet, Pocketalk and LipiRx.</p></div>
-    <div><h3>Architecture and data</h3><p>MVVM, Clean Architecture, Hilt, Retrofit, SQLite, Firebase Messaging, WebRTC, BLoC, Riverpod</p><p class="ctx">Used in CWASA, Sharjah University PoC, JSDE Wallet and AI Traveler Diary.</p></div>
-    <div><h3>Supporting skills</h3><p>ReactJS, Mendix, Unity and Unreal Engine, Python and TensorFlow, Swift (basic)</p><p class="ctx">Used in AI Traveler Diary, the autonomous platform PoC, Training_4IR, Desa_VR and the Manipulated Image Detector.</p></div>
+    <div><h3>Architecture and data</h3><p>MVVM, Clean Architecture, Hilt, Retrofit, RoomDB, SQLite, MySQL, Firebase, WebRTC, BLoC, Riverpod</p><p class="ctx">Used in CWASA, Sharjah University PoC, JSDE Wallet and AI Traveler Diary.</p></div>
+    <div><h3>Supporting skills</h3><p>ReactJS, Mendix, Unity and Unreal Engine, TensorFlow, Swift (basic), C# and C++</p><p class="ctx">Used in AI Traveler Diary, the autonomous platform PoC, Training_4IR, Desa_VR and the Manipulated Image Detector.</p></div>
+    <div><h3>AI and automation</h3><p>LLM tool calling and agents, n8n workflow orchestration, Gemini API, Ollama (local models), Whisper speech-to-text, FastAPI, Python, Telegram Bot API</p><p class="ctx">Used in Jarvis and the Job Application Assistant.</p></div>
   </div>
 </div></section>
 
@@ -512,7 +532,38 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
 
 <section id="projects" class="panel"><div class="wrap rv">
   <h2>Personal projects</h2>
-  <p class="lead">Side projects I built to learn and experiment. Code is public on GitHub.</p>
+  <p class="lead">Side projects I built to learn and experiment. Code is public on GitHub. The newest two are agentic AI assistants where a human stays in control of every action.</p>
+  <div class="ai-feat">
+    <article class="ai-card">
+      <span class="eyebrow">Nov 2026 &middot; Agentic AI</span>
+      <h3>Jarvis: Personal AI Assistant</h3>
+      <p>A self-hosted assistant I control from Telegram or by voice. Say &ldquo;Hey Jarvis&rdquo; and it answers out loud, reads my mail and calendar, and runs safe actions on my PC.</p>
+      <div class="ai-flow" role="img" aria-label="Flow: Telegram or voice, n8n agent, Gemini with Ollama fallback, tools"><span>Telegram / Voice</span><i>&rarr;</i><span>n8n agent</span><i>&rarr;</i><span>Gemini &rarr; Ollama</span><i>&rarr;</i><span>Tools</span></div>
+      <ul>
+        <li><b>Hybrid brain.</b> Gemini first, with automatic fallback to a local Ollama model when it is unreachable or rate-limited.</li>
+        <li><b>Agent with tools.</b> Gmail, Google Calendar, Google Sheets and PC control, with a confirm-before-acting rule.</li>
+        <li><b>Secure PC control.</b> Localhost-only FastAPI server, fixed action whitelist, no shell access, separate API keys and an owner-only allowlist.</li>
+        <li><b>Hands-free voice.</b> Local wake word, GPU speech-to-text and offline text-to-speech.</li>
+      </ul>
+      <div class="tech">n8n, Python, FastAPI, Gemini, Ollama, faster-whisper, openWakeWord, Piper TTS, Telegram Bot API</div>
+      <div class="btns"><a class="btn tonal" href="https://github.com/FahimFoysal97/Simple_AI_Assistant" target="_blank" rel="noopener">View on GitHub</a></div>
+    </article>
+    <article class="ai-card">
+      <span class="eyebrow">Nov 2026 &middot; Human-in-the-loop automation</span>
+      <h3>Job Application Assistant</h3>
+      <p>Forward a job link or text to a private Telegram bot. It reads the posting, scores the fit against my resume, flags scam risks, and drafts the application only after I approve.</p>
+      <div class="ai-flow" role="img" aria-label="Flow: Telegram, n8n, Gemini scoring, approval, Gmail"><span>Telegram</span><i>&rarr;</i><span>n8n</span><i>&rarr;</i><span>Gemini score</span><i>&rarr;</i><span>Approve</span><i>&rarr;</i><span>Gmail</span></div>
+      <ul>
+        <li><b>Two-stage approval.</b> Nothing is drafted or emailed without an explicit button press, which also saves AI quota.</li>
+        <li><b>Fit and scam scoring.</b> 0 to 100 fit score, seniority and domain mismatch flags, and warnings such as fee requests.</li>
+        <li><b>Privacy first.</b> Phone, email and address are stripped before text reaches an AI model, then injected locally.</li>
+        <li><b>Tracked.</b> Every job is logged to Google Sheets with duplicate blocking and a 7 day follow-up date.</li>
+      </ul>
+      <div class="tech">n8n, Gemini, Ollama, Telegram Bot API, Gmail, Google Sheets, Google Drive</div>
+      <div class="btns"><a class="btn tonal" href="https://github.com/FahimFoysal97/Job-Application-Assistant" target="_blank" rel="noopener">View on GitHub</a></div>
+    </article>
+  </div>
+  <h3 class="sub-h">More side projects</h3>
   <div class="list">
     <a href="https://github.com/FahimFoysal97/LipiRx"><h3>LipiRx</h3><p>Reads handwritten prescriptions for pharmacies in Bangladesh using Vision AI, with a choice of Gemini, Groq, OpenAI or local Ollama. Built to explore Kotlin Multiplatform and AI integration. Assistive tool: a pharmacist must verify every result.</p><span>KMP, Compose</span></a>
     <a href="https://github.com/FahimFoysal97/MovieApp"><h3>Movie App</h3><p>Nov 2021. Android sample app using modern best practices and a free movie API.</p><span>Kotlin, Hilt</span></a>
@@ -606,7 +657,7 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
           <button class="journey-item active" data-journey="0"><span class="journey-dot"></span><span><b>Software foundations</b><small>Computer Science · problem solving</small></span><span class="journey-arrow">↗</span></button>
           <button class="journey-item" data-journey="1"><span class="journey-dot"></span><span><b>Android engineering</b><small>Kotlin · architecture · production apps</small></span><span class="journey-arrow">↗</span></button>
           <button class="journey-item" data-journey="2"><span class="journey-dot"></span><span><b>Technical leadership</b><small>Team lead · delivery · technical decisions</small></span><span class="journey-arrow">↗</span></button>
-          <button class="journey-item" data-journey="3"><span class="journey-dot"></span><span><b>Cross-platform exploration</b><small>Flutter · KMP · Compose · AI-enabled experiences</small></span><span class="journey-arrow">↗</span></button>
+          <button class="journey-item" data-journey="3"><span class="journey-dot"></span><span><b>Cross-platform exploration</b><small>Flutter · KMP · Compose · agentic AI</small></span><span class="journey-arrow">↗</span></button>
         </div>
         <div class="arch-detail journey-detail" aria-live="polite"><span class="detail-index">STAGE 01</span><h3>Software foundations</h3><p>Building a strong foundation in software engineering and problem solving.</p><div class="detail-tags"><span>BSc in CSE</span><span>Problem solving</span><span>300+ problems</span></div></div>
       </div>
@@ -616,7 +667,7 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
 
 <section class="contact" id="contact"><div class="wrap rv">
   <h2>Let’s build something together.</h2>
-  <p class="lead">I’m looking for mobile roles across Android and iOS with Flutter, Kotlin Multiplatform and Kotlin, including team lead positions.</p>
+  <p class="lead">I’m looking for mobile roles across Android and iOS with Flutter, Kotlin Multiplatform and Kotlin, including team lead positions, and AI-enabled products.</p>
   <div class="btns">
     <a class="btn pri" href="#contact-form" id="email-btn" aria-expanded="false" aria-controls="contact-form">Email me</a>
     <a class="btn" href="https://www.linkedin.com/in/mdfahimfoysal/">Message on LinkedIn</a>
@@ -642,7 +693,7 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
 
 <script>
 (function(){
-  var el=document.getElementById('role'),r=['Mobile apps for Android and iOS','Flutter and Dart','Kotlin Multiplatform (KMP)','Kotlin and Jetpack Compose'],i=0,j=0,del=false;
+  var el=document.getElementById('role'),r=['Mobile apps for Android and iOS','Flutter and Dart','Kotlin Multiplatform (KMP)','Kotlin and Jetpack Compose','Agentic AI automation'],i=0,j=0,del=false;
   if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=r[0];return}
   (function tick(){var w=r[i];el.textContent=w.slice(0,j);
     if(!del&&j===w.length){del=true;return setTimeout(tick,1600)}
@@ -1211,7 +1262,7 @@ const stages=[
 {name:'Software foundations',text:'Building a strong foundation in software engineering and problem solving.',tags:['BSc in CSE','Problem solving','300+ problems']},
 {name:'Android engineering',text:'Growing into Android development with Kotlin, maintainable architecture, and production-focused implementation.',tags:['Kotlin','Jetpack Compose','MVVM','Hilt']},
 {name:'Technical leadership',text:'Taking ownership of technical decisions, collaboration, and delivery as a team lead.',tags:['Team lead','Delivery','Technical decisions']},
-{name:'Cross-platform exploration',text:'Building for Android and iOS from one codebase with Flutter and Kotlin Multiplatform, and exploring AI-enabled product experiences.',tags:['Flutter','Kotlin Multiplatform','Compose','Vision AI']}
+{name:'Cross-platform exploration',text:'Building for Android and iOS from one codebase with Flutter and Kotlin Multiplatform, and exploring AI-enabled product experiences and agentic automation.',tags:['Flutter','Kotlin Multiplatform','Vision AI','Agentic AI']}
 ];
 const jd=root.querySelector('.journey-detail');
 root.querySelectorAll('.journey-item').forEach(btn=>btn.addEventListener('click',()=>{
@@ -1248,7 +1299,7 @@ jd.querySelector('.detail-tags').replaceChildren(...d.tags.map(t=>{const e=docum
 (function(){
   var groups=[
     ['.stats .stat','pop'],['.job .proj','rise-l'],['#skills .skills>div','rise'],['#education .skills>div','rise'],
-    ['.list a','rise'],['.feature li','rise-l'],['.flow>div','pop'],['.show .step','rise-l'],['.show .phone','pop'],
+    ['.list a','rise'],['.ai-card','rise'],['.feature li','rise-l'],['.flow>div','pop'],['.show .step','rise-l'],['.show .phone','pop'],
     ['#explore .arch-card','rise'],['#explore .journey-card','rise'],['section h2','rise'],['section .lead','rise'],
     ['.contact .btns','rise'],['.job .filter','rise']
   ];
