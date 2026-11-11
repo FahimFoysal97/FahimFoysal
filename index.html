@@ -413,7 +413,7 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
           <div class="snap-lab"><span>DAILY DRIVERS</span></div>
           <div class="chips"><a href="#skills">Flutter</a><a href="#skills">Kotlin Multiplatform</a><a href="#skills">Kotlin</a><a href="#skills">Jetpack Compose</a></div>
         </div>
-        <a class="snap-now" href="#lipirx"><span class="ic">Rx</span><span><small>BUILDING ON THE SIDE</small><b>LipiRx</b><em>KMP and Vision AI for pharmacies</em></span><span class="go" aria-hidden="true">&#8599;</span></a>
+        <a class="snap-now" href="#lipirx"><span class="ic">Rx</span><span><small>BUILDING ON THE SIDE</small><b>LipiRx</b><em>KMP and multi-agent AI for pharmacies</em></span><span class="go" aria-hidden="true">&#8599;</span></a>
       </aside>
     </div>
 
@@ -565,7 +565,7 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
   </div>
   <h3 class="sub-h">More side projects</h3>
   <div class="list">
-    <a href="https://github.com/FahimFoysal97/LipiRx"><h3>LipiRx</h3><p>Reads handwritten prescriptions for pharmacies in Bangladesh using Vision AI, with a choice of Gemini, Groq, OpenAI or local Ollama. Built to explore Kotlin Multiplatform and AI integration. Assistive tool: a pharmacist must verify every result.</p><span>KMP, Compose</span></a>
+    <a href="https://github.com/FahimFoysal97/LipiRx"><h3>LipiRx</h3><p>Supervisor-driven multi-agent AI that scans handwritten prescriptions for pharmacies in Bangladesh. A manager agent routes each scan through specialist agents for OCR, medicine parsing, generic brand substitutes and a safety audit, with a different provider and model per agent: Gemini, Groq, OpenAI or local Ollama. Built to explore Kotlin Multiplatform and AI integration. Assistive tool: a pharmacist must verify every result.</p><span>KMP, Multi-agent AI</span></a>
     <a href="https://github.com/FahimFoysal97/MovieApp"><h3>Movie App</h3><p>Nov 2021. Android sample app using modern best practices and a free movie API.</p><span>Kotlin, Hilt</span></a>
     <a href="https://github.com/FahimFoysal97/ManipulatedImageDetector"><h3>Manipulated Image Detector</h3><p>2019 to 2020. Android app that checks whether an image was manipulated, using a neural network.</p><span>Java, Python</span></a>
     <a href="https://github.com/FahimFoysal97/AutomaticAttendance"><h3>Automatic Attendance</h3><p>2019. Takes student attendance automatically over WiFi Direct.</p><span>Java, WiFi Direct</span></a>
@@ -577,11 +577,12 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
   <div class="feature rv">
     <div>
       <h2>Hobby project spotlight: LipiRx</h2>
-      <p class="lead">A personal project I built for learning and as a hobby, to explore Kotlin Multiplatform and AI integration. It is designed for retail pharmacies in Bangladesh: point the camera at a doctor’s prescription and it fills in the details.</p>
-      <div class="chips"><span>Personal project</span><span>Kotlin Multiplatform</span><span>Compose Multiplatform</span><span>Vision AI</span><span>Gemini</span><span>Groq</span><span>OpenAI</span><span>Ollama</span></div>
+      <p class="lead">A personal project I built for learning and as a hobby, to explore Kotlin Multiplatform and multi-agent AI. It is designed for retail pharmacies in Bangladesh: point the camera at a doctor’s prescription and a supervisor agent coordinates specialist agents that read it, fill in the details and audit it for safety.</p>
+      <div class="chips"><span>Personal project</span><span>Kotlin Multiplatform</span><span>Compose Multiplatform</span><span>Multi-agent AI</span><span>Vision AI</span><span>Gemini</span><span>Groq</span><span>OpenAI</span><span>Ollama</span></div>
       <a class="btn pri" href="https://github.com/FahimFoysal97/LipiRx">View on GitHub</a>
     </div>
     <ul>
+      <li><b>Supervisor-driven agents.</b> A manager AI decides which specialist runs next (OCR, parser, brand matcher, safety auditor) and falls back to rules if the model is unavailable.</li>
       <li><b>Brand names.</b> Finds each medicine written on the prescription.</li>
       <li><b>Generic compositions.</b> Matches each brand to its active ingredient.</li>
       <li><b>Local dosage schedules.</b> Understands the dosing notation used locally.</li>
@@ -589,7 +590,8 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
       <li><b>Similar brands.</b> Suggests alternative brands for each medicine.</li>
       <li><b>Needs review flags.</b> Marks unclear items so the pharmacist confirms before dispensing.</li>
       <li><b>Zoom and pan.</b> Inspect the original photo next to the result.</li>
-      <li><b>Your choice of AI provider.</b> Gemini, Groq, OpenAI, or any OpenAI-compatible endpoint, including a local Ollama server or a private proxy.</li>
+      <li><b>Safety audit.</b> Checks dosage safety, interaction risks and unreadable spellings before anything reaches the pharmacist.</li>
+      <li><b>Your choice of AI provider, per agent.</b> Gemini, Groq, OpenAI, or any OpenAI-compatible endpoint, including a local Ollama server, assigned agent by agent.</li>
     </ul>
   </div>
 
@@ -630,7 +632,7 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
 
   <div class="flow rv">
     <div><b>1. Scan</b><span>Take a photo of the handwritten prescription.</span></div>
-    <div><b>2. Read</b><span>Vision AI reads it with the provider you chose.</span></div>
+    <div><b>2. Read</b><span>A supervisor AI routes it through specialist agents: OCR, parsing, brand matching and a safety audit.</span></div>
     <div><b>3. Review</b><span>Check brands, generics, dosage schedules and tablet counts.</span></div>
   </div>
 </div></section>
@@ -646,8 +648,9 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
         <div class="arch-map" role="group" aria-label="Select an architecture layer">
           <button class="arch-node active" data-layer="presentation"><span class="arch-num">01</span><b>Presentation</b><small>Compose UI · screens · state</small><span class="arch-arrow">↗</span></button>
           <button class="arch-node" data-layer="domain"><span class="arch-num">02</span><b>Domain</b><small>Use cases · models · rules</small><span class="arch-arrow">↗</span></button>
-          <button class="arch-node" data-layer="data"><span class="arch-num">03</span><b>Data</b><small>Repositories · sources</small><span class="arch-arrow">↗</span></button>
-          <button class="arch-node" data-layer="platform"><span class="arch-num">04</span><b>Platform &amp; AI</b><small>KMP · OCR/vision providers</small><span class="arch-arrow">↗</span></button>
+          <button class="arch-node" data-layer="agents"><span class="arch-num">03</span><b>Agents</b><small>Supervisor · specialist agents</small><span class="arch-arrow">↗</span></button>
+          <button class="arch-node" data-layer="data"><span class="arch-num">04</span><b>Data</b><small>Repositories · sources</small><span class="arch-arrow">↗</span></button>
+          <button class="arch-node" data-layer="platform"><span class="arch-num">05</span><b>Platform &amp; AI</b><small>KMP · OCR/vision providers</small><span class="arch-arrow">↗</span></button>
         </div>
         <div class="arch-detail" aria-live="polite"><span class="detail-index">LAYER PRESENTATION</span><h3>Presentation</h3><p>Compose screens present the prescription workflow, collect user input, and reflect loading, results, and review states.</p><div class="detail-tags"><span>Compose</span><span>UI state</span><span>ViewModel</span></div></div>
       </div>
@@ -1243,8 +1246,9 @@ const root=document.querySelector('#explore');if(!root)return;
 const layers={
 presentation:{name:'Presentation',text:'Compose screens present the prescription workflow, collect user input, and reflect loading, results, and review states.',tags:['Compose','UI state','ViewModel']},
 domain:{name:'Domain',text:'Use cases and domain models express the core workflow independently from UI details and external AI providers.',tags:['Use cases','Domain models','Validation']},
+agents:{name:'Agents',text:'A supervisor agent evaluates the workspace state each turn and routes work to specialist agents for OCR, entity parsing, generic substitutes and safety audit, passing feedback prompts and falling back to rules if the model fails.',tags:['Supervisor agent','Orchestrator','Per-agent providers']},
 data:{name:'Data',text:'Repository boundaries coordinate data access and keep the workflow insulated from individual provider implementations.',tags:['Repositories','Data sources','Mapping']},
-platform:{name:'Platform & AI',text:'Kotlin Multiplatform supports shared logic, while configurable vision/AI providers support handwriting interpretation. Results remain subject to pharmacist review.',tags:['KMP','Vision AI','Provider integration']}
+platform:{name:'Platform & AI',text:'Kotlin Multiplatform supports shared logic, while a strategy-pattern AI layer (Gemini, Groq, OpenAI, custom endpoints) supports handwriting interpretation. Results remain subject to pharmacist review.',tags:['KMP','Vision AI','Provider integration']}
 };
 
 const trimLine=(list,sel)=>{const m=list.querySelectorAll(sel);if(m.length<2)return;const L=list.getBoundingClientRect(),f=m[0].getBoundingClientRect(),l=m[m.length-1].getBoundingClientRect();
