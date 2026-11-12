@@ -1,12 +1,15 @@
 <div align="center">
 
-<img src="assets/header.svg" alt="Fahim Foysal, Senior Software Engineer" width="100%"/>
+# Fahim Foysal
 
-<img src="assets/status.svg" alt="Bangladesh · 5 years at BJIT · Open to work · Android + iOS" width="100%"/>
+### Senior Software Engineer
 
-<a href="https://fahimfoysalportfolio.vercel.app/"><img src="assets/btn-portfolio.svg" alt="Portfolio" height="56"/></a>&nbsp;
-<a href="https://www.linkedin.com/in/mdfahimfoysal/"><img src="assets/btn-linkedin.svg" alt="LinkedIn" height="56"/></a>&nbsp;
-<a href="mailto:fahimfoysal97@gmail.com"><img src="assets/btn-email.svg" alt="Email" height="56"/></a>
+**Mobile apps for Android + iOS**<br>
+Flutter · Kotlin Multiplatform · Kotlin + Jetpack Compose · Clean Architecture
+
+📍 Bangladesh &nbsp;·&nbsp; 🏢 5 years at BJIT &nbsp;·&nbsp; 🟢 Open to work &nbsp;·&nbsp; 📱 Android + iOS
+
+[🌐 **Portfolio**](https://fahimfoysalportfolio.vercel.app/) &nbsp;·&nbsp; [💼 **LinkedIn**](https://www.linkedin.com/in/mdfahimfoysal/) &nbsp;·&nbsp; [✉️ **fahimfoysal97@gmail.com**](mailto:fahimfoysal97@gmail.com)
 
 <br><br>
 
@@ -16,17 +19,20 @@
 
 <br>
 
-<img src="assets/h-about.svg" alt="01 About Me" width="100%"/>
+## 01 · About Me
 
 I'm a **Senior Software Engineer** with **5 years at BJIT**, mainly building **mobile apps for Android and iOS with Flutter and Kotlin Multiplatform**, plus native Android with **Kotlin and Jetpack Compose**. My work covers real-time communication, hardware and device integration, push messaging, health tech, utility apps and AI-assisted features. I also build **agentic AI automation**: LLM assistants that call real APIs and local actions, with allowlists and human approval built in. I lead teams from analysis and design through testing and debugging.
 
 Most of my career has been in mobile. When my company needed it, I also took on assignments in low-code (Mendix), web (ReactJS) and VR (Unity and Unreal), which broadened my range as an engineer.
 
-<img src="assets/metrics.svg" alt="5+ years, 9 projects, 4 teams led, 2 platforms" width="100%"/>
+- ⏳ **5+ years at BJIT** (Nov 2021 – Oct 2026)
+- 🚀 **9 projects shipped**: 5 mobile projects and 4 assignments outside mobile
+- 👑 **4 teams led**, from analysis to delivery
+- 📱 **2 platforms**: Android and iOS
 
 <br>
 
-| | |
+| Topic | Details |
 |---|---|
 | 🔎 **Status** | Open to mobile roles across Android and iOS: Flutter, KMP, Kotlin, and team-lead positions |
 | 📱 **Core focus** | Flutter and Dart, Kotlin Multiplatform, native Android (Kotlin, Jetpack Compose) |
@@ -37,21 +43,18 @@ Most of my career has been in mobile. When my company needed it, I also took on 
 
 <br>
 
-<img src="assets/h-stack.svg" alt="02 Tech Stack" width="100%"/>
+## 02 · Tech Stack
 
-<div align="center">
-
-<img src="assets/stack-orbit.svg" alt="Core mobile stack: Flutter, Dart, Kotlin Multiplatform, Kotlin, Jetpack Compose, Android, iOS, Java, Swift, Firebase, SQLite, MySQL" width="100%"/>
-
-<img src="assets/stack-marquee.svg" alt="Architecture and libraries: Clean Architecture, MVVM, BLoC, Riverpod, Hilt/Dagger, Retrofit, Room, Firebase Messaging, WebRTC. Also: Python, C#, C++, TensorFlow, ReactJS, Mendix, Unity, Unreal Engine, Git, GitHub, Jira" width="100%"/>
-
-</div>
-
-**AI and automation:** LLM tool calling and agents · JetBrains Koog · LiteRT-LM (on-device) · n8n · Gemini API · Ollama · Whisper (faster-whisper) · FastAPI · Telegram Bot API
+| Area | Technologies |
+|---|---|
+| 📱 **Core mobile stack** (Android + iOS) | `Flutter` `Dart` `Kotlin Multiplatform` `Kotlin` `Jetpack Compose` `Compose Multiplatform` `Android` `Java` `Swift (basic)` `iOS` `Firebase` `SQLite` `MySQL` |
+| 🏗 **Architecture and libraries** | `Clean Architecture` `MVVM` `BLoC` `Riverpod` `Hilt / Dagger` `Retrofit` `Room DB` `Firebase Messaging` `WebRTC` |
+| 🤖 **AI and automation** | `LLM tool calling and agents` `JetBrains Koog` `LiteRT-LM (on-device)` `n8n` `Gemini API` `Ollama` `Whisper (faster-whisper)` `FastAPI` `Telegram Bot API` |
+| 🧰 **Also worked with** | `Python` `C#` `C++` `TensorFlow` `ReactJS` `Mendix` `Unity` `Unreal Engine` `Git` `GitHub` `Jira` |
 
 <br>
 
-<img src="assets/h-exp.svg" alt="03 Experience" width="100%"/>
+## 03 · Experience
 
 ### Senior Software Engineer · BJIT Limited, Dhaka
 *Nov 2021 – Oct 2026*
@@ -72,13 +75,13 @@ Most of my career has been in mobile. When my company needed it, I also took on 
 
 <br>
 
-<img src="assets/h-projects.svg" alt="04 Personal Projects" width="100%"/>
+## 04 · Personal Projects
 
 | Project | What it does | Tech | Link |
 |---|---|---|---|
 | 🤖 **Jarvis: Personal AI Assistant** | Nov 2026. Self-hosted assistant controlled by Telegram or a "Hey Jarvis" voice wake word, with spoken replies. An agent uses Gmail, Google Calendar, Google Sheets and PC control as tools, and falls back from Gemini to a local Ollama model. The PC-control server is localhost-only with a fixed action whitelist, no shell access, separate API keys, an owner-only allowlist and a confirm-before-acting rule | n8n, Python, FastAPI, Gemini, Ollama, faster-whisper, openWakeWord, Piper TTS | [View repo](https://github.com/FahimFoysal97/Simple_AI_Assistant) |
 | 💼 **Job Application Assistant** | Nov 2026. Telegram-controlled, human-in-the-loop assistant that reads a job posting, extracts structured data, scores fit against my resume, flags scam risks and drafts the application. Two-stage approval: nothing is drafted or emailed without an explicit button press, and duplicate applications are blocked | n8n, Gemini, Ollama, Telegram Bot API, Gmail, Google Sheets, Google Drive | [View repo](https://github.com/FahimFoysal97/Job-Application-Assistant) |
-| 💊 **LipiRx** | A hobby project: a **supervisor-driven multi-agent AI** prescription scanner for pharmacies in Bangladesh, built with the **JetBrains Koog** agent framework. A manager LLM agent checks the workspace state each turn and dispatches type-safe agent tools (vision OCR, medicine entity parser, generic brand substitutes, safety auditor), passing feedback prompts, with rule-based fallbacks and guardrails against finishing early. An agent settings matrix assigns a different provider and model per agent: Gemini, Groq, OpenAI, a local Ollama endpoint, or an **on-device model (Google LiteRT-LM)** for fully offline use, with Hybrid fallback, On-device first, On-device only and Cloud only strategies. Saves scan history locally. Assistive tool: flags low-confidence results and a pharmacist must verify every result | Kotlin Multiplatform, Compose Multiplatform, Koog, Multi-Agent AI, LiteRT-LM, Ktor, Koin, SQLDelight, Gemini, Groq, OpenAI, Ollama | [View repo](https://github.com/FahimFoysal97/LipiRx) |
+| 💊 **LipiRx** | A hobby project: a **supervisor-driven multi-agent AI** prescription scanner for retail pharmacies in Bangladesh, built with **Kotlin Multiplatform**, **Compose Multiplatform** and the **JetBrains Koog** agent framework. It scans handwritten prescriptions and extracts, normalizes and safety-audits medicine names, generics, dosage schedules and calculated quantities. A manager LLM agent checks the workspace state each turn and dispatches type-safe agent tools (multimodal vision OCR, medicine entity parser, generic substitute search that cross-references DGDA active ingredients and matches 3 to 5 Bangladeshi brands, safety auditor for dosage and interaction risks), passing feedback prompts, with rule-based fallbacks and guardrails against finishing early. An agent settings matrix assigns a different provider and model per agent: Gemini, Groq, OpenAI, a custom OpenAI-compatible endpoint (such as local Ollama), or an **on-device model (Google LiteRT-LM)** for fully offline use, with Hybrid fallback, On-device first, On-device only and Cloud only strategies. Shows live supervisor reasoning and per-agent timing while analyzing, saves scan history locally, and copies a one-click summary for pharmacy POS software. Assistive tool: flags low-confidence results and a pharmacist must verify every result | Kotlin Multiplatform, Compose Multiplatform, Material 3, Koog, Multi-Agent AI, LiteRT-LM, Ktor, Koin, SQLDelight, Coil, Gemini, Groq, OpenAI, Ollama | [View repo](https://github.com/FahimFoysal97/LipiRx) |
 | 🎬 **Movie App** | Nov 2021. Android sample app using modern best practices and a free movie API | Kotlin, MVVM, Hilt, Retrofit | [View repo](https://github.com/FahimFoysal97/MovieApp) |
 | 🕵️ **Manipulated Image Detector** | 2019 to 2020. Android app that checks whether an image was manipulated, using a neural network | Java, Python, Neural Network | [View repo](https://github.com/FahimFoysal97/ManipulatedImageDetector) |
 | 📋 **Automatic Attendance** | 2019. Takes student attendance automatically over WiFi Direct | Java, XML, WiFi Direct | [View repo](https://github.com/FahimFoysal97/AutomaticAttendance) |
@@ -86,24 +89,7 @@ Most of my career has been in mobile. When my company needed it, I also took on 
 
 <br>
 
-<img src="assets/h-stats.svg" alt="05 GitHub Stats" width="100%"/>
-
-<div align="center">
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=FahimFoysal97&show_icons=true&hide_border=true&bg_color=0d1117&title_color=2EE59D&icon_color=2EE59D&text_color=D6E6DD&border_radius=16"/>
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=FahimFoysal97&layout=compact&hide_border=true&bg_color=0d1117&title_color=2EE59D&text_color=D6E6DD&border_radius=16"/>
-
-<img src="https://streak-stats.demolab.com?user=FahimFoysal97&hide_border=true&background=0d1117&ring=2EE59D&fire=2EE59D&currStreakLabel=2EE59D&currStreakNum=D6E6DD&sideNums=D6E6DD&sideLabels=9AA8C7&dates=9AA8C7&border_radius=16"/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=FahimFoysal97&bg_color=0d1117&color=2EE59D&line=0f9d6b&point=ffffff&area=true&hide_border=true&radius=16" width="100%"/>
-
-</div>
-
-<br>
-
-<img src="assets/h-awards.svg" alt="06 Achievements" width="100%"/>
-
-<img src="assets/achievements.svg" alt="4th place CoU CSE Fiesta 2015, 300+ problems solved, gold badges on HackerRank" width="100%"/>
+## 05 · Achievements
 
 - 🥇 **4th place**: CoU CSE Fiesta 2015, Inter University Programming Contest
 - 💻 **300+ problems solved** on [LeetCode](https://leetcode.com/fahimfoysal97/), [BeeCrowd](https://www.beecrowd.com.br/judge/en/profile/59519) and [HackerRank](https://www.hackerrank.com/profile/Fahim_Foysal)
@@ -111,7 +97,7 @@ Most of my career has been in mobile. When my company needed it, I also took on 
 
 <br>
 
-<img src="assets/h-edu.svg" alt="07 Education and Training" width="100%"/>
+## 06 · Education and Training
 
 - **BSc (Engg.) in Computer Science & Engineering**: Comilla University, 2015–2020
 - **BJIT Academy:** Android Development, Project Management, Japanese Business Culture, Business Finance & Communication, Workplace Etiquette
@@ -119,16 +105,15 @@ Most of my career has been in mobile. When my company needed it, I also took on 
 
 <br>
 
-<img src="assets/h-connect.svg" alt="08 Let's Connect" width="100%"/>
+## 07 · Let's Connect
 
 <div align="center">
 
-<a href="https://fahimfoysalportfolio.vercel.app/"><img src="assets/btn-portfolio.svg" alt="Portfolio" height="56"/></a>&nbsp;
-<a href="https://www.linkedin.com/in/mdfahimfoysal/"><img src="assets/btn-linkedin.svg" alt="LinkedIn" height="56"/></a>&nbsp;
-<a href="mailto:fahimfoysal97@gmail.com"><img src="assets/btn-email.svg" alt="Email" height="56"/></a>
+[🌐 **Portfolio**](https://fahimfoysalportfolio.vercel.app/) &nbsp;·&nbsp; [💼 **LinkedIn**](https://www.linkedin.com/in/mdfahimfoysal/) &nbsp;·&nbsp; [✉️ **Email**](mailto:fahimfoysal97@gmail.com)
 
-<br><br>
+### Let's build something great.
 
-<img src="assets/footer.svg" alt="Let's build something great" width="100%"/>
+Open to mobile roles · Android · iOS · Flutter · KMP · team lead<br>
+🟢 Available now · fahimfoysal97@gmail.com
 
 </div>
