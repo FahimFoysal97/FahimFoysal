@@ -11,10 +11,6 @@ Flutter · Kotlin Multiplatform · Kotlin + Jetpack Compose · Clean Architectur
 
 [🌐 **Portfolio**](https://fahimfoysalportfolio.vercel.app/) &nbsp;·&nbsp; [💼 **LinkedIn**](https://www.linkedin.com/in/mdfahimfoysal/) &nbsp;·&nbsp; [✉️ **fahimfoysal97@gmail.com**](mailto:fahimfoysal97@gmail.com)
 
-<br><br>
-
-<img src="https://komarev.com/ghpvc/?username=FahimFoysal97&label=Profile%20Views&color=0f9d6b&style=flat-square&labelColor=053d2e"/>
-
 </div>
 
 <br>
