@@ -20,7 +20,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fahim Foysal – Senior Software Engineer | Mobile: Flutter, KMP, Android, iOS</title>
 <meta name="description" content="Fahim Foysal is a senior software engineer building mobile apps for Android and iOS with Flutter, Kotlin Multiplatform and Kotlin. Also builds agentic AI automation with n8n, Gemini and Ollama. Portfolio of professional and personal projects.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Fahim Foysal", "jobTitle": "Senior Software Engineer", "url": "https://fahimfoysalportfolio.vercel.app/", "image": "https://fahimfoysalportfolio.vercel.app/og-image.png", "alumniOf": {"@type": "CollegeOrUniversity", "name": "Comilla University"}, "knowsAbout": ["Mobile app development", "Flutter", "Dart", "Kotlin Multiplatform", "Kotlin", "Jetpack Compose", "Android", "iOS", "Agentic AI", "LLM tool calling", "Multi-agent orchestration", "JetBrains Koog", "On-device LLMs", "n8n workflow automation"], "sameAs": ["https://github.com/FahimFoysal97", "https://www.linkedin.com/in/mdfahimfoysal/"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Fahim Foysal", "jobTitle": "Senior Software Engineer", "url": "https://fahimfoysalportfolio.vercel.app/", "image": "https://fahimfoysalportfolio.vercel.app/og-image.png", "alumniOf": {"@type": "CollegeOrUniversity", "name": "Comilla University"}, "knowsAbout": ["Mobile app development", "Flutter", "Dart", "Kotlin Multiplatform", "Kotlin", "Jetpack Compose", "Android", "iOS", "Agentic AI", "LLM tool calling", "Multi-agent orchestration", "JetBrains Koog", "Model Context Protocol (MCP)", "On-device LLMs", "n8n workflow automation"], "sameAs": ["https://github.com/FahimFoysal97", "https://www.linkedin.com/in/mdfahimfoysal/"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -259,13 +259,13 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
 #explore .journey-list{position:relative;display:flex;flex-direction:column;gap:4px}
 #explore .journey-list::before{content:"";position:absolute;left:21px;top:var(--line-top,24px);bottom:var(--line-bottom,24px);width:2px;background:var(--md-outline-variant)}
 #explore .journey-item{position:relative;display:grid;grid-template-columns:24px 1fr 20px;align-items:center;gap:12px;text-align:left;padding:12px 16px 12px 10px;border:0;border-radius:var(--shape-lg);background:transparent;color:var(--md-on-surface);font:inherit;letter-spacing:inherit;cursor:pointer;transition:background-color .2s var(--ease-std)}
-#explore .journey-dot{width:12px;height:12px;margin-left:6px;border-radius:50%;background:var(--md-outline);box-shadow:0 0 0 4px var(--md-surface-container);z-index:1;transition:background-color .2s var(--ease-std)}
+#explore .journey-num{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--md-surface-container);box-shadow:0 0 0 4px var(--md-surface-container);font:500 11px/16px var(--font-body);letter-spacing:.2px;color:var(--md-primary);z-index:1;transition:background-color .2s var(--ease-std),color .2s var(--ease-std)}
 #explore .journey-item b{display:block;font:500 16px/24px var(--font-body);letter-spacing:.15px}
 #explore .journey-item small{display:block;font:400 12px/16px var(--font-body);letter-spacing:.4px;color:var(--md-on-surface-variant);margin-top:2px}
 #explore .journey-arrow{color:var(--md-on-surface-variant);opacity:0;transition:opacity .2s}
 #explore .journey-item.active{background:var(--md-secondary-container);color:var(--md-on-secondary-container)}
 #explore .journey-item.active small,#explore .journey-item.active .journey-arrow{color:var(--md-on-secondary-container)}
-#explore .journey-item.active .journey-dot{background:var(--md-primary);box-shadow:0 0 0 4px var(--md-secondary-container)}
+#explore .journey-item.active .journey-num{background:var(--md-primary);color:var(--md-on-primary);box-shadow:0 0 0 4px var(--md-secondary-container)}
 #explore .journey-item.active .journey-arrow{opacity:1}
 #explore .journey-caption{font:400 14px/20px var(--font-body);letter-spacing:.25px;color:var(--md-on-surface-variant);border-top:1px solid var(--md-outline-variant);padding-top:16px;margin-top:16px}
 
@@ -359,8 +359,10 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
 .ai-card .tech{margin-top:0}
 .ai-card .btns{margin-top:auto;padding-top:6px}
 .ai-card .btn{height:36px;padding:0 18px}
+.ai-card.wide{grid-column:1/-1}
+.ai-card.wide ul{grid-template-columns:repeat(2,1fr);gap:12px 32px}
 .sub-h{font-size:20px;line-height:28px;margin:0 0 12px}
-@media(max-width:840px){.ai-feat{grid-template-columns:1fr}}
+@media(max-width:840px){.ai-feat{grid-template-columns:1fr}.ai-card.wide ul{grid-template-columns:1fr}}
 /* Window size classes: medium below 840px, compact below 600px */
 @media(max-width:840px){
   .hero>div{grid-template-columns:minmax(0,1fr);align-items:start}
@@ -515,7 +517,7 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
     <div><h3>Mobile: Android and iOS</h3><p>Flutter, Dart, Kotlin Multiplatform, Kotlin, Jetpack Compose, Compose Multiplatform, Android, iOS, Java</p><p class="ctx">Used in AI Traveler Diary (Flutter), CWASA, Sharjah University PoC, JSDE Wallet, Pocketalk and LipiRx.</p></div>
     <div><h3>Architecture and data</h3><p>MVVM, Clean Architecture, Hilt, Koin, Retrofit, Ktor, RoomDB, SQLDelight, SQLite, MySQL, Firebase, WebRTC, BLoC, Riverpod</p><p class="ctx">Used in CWASA, Sharjah University PoC, JSDE Wallet, AI Traveler Diary and LipiRx.</p></div>
     <div><h3>Supporting skills</h3><p>ReactJS, Mendix, Unity and Unreal Engine, TensorFlow, Swift (basic), C# and C++</p><p class="ctx">Used in AI Traveler Diary, the autonomous platform PoC, Training_4IR, Desa_VR and the Manipulated Image Detector.</p></div>
-    <div><h3>AI and automation</h3><p>Multi-agent orchestration (supervisor-driven agents), JetBrains Koog, LLM tool calling and agents, on-device LLMs with LiteRT-LM, n8n workflow orchestration, Gemini API, Groq, OpenAI, Ollama (local models), Whisper speech-to-text, FastAPI, Python, Telegram Bot API</p><p class="ctx">Used in LipiRx, Jarvis and the Job Application Assistant.</p></div>
+    <div><h3>AI and automation</h3><p>Multi-agent orchestration (supervisor-driven agents), JetBrains Koog, Model Context Protocol (MCP) servers, LLM tool calling and agents, on-device LLMs with LiteRT-LM, n8n workflow orchestration, Gemini API, Groq, OpenAI, Ollama (local models), Whisper speech-to-text, FastAPI, Python, Telegram Bot API</p><p class="ctx">Used in LipiRx, Jarvis and the Job Application Assistant.</p></div>
   </div>
 </div></section>
 
@@ -542,7 +544,7 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
 
 <section id="projects" class="panel"><div class="wrap rv">
   <h2>Personal projects</h2>
-  <p class="lead">Side projects I built to learn and experiment. Code is public on GitHub. The newest two are agentic AI assistants where a human stays in control of every action.</p>
+  <p class="lead">Side projects I built to learn and experiment. Code is public on GitHub. The newest three are agentic AI projects built to keep a human in control of every action.</p>
   <div class="ai-feat">
     <article class="ai-card">
       <span class="eyebrow">Nov 2026 &middot; Agentic AI</span>
@@ -572,10 +574,25 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
       <div class="tech">n8n, Gemini, Ollama, Telegram Bot API, Gmail, Google Sheets, Google Drive</div>
       <div class="btns"><a class="btn tonal" href="https://github.com/FahimFoysal97/Job-Application-Assistant" target="_blank" rel="noopener">View on GitHub</a></div>
     </article>
+    <article class="ai-card wide">
+      <span class="eyebrow">Oct 2026 &middot; Multi-agent AI</span>
+      <h3>LipiRx: Prescription Scanner</h3>
+      <p>Scans handwritten prescriptions for retail pharmacies in Bangladesh. A supervisor agent coordinates specialist agents, and a pharmacist verifies every result.</p>
+      <div class="ai-flow" role="img" aria-label="Flow: prescription photo, supervisor agent, OCR, parsing, brand matching and safety audit tools, pharmacist review"><span>Photo</span><i>&rarr;</i><span>Supervisor agent</span><i>&rarr;</i><span>OCR &middot; Parse &middot; Brands &middot; Safety audit</span><i>&rarr;</i><span>Pharmacist review</span></div>
+      <ul>
+        <li><b>Supervisor-driven agents.</b> A manager agent built on JetBrains Koog reads the workspace state each turn and routes work to type-safe tools, falling back to rules with guardrails if the model fails.</li>
+        <li><b>Provider per agent.</b> Gemini, Groq, OpenAI, a custom endpoint such as local Ollama, or an on-device model, assigned agent by agent.</li>
+        <li><b>Works offline.</b> On-device LiteRT-LM model with Hybrid fallback, On-device first, On-device only or Cloud only strategies.</li>
+        <li><b>Embedded MCP server.</b> JSON-RPC 2.0 over local HTTP exposes scan history and the agent tools to Claude Desktop, Cursor or POS software.</li>
+        <li><b>Pharmacist in control.</b> Review flags for low confidence, unreadable text or dosage anomalies, plus 3 to 5 local brand substitutes per medicine.</li>
+        <li><b>Local history.</b> SQLDelight stores scans and dispensing memory, with delete, clear all and one-tap POS copy.</li>
+      </ul>
+      <div class="tech">Kotlin Multiplatform, Compose Multiplatform, JetBrains Koog, MCP, LiteRT-LM, Ktor, Koin, SQLDelight, Gemini, Groq, OpenAI, Ollama</div>
+      <div class="btns"><a class="btn tonal" href="https://github.com/FahimFoysal97/LipiRx" target="_blank" rel="noopener">View on GitHub</a><a class="btn tonal" href="#lipirx">App walkthrough</a></div>
+    </article>
   </div>
   <h3 class="sub-h">More side projects</h3>
   <div class="list">
-    <a href="https://github.com/FahimFoysal97/LipiRx"><h3>LipiRx</h3><p>Supervisor-driven multi-agent AI, built with the JetBrains Koog framework, that scans handwritten prescriptions for pharmacies in Bangladesh. A manager agent routes each scan through type-safe specialist tools for OCR, medicine parsing, generic brand substitutes and a safety audit, with a different provider and model per agent: Gemini, Groq, OpenAI or local Ollama. Built to explore Kotlin Multiplatform and AI integration, and it can run fully offline with an on-device model. Assistive tool: a pharmacist must verify every result.</p><span>KMP, Koog, Multi-agent AI</span></a>
     <a href="https://github.com/FahimFoysal97/MovieApp"><h3>Movie App</h3><p>Nov 2021. Android sample app using modern best practices and a free movie API.</p><span>Kotlin, Hilt</span></a>
     <a href="https://github.com/FahimFoysal97/ManipulatedImageDetector"><h3>Manipulated Image Detector</h3><p>2019 to 2020. Android app that checks whether an image was manipulated, using a neural network.</p><span>Java, Python</span></a>
     <a href="https://github.com/FahimFoysal97/AutomaticAttendance"><h3>Automatic Attendance</h3><p>2019. Takes student attendance automatically over WiFi Direct.</p><span>Java, WiFi Direct</span></a>
@@ -587,8 +604,8 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
   <div class="feature rv">
     <div>
       <h2>Hobby project spotlight: LipiRx</h2>
-      <p class="lead">A personal project I built for learning and as a hobby, to explore Kotlin Multiplatform and multi-agent AI with the JetBrains Koog framework. It is designed for retail pharmacies in Bangladesh: point the camera at a doctor’s handwritten prescription and a supervisor agent coordinates specialist agents that read it, normalize and enrich the details, and audit them for safety.</p>
-      <div class="chips"><span>Personal project</span><span>Kotlin Multiplatform</span><span>Compose Multiplatform</span><span>Multi-agent AI</span><span>JetBrains Koog</span><span>Vision AI</span><span>On-device AI</span><span>LiteRT-LM</span><span>Gemini</span><span>Groq</span><span>OpenAI</span><span>Ollama</span><span>Ktor</span><span>Koin</span><span>SQLDelight</span></div>
+      <p class="lead">A personal project I started in October 2026, built for learning and as a hobby, to explore Kotlin Multiplatform and multi-agent AI with the JetBrains Koog framework. It is designed for retail pharmacies in Bangladesh: point the camera at a doctor’s handwritten prescription and a supervisor agent coordinates specialist agents that read it, normalize and enrich the details, and audit them for safety.</p>
+      <div class="chips"><span>Personal project</span><span>Started Oct 2026</span><span>Kotlin Multiplatform</span><span>Compose Multiplatform</span><span>Multi-agent AI</span><span>JetBrains Koog</span><span>MCP</span><span>Vision AI</span><span>On-device AI</span><span>LiteRT-LM</span><span>Gemini</span><span>Groq</span><span>OpenAI</span><span>Ollama</span><span>Ktor</span><span>Koin</span><span>SQLDelight</span></div>
       <a class="btn pri" href="https://github.com/FahimFoysal97/LipiRx">View on GitHub</a>
     </div>
     <ul>
@@ -599,9 +616,10 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
       <li><b>Tablet quantities.</b> Calculates how many tablets to hand over.</li>
       <li><b>Similar brands.</b> Cross-references DGDA active ingredients and suggests 3 to 5 Bangladeshi brand substitutes for each medicine, with manufacturer names.</li>
       <li><b>Needs review flags.</b> Visual review cards for low confidence, unreadable text or dosage anomalies, so the pharmacist confirms before dispensing.</li>
-      <li><b>Zoom and pan.</b> Inspect the original photo next to the result.</li>
+      <li><b>Zoom, pan and clear errors.</b> Inspect the original photo next to the result in a scrollable preview, with collapsible error notices when something goes wrong.</li>
       <li><b>Safety audit.</b> Checks dosage safety, interaction risks and unreadable spellings before anything reaches the pharmacist.</li>
       <li><b>Your choice of AI provider, per agent.</b> An agent settings matrix assigns Gemini (with dynamic model discovery), Groq, OpenAI, any OpenAI-compatible endpoint such as a local Ollama server, or an on-device model, agent by agent.</li>
+      <li><b>Embedded MCP server.</b> A built-in Model Context Protocol server (JSON-RPC 2.0, local HTTP on port 8080) exposes scan history and provider settings as resources, and the agent tools (vision OCR, entity parsing, generic substitutes, safety audit) as callable tools, so Claude Desktop, Cursor, terminal scripts or pharmacy POS desktop software can connect directly.</li>
       <li><b>Live analysis view.</b> A 5-step progress screen shows the supervisor’s reasoning, a checklist and per-agent timing logs while a scan runs.</li>
       <li><b>Works offline.</b> An on-device small language model (Google LiteRT-LM, <code>.litertlm</code> weights stored on the phone) can run the agents. Pick Hybrid fallback (cloud first, local fallback on network drops, server errors or quota limits; the default), On-device first, On-device only (100% offline) or Cloud only.</li>
       <li><b>Scan history.</b> Past scans and dispensing memory are saved on the device with SQLDelight, with single-item delete and clear all.</li>
@@ -641,10 +659,11 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
       <div class="journey-card">
         <div class="arch-head"><span class="mini-label">CAREER JOURNEY</span><span class="arch-note">Scroll or select a milestone</span></div>
         <div class="journey-list">
-          <button class="journey-item active" data-journey="0"><span class="journey-dot"></span><span><b>Software foundations</b><small>Computer Science · problem solving</small></span><span class="journey-arrow">↗</span></button>
-          <button class="journey-item" data-journey="1"><span class="journey-dot"></span><span><b>Android engineering</b><small>Kotlin · architecture · production apps</small></span><span class="journey-arrow">↗</span></button>
-          <button class="journey-item" data-journey="2"><span class="journey-dot"></span><span><b>Technical leadership</b><small>Team lead · delivery · technical decisions</small></span><span class="journey-arrow">↗</span></button>
-          <button class="journey-item" data-journey="3"><span class="journey-dot"></span><span><b>Cross-platform exploration</b><small>Flutter · KMP · Compose · agentic AI</small></span><span class="journey-arrow">↗</span></button>
+          <button class="journey-item active" data-journey="0"><span class="journey-num" aria-hidden="true">01</span><span><b>Software foundations</b><small>Computer Science · problem solving</small></span><span class="journey-arrow">↗</span></button>
+          <button class="journey-item" data-journey="1"><span class="journey-num" aria-hidden="true">02</span><span><b>Android engineering</b><small>Kotlin · architecture · production apps</small></span><span class="journey-arrow">↗</span></button>
+          <button class="journey-item" data-journey="2"><span class="journey-num" aria-hidden="true">03</span><span><b>Technical leadership</b><small>Team lead · delivery · technical decisions</small></span><span class="journey-arrow">↗</span></button>
+          <button class="journey-item" data-journey="3"><span class="journey-num" aria-hidden="true">04</span><span><b>Cross-platform exploration</b><small>Flutter · KMP · Compose Multiplatform</small></span><span class="journey-arrow">↗</span></button>
+          <button class="journey-item" data-journey="4"><span class="journey-num" aria-hidden="true">05</span><span><b>AI engineering</b><small>Agents · MCP · on-device LLMs</small></span><span class="journey-arrow">↗</span></button>
         </div>
         <div class="arch-detail journey-detail" aria-live="polite"><span class="detail-index">STAGE 01</span><h3>Software foundations</h3><p>Building a strong foundation in software engineering and problem solving.</p><div class="detail-tags"><span>BSc in CSE</span><span>Problem solving</span><span>300+ problems</span></div></div>
       </div>
@@ -1228,16 +1247,16 @@ if(!rm)requestAnimationFrame(frame);
 (()=>{
 const root=document.querySelector('#explore');if(!root)return;
 const layers={
-presentation:{name:'Presentation',text:'Compose Multiplatform screens with Material 3 present the prescription workflow, collect user input, and reflect the live analysis, results, history and review states through MVVM and StateFlow.',tags:['Compose','Material 3','StateFlow','ViewModel']},
+presentation:{name:'Presentation',text:'Compose Multiplatform screens with Material 3 present the prescription workflow, collect user input, and reflect the live analysis, results, history and review states through MVVM, StateFlow and immutable collections, with Coil 3 for image loading.',tags:['Compose','Material 3','StateFlow','ViewModel','Coil 3']},
 domain:{name:'Domain',text:'Use cases and domain models express the core workflow independently from UI details and external AI providers.',tags:['Use cases','Domain models','Validation']},
-agents:{name:'Agents',text:'A supervisor agent, run by a JetBrains Koog engine, evaluates the workspace state each turn and routes work to type-safe tools for OCR, entity parsing, generic substitutes and safety audit, passing feedback prompts and falling back to rules, with guardrails against finishing early, if the model fails.',tags:['JetBrains Koog','Supervisor agent','Type-safe tools','Per-agent providers']},
+agents:{name:'Agents',text:'A supervisor agent, run by a JetBrains Koog engine, evaluates the workspace state each turn and routes work to type-safe tools for OCR, entity parsing, generic substitutes and safety audit, passing feedback prompts and falling back to rules, with guardrails against finishing early, if the model fails. An embedded Model Context Protocol server (JSON-RPC 2.0 over local HTTP) exposes the same tools, plus scan history and provider config as resources, to external MCP clients.',tags:['JetBrains Koog','Supervisor agent','Type-safe tools','MCP server','Per-agent providers']},
 data:{name:'Data',text:'A SQLDelight database stores provider settings, per-agent model assignments, the on-device strategy and offline scan history, while Ktor with kotlinx.serialization handles the provider APIs behind clear boundaries.',tags:['SQLDelight','Ktor','Koin','Mapping']},
-platform:{name:'Platform & AI',text:'Kotlin Multiplatform supports shared logic, while a strategy-pattern AI layer (Gemini, Groq, OpenAI, custom endpoints and an on-device LiteRT-LM model) routed by a composite service, supports handwriting interpretation online or offline, with Hybrid fallback, On-device first, On-device only and Cloud only strategies. Results remain subject to pharmacist review.',tags:['KMP','Vision AI','On-device SLM','LiteRT-LM','Provider integration']}
+platform:{name:'Platform & AI',text:'Kotlin Multiplatform shares logic and UI across Android and iOS, while a strategy-pattern AI layer (Gemini, Groq, OpenAI, custom endpoints and an on-device LiteRT-LM model) routed by a composite service, supports handwriting interpretation online or offline, with Hybrid fallback, On-device first, On-device only and Cloud only strategies. Results remain subject to pharmacist review.',tags:['KMP','Vision AI','On-device SLM','LiteRT-LM','Provider integration']}
 };
 
 const trimLine=(list,sel)=>{const m=list.querySelectorAll(sel);if(m.length<2)return;const L=list.getBoundingClientRect(),f=m[0].getBoundingClientRect(),l=m[m.length-1].getBoundingClientRect();
 list.style.setProperty('--line-top',(f.top+f.height/2-L.top)+'px');list.style.setProperty('--line-bottom',(L.bottom-(l.top+l.height/2))+'px');};
-[['.journey-list','.journey-dot'],['.arch-map','.arch-num']].forEach(([ls,ms])=>{const list=root.querySelector(ls);if(!list)return;const run=()=>trimLine(list,ms);run();
+[['.journey-list','.journey-num'],['.arch-map','.arch-num']].forEach(([ls,ms])=>{const list=root.querySelector(ls);if(!list)return;const run=()=>trimLine(list,ms);run();
 if(window.ResizeObserver)new ResizeObserver(run).observe(list);window.addEventListener('resize',run);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(run);});
 const detail=root.querySelector('.arch-card .arch-detail');
 root.querySelectorAll('.arch-node').forEach(btn=>btn.addEventListener('click',()=>{
@@ -1250,13 +1269,14 @@ const stages=[
 {name:'Software foundations',text:'Building a strong foundation in software engineering and problem solving.',tags:['BSc in CSE','Problem solving','300+ problems']},
 {name:'Android engineering',text:'Growing into Android development with Kotlin, maintainable architecture, and production-focused implementation.',tags:['Kotlin','Jetpack Compose','MVVM','Hilt']},
 {name:'Technical leadership',text:'Taking ownership of technical decisions, collaboration, and delivery as a team lead.',tags:['Team lead','Delivery','Technical decisions']},
-{name:'Cross-platform exploration',text:'Building for Android and iOS from one codebase with Flutter and Kotlin Multiplatform, and exploring AI-enabled product experiences and agentic automation.',tags:['Flutter','Kotlin Multiplatform','Vision AI','Agentic AI']}
+{name:'Cross-platform exploration',text:'Building for Android and iOS from one codebase with Flutter and Kotlin Multiplatform, and sharing UI with Compose Multiplatform.',tags:['Flutter','Kotlin Multiplatform','Compose Multiplatform','Android + iOS']},
+{name:'AI engineering',text:'Building agentic AI with humans in control: a supervisor-driven multi-agent prescription scanner on JetBrains Koog with an embedded MCP server and on-device models, plus tool-calling assistants and n8n automations with approval steps.',tags:['Multi-agent','JetBrains Koog','MCP','On-device LLMs','n8n']}
 ];
 const jd=root.querySelector('.journey-detail');
 root.querySelectorAll('.journey-item').forEach(btn=>btn.addEventListener('click',()=>{
 root.querySelectorAll('.journey-item').forEach(b=>b.classList.toggle('active',b===btn));
 const i=Number(btn.dataset.journey),d=stages[i];
-jd.querySelector('.detail-index').textContent='STAGE 0'+(i+1);
+jd.querySelector('.detail-index').textContent='STAGE '+String(i+1).padStart(2,'0');
 jd.querySelector('h3').textContent=d.name;jd.querySelector('p').textContent=d.text;
 jd.querySelector('.detail-tags').replaceChildren(...d.tags.map(t=>{const e=document.createElement('span');e.textContent=t;return e;}));
 }));
