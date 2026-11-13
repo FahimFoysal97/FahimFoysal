@@ -361,8 +361,13 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
 .ai-card .btn{height:36px;padding:0 18px}
 .ai-card.wide{grid-column:1/-1}
 .ai-card.wide ul{grid-template-columns:repeat(2,1fr);gap:12px 32px}
+.spot-head{margin-bottom:32px}
+.spot-head .lead{max-width:80ch}
+.spot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:56px}
+.spot-grid .ai-card h3{font-size:20px;line-height:28px}
+@media(min-width:841px){.show{align-items:stretch}.show .phone{align-self:center}.show .steps{grid-auto-rows:1fr}.show .step{display:flex;flex-direction:column;justify-content:center}}
 .sub-h{font-size:20px;line-height:28px;margin:0 0 12px}
-@media(max-width:840px){.ai-feat{grid-template-columns:1fr}.ai-card.wide ul{grid-template-columns:1fr}}
+@media(max-width:840px){.ai-feat,.spot-grid{grid-template-columns:1fr}.ai-card.wide ul{grid-template-columns:1fr}}
 /* Window size classes: medium below 840px, compact below 600px */
 @media(max-width:840px){
   .hero>div{grid-template-columns:minmax(0,1fr);align-items:start}
@@ -601,30 +606,52 @@ footer{text-align:center;color:var(--md-on-surface-variant);font:400 14px/20px v
 </div></section>
 
 <section id="lipirx" class="panel"><div class="wrap">
-  <div class="feature rv">
-    <div>
+  <div class="spot-head rv">
       <h2>Hobby project spotlight: LipiRx</h2>
       <p class="lead">A personal project I started in October 2026, built for learning and as a hobby, to explore Kotlin Multiplatform and multi-agent AI with the JetBrains Koog framework. It is designed for retail pharmacies in Bangladesh: point the camera at a doctor’s handwritten prescription and a supervisor agent coordinates specialist agents that read it, normalize and enrich the details, and audit them for safety.</p>
       <div class="chips"><span>Personal project</span><span>Started Oct 2026</span><span>Kotlin Multiplatform</span><span>Compose Multiplatform</span><span>Multi-agent AI</span><span>JetBrains Koog</span><span>MCP</span><span>Vision AI</span><span>On-device AI</span><span>LiteRT-LM</span><span>Gemini</span><span>Groq</span><span>OpenAI</span><span>Ollama</span><span>Ktor</span><span>Koin</span><span>SQLDelight</span></div>
       <a class="btn pri" href="https://github.com/FahimFoysal97/LipiRx">View on GitHub</a>
-    </div>
-    <ul>
-      <li><b>Supervisor-driven agents.</b> Instead of a fixed single prompt, a manager AI (built with JetBrains Koog) reads the workspace state every turn, decides which type-safe specialist runs next (OCR, parser, brand matcher, safety auditor), explains its reasoning and writes a feedback prompt for it. It falls back to rules, with guardrails against finishing too early, if the model is unavailable.</li>
-      <li><b>Brand names.</b> Finds each medicine written on the prescription.</li>
-      <li><b>Generic compositions.</b> Matches each brand to its active ingredient.</li>
-      <li><b>Local dosage schedules.</b> Understands the dosing notation used locally.</li>
-      <li><b>Tablet quantities.</b> Calculates how many tablets to hand over.</li>
-      <li><b>Similar brands.</b> Cross-references DGDA active ingredients and suggests 3 to 5 Bangladeshi brand substitutes for each medicine, with manufacturer names.</li>
-      <li><b>Needs review flags.</b> Visual review cards for low confidence, unreadable text or dosage anomalies, so the pharmacist confirms before dispensing.</li>
-      <li><b>Zoom, pan and clear errors.</b> Inspect the original photo next to the result in a scrollable preview, with collapsible error notices when something goes wrong.</li>
-      <li><b>Safety audit.</b> Checks dosage safety, interaction risks and unreadable spellings before anything reaches the pharmacist.</li>
-      <li><b>Your choice of AI provider, per agent.</b> An agent settings matrix assigns Gemini (with dynamic model discovery), Groq, OpenAI, any OpenAI-compatible endpoint such as a local Ollama server, or an on-device model, agent by agent.</li>
-      <li><b>Embedded MCP server.</b> A built-in Model Context Protocol server (JSON-RPC 2.0, local HTTP on port 8080) exposes scan history and provider settings as resources, and the agent tools (vision OCR, entity parsing, generic substitutes, safety audit) as callable tools, so Claude Desktop, Cursor, terminal scripts or pharmacy POS desktop software can connect directly.</li>
-      <li><b>Live analysis view.</b> A 5-step progress screen shows the supervisor’s reasoning, a checklist and per-agent timing logs while a scan runs.</li>
-      <li><b>Works offline.</b> An on-device small language model (Google LiteRT-LM, <code>.litertlm</code> weights stored on the phone) can run the agents. Pick Hybrid fallback (cloud first, local fallback on network drops, server errors or quota limits; the default), On-device first, On-device only (100% offline) or Cloud only.</li>
-      <li><b>Scan history.</b> Past scans and dispensing memory are saved on the device with SQLDelight, with single-item delete and clear all.</li>
-      <li><b>POS copy.</b> One tap copies the result summary for pasting into pharmacy POS software.</li>
-    </ul>
+  </div>
+  <div class="spot-grid rv">
+    <article class="ai-card">
+      <span class="eyebrow">What it reads</span>
+      <h3>From handwriting to a clean result</h3>
+      <ul>
+        <li><b>Brand names.</b> Finds each medicine written on the prescription.</li>
+        <li><b>Generic compositions.</b> Matches each brand to its active ingredient.</li>
+        <li><b>Local dosage schedules.</b> Understands the dosing notation used locally.</li>
+        <li><b>Tablet quantities.</b> Calculates how many tablets to hand over.</li>
+        <li><b>Similar brands.</b> Cross-references DGDA active ingredients and suggests 3 to 5 Bangladeshi brand substitutes for each medicine, with manufacturer names.</li>
+      </ul>
+    </article>
+    <article class="ai-card">
+      <span class="eyebrow">At the counter</span>
+      <h3>Built for the pharmacist</h3>
+      <ul>
+        <li><b>Live analysis view.</b> A 5-step progress screen shows the supervisor’s reasoning, a checklist and per-agent timing logs while a scan runs.</li>
+        <li><b>Zoom, pan and clear errors.</b> Inspect the original photo next to the result in a scrollable preview, with collapsible error notices when something goes wrong.</li>
+        <li><b>Scan history.</b> Past scans and dispensing memory are saved on the device with SQLDelight, with single-item delete and clear all.</li>
+        <li><b>POS copy.</b> One tap copies the result summary for pasting into pharmacy POS software.</li>
+      </ul>
+    </article>
+    <article class="ai-card">
+      <span class="eyebrow">Under the hood</span>
+      <h3>Supervisor and safety</h3>
+      <ul>
+        <li><b>Supervisor-driven agents.</b> Instead of a fixed single prompt, a manager AI (built with JetBrains Koog) reads the workspace state every turn, decides which type-safe specialist runs next (OCR, parser, brand matcher, safety auditor), explains its reasoning and writes a feedback prompt for it. It falls back to rules, with guardrails against finishing too early, if the model is unavailable.</li>
+        <li><b>Safety audit.</b> Checks dosage safety, interaction risks and unreadable spellings before anything reaches the pharmacist.</li>
+        <li><b>Needs review flags.</b> Visual review cards for low confidence, unreadable text or dosage anomalies, so the pharmacist confirms before dispensing.</li>
+      </ul>
+    </article>
+    <article class="ai-card">
+      <span class="eyebrow">Your AI, your way</span>
+      <h3>Cloud, local or both</h3>
+      <ul>
+        <li><b>Your choice of AI provider, per agent.</b> An agent settings matrix assigns Gemini (with dynamic model discovery), Groq, OpenAI, any OpenAI-compatible endpoint such as a local Ollama server, or an on-device model, agent by agent.</li>
+        <li><b>Works offline.</b> An on-device small language model (Google LiteRT-LM, <code>.litertlm</code> weights stored on the phone) can run the agents. Pick Hybrid fallback (cloud first, local fallback on network drops, server errors or quota limits; the default), On-device first, On-device only (100% offline) or Cloud only.</li>
+        <li><b>Embedded MCP server.</b> A built-in Model Context Protocol server (JSON-RPC 2.0, local HTTP on port 8080) exposes scan history and provider settings as resources, and the agent tools (vision OCR, entity parsing, generic substitutes, safety audit) as callable tools, so Claude Desktop, Cursor, terminal scripts or pharmacy POS desktop software can connect directly.</li>
+      </ul>
+    </article>
   </div>
 
   <div class="show rv">
